@@ -1,2 +1,2 @@
-document.write('<title>denis.network</title>');
+document.write('<title>ca-math.github.io</title>');
 
