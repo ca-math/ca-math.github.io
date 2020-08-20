@@ -1,9 +1,21 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+#!/usr/bin/env python3
+
+# Generate index.html files for
+# all subdirectories in a directory tree.
+
+# By default only the current folder is processed.
+
+# Use -r or --recursive to process nested folders.
+
+import argparse
+import datetime
+import os
+import sys
+from pathlib import Path
+
+index_file_name = 'index.html'
+
+CSS = """<style>
 * { padding: 0; margin: 0; }
 
 body {
@@ -201,7 +213,34 @@ tr.clickable a {
     }
 }
 </style>
+"""
 
+
+def process_dir(top_dir, opts):
+    glob_patt = opts.filter or '*'
+
+    path_top_dir: Path
+    path_top_dir = Path(top_dir)
+    index_file = None
+ 
+
+    index_path = Path(path_top_dir, index_file_name)
+
+    if opts.verbose:
+        print(f'Traversing dir {path_top_dir.absolute()}')
+
+    try:
+        index_file = open(index_path, "w")
+    except Exception as e:
+        print('cannot create file %s %s' % (index_path, e))
+        return
+
+    index_file.write(f'''<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {CSS}
 </head>
 <body>
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="0" width="0" style="position: absolute;">
@@ -244,7 +283,7 @@ tr.clickable a {
     </svg>
 <header>
     <h1>
-        docs
+        {path_top_dir.name}
     </h1>
 </header>
 <main>
@@ -270,57 +309,135 @@ tr.clickable a {
             <td class="hideable">&mdash;</td>
             <td class="hideable"></td>
         </tr>
+''')
 
+    # sort dirs first
+    sorted_entries = sorted(path_top_dir.glob(glob_patt), key= lambda p: (p.is_file(), p.name))
 
-    
+    entry: Path
+    for entry in sorted_entries:
 
+        # don't include index.html in the file listing
+        if entry.name.lower() == index_file_name.lower():
+            continue
+
+        if entry.is_dir() and opts.recursive:
+            process_dir(entry, opts)
+
+        if not os.access(str(entry), os.W_OK):
+            print(f"***ERROR*** folder {entry.absolute()} is not writable! SKIPPING!")
+            continue
+        if opts.verbose:
+            print(f'{entry.absolute()}')
+
+        size_bytes = -1  ## is a folder
+        size_pretty = '&mdash;'
+        try:
+            if entry.is_file():
+                size_bytes = entry.stat().st_size
+                size_pretty = pretty_size(size_bytes)
+
+            last_modified = datetime.datetime.fromtimestamp(entry.stat().st_mtime).replace(microsecond=0)
+            last_modified_iso = last_modified.isoformat()
+            last_modified_human_readable = last_modified.strftime("%c")
+
+        except Exception as e:
+            print('ERROR accessing file name:', e, entry)
+            continue
+
+        if entry.is_dir() and not entry.is_symlink():
+            entry_type = 'folder'
+        elif entry.is_dir() and entry.is_symlink():
+            entry_type = 'folder-shortcut'
+        elif entry.is_file() and entry.is_symlink():
+            entry_type = 'file-shortcut'
+        else:
+            entry_type = 'file'
+
+        index_file.write(f"""
 
         <tr class="file">
             <td></td>
             <td>
-                <a href="Fall 2020 - Daily.pdf">
-                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
-                    <span class="name">Fall 2020 - Daily.pdf</span>
+                <a href="{str(entry.name)}">
+                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#{entry_type}"></use></svg>
+                    <span class="name">{entry.name}</span>
                 </a>
             </td>
-            <td data-order="1165374">1 MB</td>
-            <td class="hideable"><time datetime="2020-08-19T14:09:19">Wed Aug 19 14:09:19 2020</time></td>
+            <td data-order="{size_bytes}">{size_pretty}</td>
+            <td class="hideable"><time datetime="{last_modified_iso}">{last_modified_human_readable}</time></td>
             <td class="hideable"></td>
         </tr>
+""")
 
-
-        <tr class="file">
-            <td></td>
-            <td>
-                <a href="Purple-Gray.pdf">
-                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
-                    <span class="name">Purple-Gray.pdf</span>
-                </a>
-            </td>
-            <td data-order="54442">53 KB</td>
-            <td class="hideable"><time datetime="2020-08-19T14:05:33">Wed Aug 19 14:05:33 2020</time></td>
-            <td class="hideable"></td>
-        </tr>
-
-
-      
-
-        <tr class="file">
-            <td></td>
-            <td>
-                <a href="zoom-signup-in-three-steps.pdf">
-                    <svg width="1.5em" height="1em" version="1.1" viewBox="0 0 265 323"><use xlink:href="#file"></use></svg>
-                    <span class="name">zoom-signup-in-three-steps.pdf</span>
-                </a>
-            </td>
-            <td data-order="87782">85 KB</td>
-            <td class="hideable"><time datetime="2020-08-20T17:39:04">Thu Aug 20 17:39:04 2020</time></td>
-            <td class="hideable"></td>
-        </tr>
-
+    index_file.write("""
             </tbody>
         </table>
     </div>
 </main>
 </body>
-</html>
+</html>""")
+    if index_file:
+        index_file.close()
+
+
+# bytes pretty-printing
+UNITS_MAPPING = [
+    (1024 ** 5, ' PB'),
+    (1024 ** 4, ' TB'),
+    (1024 ** 3, ' GB'),
+    (1024 ** 2, ' MB'),
+    (1024 ** 1, ' KB'),
+    (1024 ** 0, (' byte', ' bytes')),
+]
+
+
+def pretty_size(bytes, units=UNITS_MAPPING):
+    """Human-readable file sizes.
+
+    ripped from https://pypi.python.org/pypi/hurry.filesize/
+    """
+    for factor, suffix in units:
+        if bytes >= factor:
+            break
+    amount = int(bytes / factor)
+
+    if isinstance(suffix, tuple):
+        singular, multiple = suffix
+        if amount == 1:
+            suffix = singular
+        else:
+            suffix = multiple
+    return str(amount) + suffix
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='''DESCRIPTION:
+    Generate directory index files (recursive is OFF by default).
+    Start from current dir or from folder passed as first positional argument.
+    Optionally filter by file types with --filter "*.py". ''')
+
+    parser.add_argument('top_dir',
+                        nargs='?',
+                        action='store',
+                        help='top folder from which to start generating indexes, '
+                             'use current folder if not specified',
+                        default=os.getcwd())
+
+    parser.add_argument('--filter', '-f',
+                        help='only include files matching glob',
+                        required=False)
+
+    parser.add_argument('--recursive', '-r',
+                        action='store_true',
+                        help="recursively process nested dirs (FALSE by default)",
+                        required=False)
+
+    parser.add_argument('--verbose', '-v',
+                        action='store_true',
+                        help='***WARNING: this can take a very long time with complex file tree structures***'
+                             ' verbosely list every processed file',
+                        required=False)
+
+    config = parser.parse_args(sys.argv[1:])
+    process_dir(config.top_dir, config)
