@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <!-- Project Page: Title -->
+ <script src="/incl/t.txt"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Calculus, AP Calculus, AP Calculus AB, AP Calculus BC, College Board, Free Response, Multiple Choice, Mathematics, Worksheets, Tutorials, Practice">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+ 
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+</head>
+<body>
+ 
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#about"></a>
+    </div>
+	
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">about</a></li>   
+        <li><a href="#notes">notes</a></li>
+    <li><a href="#links">links</a></li>   
+    <li><a href="#info">info</a></li>
+    <li><a href="#help">help</a></li>
+   
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- first container: about  -->
+<div class="container-fluid bg-4 text-left">
+  <h2 class="margin" id="about">about</h2>
+  <!-- <p align="center"><img src="img/site/ca.jpeg" class="img-responsive img-circle margin" style="display:inline" alt="ap-calc" width="200" height="207"> </p>
+  -->
+     <p> 
+Linear algebra is a crossroads where many important areas of mathematics meet, and it is the tool used to analyze the first approximation of complex systems. Students will learn to understand and use the language and theorems in both abstract and applied situations, gain insight into the nature of mathematical inquiry, and learn how to reason carefully and precisely about formally described situations. Topics include vectors and subspaces of the n-dimensional space, linear transformations, and matrices; systems of linear equations; abstract vector spaces and the theory of single linear transformation: change of basis, determinants, eigenvalues and eigenvectors, and diagonalization. 
+</p> </div>
+<!-- end of first container -->
+
+
+<!-- start notes container (Grid) -->
+<div class="container-fluid text-left">
+  <h2 id="notes">notes / updates</h2>
+  <hr>
+
+  <b> October 24, 2025 | LU decomposition with SageMath </b> <br>
+  
+   <pre>
+   <code class="language-python">
+  #Example 2 | Section 2.5 
+A = matrix([[2,4,-1,5,-2],[-4,-5,3,-8,1],[2,-5,-4,1,8],[-6,0,7,-3,1]])
+
+P, L, U = A.LU(pivot='nonzero')
+print(U)
+print(L)
+
+#check
+print(A == L*U)
+
+
+# Practice Problem | Section 2.5
+
+A = matrix([[2,-4,-2,3],[6,-9,-5,8],[2,-7,-3,9],[4,-2,-2,-1],[-6,3,3,4]])
+
+P, L, U = A.LU(pivot='nonzero')
+print(U)
+print(L)
+
+print(A == L*U)
+   </code>
+    </pre>
+
+
+  <hr>
+
+
+
+
+<!-- end notes container-->
+</div>
+<hr>
+<!-- Second Container (Grid) -->
+  <div class="container-fluid text-left">
+    <h2 id="links">links</h2>
+    <!-- 
+    <a href="https://www.sagemath.org/" target="_blank">sagemath</a> <br>
+    <a href="https://sagecell.sagemath.org/" target="_blank"> sagecell</a> <br>
+    end notes
+    -->
+
+  </div>
+<hr>
+  <!-- Third Container (Grid) -->
+ <!-- <div class="container-fluid text-left">
+    <h2 id="info">expectations</h2>
+    <div w3-include-HTML="z-expectations.html"></div>
+  </div>
+-->
+
+
+  <script>
+    w3.includeHTML();
+    </script>
+</body>
+</html>

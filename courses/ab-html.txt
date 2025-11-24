@@ -1,0 +1,527 @@
+
+<hr>
+
+<b> November 19, 2021  </b> <br>
+<!-- quiz 24 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}
+\\
+y = e^{3x}\\
+dy/dx = 3 e^{3x}\\
+\text{Two points: } (0,0), (a, e^{3a})\\
+\text{Write slope as rise/run: }\frac{e^{3a}-0}{a-0}\\
+\text{Write slope as the derivative at x=a: } 3e^{3a}\\ 
+\text{Set the two slopes equal to each other, and solve for a.}\\
+\text{State the x and y coordinates.}\\
+\text{Problem 2}\\
+\text{a)}\\
+L(x) = f(\pi/3) + f'(\pi/3) (x-\pi/3) = \sqrt{3} + 4 (x-\pi/3)\\
+L(61\pi/180)=...\\
+\text{b)}\\
+L(x) = f(\pi/4) + f'(\pi/4) (x-\pi/4) = (\sqrt{2}/2) + (\sqrt{2}/2) (x-\pi/4)\\
+L(44\pi/180)=...\\
+\\
+\text{Problem 3}\\
+\text{Make a neat drawing with variables shown. m and n are NOT variables}\\
+\text{If the hypotenuse is z and the sides are x and y, we have:}\\
+dx/dt = -n, dz/dt = m\\
+\text{equation for part a) } \theta = \arcsin(x/z)\\
+d\theta/dt = \frac{1}{\sqrt{1-(x/z)^2}} \frac{z dx/dt - dz/dt x}{z^2}\\
+\text{plug in the known rates and } x= 1, z=\sqrt{2} \text{ to find } d\theta/dt\\
+\text{Be sure to include a sentence and "units"}\\
+\)
+
+</font>
+
+<hr>
+
+<b> November 15, 2021  </b> <br>
+<!-- quiz 23 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}
+\\
+f(x)=2+e^{1-x}\\
+f(1)=3\\
+f'(x) = -e^{1-x}\\
+f'(1)=-1\\
+y = -x + 4\\
+\\
+\text{Problem 2}
+\\
+1+\ln(xy) = e^{x-y}\\
+\text{Point: } (1,1)\\
+\frac{1}{xy}(x dy/dx + y) = e^{x-y}(1-dy/dx)\\
+\text{Find: } dy/dx = 0 \text{at (1,1)}\\
+\text{Tangent line: y=1, with supporting work.}
+\)
+
+</font>
+
+
+<hr>
+
+<b> November 7, 2021  </b> <br>
+<!-- quiz 20 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+\text{Make a neat drawing. Label the elevation angle } \theta \text{clearly.}\\
+\text{Set up the equation:} \tan\theta = 5/x \text{ or } x = 5\cot\theta\\
+dx/dt = -5\csc^2\theta d\theta/dt\\
+\text{Note that} \csc^2\theta = 4/3 \text{ when }\theta=\pi/3\\
+\text{Evaluate } dx/dt = (-5)*4/3 (-\pi/6)=10\pi/9 km/min\\
+\text{Conclusion: At the moment when the elevation angle is pi/3, the airplane} \\
+\text{is flying at a rate 10pi/9 km/min}\\
+\\
+\text{Problem 2}\\
+\text{This is very similar to the example from class. }\\
+\text{Make a neat drawing. Label } \theta \text{ clearly.}\\
+\text{Set up the equation:} \tan\theta = x/2000 \\
+dx/dt = 2000\sec^2\theta d\theta/dt\\
+\text{Note that } \sec^2\theta = 17/16 \text{ when }x=500m\\
+\text{Also note that } d\theta/dt = 4\pi rad/min\\
+\text{Evaluate } dx/dt = 8500\pi m/min\\
+\text{Conclusion: At the moment when the point on the shoreline is 500m away from the nearest}\\
+\text{point to the lighthouse, the point is moving at a rate of 8500pi m/min.} \\
+\\
+\)
+
+</font>
+
+
+
+<hr>
+
+<b> November 4, 2021  </b> <br>
+<!-- quiz 19 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+x^2 y + ay^2 = b\\
+\rightarrow 2xy+ x^2 dy/dx + 2ay*dy/dx =0\\
+\text{Plug in (1,1) in the original equation to get:} 1 + a = b\\
+\text{Plug in dy/dx=-4/3 and (1,1) for (x,y) in the second equation to get}\\
+-4/3 + 2 -8a/3 = 0\\
+\rightarrow a = 1/4, b=5/4\\
+\\
+\text{Problem 2}\\
+V = \pi r^2 h \text{ and r = 3m}\\ 
+V(t) = \pi (3)^2 h(t) \\
+V(t) = 9\pi h(t)\\
+dV/dt = 9\pi dh/dt\\
+dh/dt = 5/(9\pi) m/min\\
+\text{Conclusion: The depth of the water is rising at a rate of 5/(9pi) m/min}
+\\
+\)
+
+</font>
+
+
+<hr>
+
+<b> November 3, 2021  </b> <br>
+<!-- quiz 18 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Given: } 6 + x^3y = x y^2\\
+\text{a)}\\
+dy/dx = \frac{y^2-3x^2y}{x^3-2xy}\\
+\\
+\text{b)}\\
+\text{When x = 1, the curve's equation becomes: } 6 + y = y^2\\
+\text{Solving for y, find: } y = -2, y = 3\\
+\text{Points: } (1, 3)\text{ and } (1, -2)\\
+\text{At (1, 3), slope = 0, equation: } y=3\\
+\text{At (1, -2), slope = 2, equation: } y=2x-4\\
+\text{c)}\\
+\text{Set the denominator of dy/dx equal to zero:}\\
+x^3-2xy=0\rightarrow x(x^2-2y)=0\\
+x=0\text{ This is impossible. Why?}\\
+y=x^2/2\text{ Plug this into the equation of the curve, to find}\\
+x=-24^{1/5}\\
+
+\)
+
+</font>
+
+<hr>
+
+<b> October 31, 2021  </b> <br>
+<!-- quiz 17 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+f'(x)=6*2*(2x+7)^5 (x-2)^5 + 5 (2x+7)^6 (x-2)^4\\
+\text{Factor completely:}\\
+f'(x)=(x-2)^4(2x+7)^5(22x+11)\\
+\text{Set } f'(x)=0 \\
+\rightarrow x=-7/2, -1/2, 2\\
+\\
+\text{Problem 2}\\
+f'(x)=3-\sec^2x\\
+f'(x)=1\\
+\sec^2x =2\\
+\cos x = \pm \sqrt{2}/2\\
+x=\pi/4 + k \pi/2\\\)
+
+</font>
+
+<hr>
+
+<b> October 21, 2021  </b> <br>
+<!-- quiz 16 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\\
+f(x)=(2x-1)\sqrt{4x+1}\\
+\text{Use the product rule and the chain rule to find: }\\
+f'(x)=\frac{12x}{\sqrt{4x+1}}\\
+\text{To find where the tangent line is horizontal:}\\
+f'(x)=0 \rightarrow x=0, y=-1\\
+\\
+\text{For the tangent line at x=2:}\\
+f'(2) = 8\\
+f(2) = 9\\
+Tangent: y = 8x-7\\\)
+
+</font>
+
+
+
+
+<hr>
+
+<b> October 21, 2021  </b> <br>
+<!-- quiz 15 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+f(x)=6 x \cot{x}=(6x) \cot{x} \\
+x=\pi/6\\
+y=f(\pi/6) =\pi\sqrt{3}\\
+\\
+f'(x)= 6\cot{x} + 6x (-\csc^{2}x)\\
+slope=f'(\pi/6) = 6\sqrt{3} + 6\pi/6 (-4) = 6\sqrt{3}-4\pi\\
+\text{Tangent Line Equation: } y - \pi\sqrt{3} =  (6\sqrt{3}-4\pi)(x-\pi/6)\\
+\text{A simplified version of this would be fine, too: } y =  (6\sqrt{3}-4\pi)x + 2\pi^{2}/3\\\\
+\\
+\text{Problem 2} \\
+\text{ Make a neat drawing with the angle and side x both labeled} \\
+\frac{x}{20}=\sin{\beta}\\
+x = 20\sin{\beta}\\
+\frac{dx}{d\beta}=20 \cos{\beta} \\
+\text{Plug in the angle: } \beta=\pi/6 \text{ to get: }\\
+\frac{dx}{d\beta} = 20*\sqrt{3}/2 = 10\sqrt{3} \text{ feet per radian.}\\
+\text{Note: The units matter.}\\\)
+
+</font>
+
+
+
+
+
+<hr>
+
+<b> October 19, 2021  </b> <br>
+<!-- quiz 14 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\text{Problem 1}\\
+f(x)=2x + \tan(x) \\
+f'(x)=2+\sec^2(x)\\
+\text{@ } x=\frac{\pi}{3}\text{,  } y=f(\frac{\pi}{3})=\frac{2\pi}{\sqrt{3}}\\
+f'(\frac{\pi}{3}) = slope = ... = 6 \\
+\text{ equation: } y = 6x - 2\pi +\frac{2\pi}{3} +\sqrt{3}\\\\
+\text{Problem 2}\\
+\frac{dy}{dx}=-\sqrt{2}\sin(x) \\
+slope = -1 \\
+Tangent:  y = -x + 1 +\frac{\pi}{4}\\
+Normal: y = x + 1 -\frac{\pi}{4}\\\)
+
+</font>
+
+
+
+
+
+<hr>
+
+<b> October 15, 2021  </b> <br>
+
+<font color="dodgerblue"> 
+The midterm marking period closes today.
+</font>
+
+
+
+<hr>
+
+<b> October 11, 2021  </b> <br>
+<!-- quiz 10 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(f(x)=\frac{x-1}{1+x}\\
+\\
+f'(x)=\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}\\
+f'(x)=\lim_{h \to 0}\frac{1}{h} (\frac{x+h-1}{1+x+h}- \frac{x-1}{1+x})\\
+\text{...combine and simplify...}\\
+f'(x) =\frac{2}{(1+x)^2}\\
+\\
+f'(x) =1/2 \rightarrow (1+x)^2= 4 \rightarrow 1+x = \pm{2} \rightarrow x=-3\text{ or } x=1 \\
+\text{two points:} (1, 0)\text{ and }(-3, 2)\\\)
+
+</font>
+
+<!-- quiz 11 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(f(x)=\frac{1}{\sqrt{x}}\\
+\\
+f'(a)=\lim_{h \to 0} \frac{f(a+h)-f(a)}{h}\\
+f'(a)=\lim_{h \to 0}\frac{1}{h} (\frac{1}{\sqrt{a+h}}- \frac{1}{\sqrt{a}})\\
+f'(a)=\lim_{h \to 0}\frac{1}{h} \frac{\sqrt{a}-\sqrt{a+h}}{\sqrt{a+h}\sqrt{a}}\\
+\text{... multiply by the conjugate and simplify...}\\
+f'(a) =\frac{-1}{2a^{3/2}}\\
+\\
+\text{at point (1,1), } f'(1) =\frac{-1}{2} \rightarrow y-1 = \frac{-1}{2} (x-1)\\
+\text{at point (4, 1/2), } f'(4) =\frac{-1}{16} \rightarrow y-\frac{1}{2} = \frac{-1}{16} (x-4)\\\)
+
+</font>
+
+
+<hr>
+<b> October 11, 2021  </b> <br>
+
+<font color="dodgerblue"> 
+In the Downloads' section (to the right) find an answer key to the [ <b>overtime</b> ] algebra review packet from week 5. Use it to correct any mistakes you may have made. If you think the key has mistakes, please let me know so we can fix them. <br> <br>
+
+</font>
+
+
+
+
+<hr>
+<b> October 10, 2021  </b> <br>
+<!-- quiz 09 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(a)\\
+f(x) =\frac{3}{1-x}\\
+f'(x)= \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \\
+=\lim_{h \to 0} \frac{\frac{3}{1-(x+h)}-\frac{3}{1-x}}{h} \\
+=\lim_{h \to 0}\frac{3}{h}\frac{(1-x)-(1-x-h)}{(1-x-h)(1-x)} \\
+=\lim_{h \to 0}\frac{3}{h}\frac{h}{(1-x-h)(1-x)} \\
+=\lim_{h \to 0}\frac{3}{(1-x-h)(1-x)} \\
+=\frac{3}{(1-x)^2} \\
+\\
+b)\\
+slope=f'(-2) = \frac{3}{(1-(-2))^2} = \frac{1}{3}\\
+point: (-2, 1) \\
+equation: y-1 = \frac{1}{3}(x+2)\\
+or:  y=\frac{1}{3}x+\frac{5}{3}\\\)
+ <br><br>
+
+</font>
+
+
+
+<hr>
+<b> September 24, 2021  </b> <br>
+<!-- quiz 04 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+P1<br>
+Simplify the expression by combining the fractions into a common denominator. The limit is -1/4. <br>
+<br><br>
+
+P2<br>
+Use the Squeeze Theorem (write the name down!) by starting with: <br>
+
+\( -1\leq \cos(1/x^2) \leq 1 \)  <br>
+
+Then multiply the inequality by \( x^2 \) <br>.
+Using the Squeeze Theorem, conclude that the limit is zero.
+ 
+ <br><br>
+P3<br>
+a) Please review trig functions. If we can't plot cosine and sine, we have have big problems. <br>
+b) All but -2pi, 2pi, and 0. <br>
+c) x = 2pi <br>
+d) x= -2pi
+
+ <br><br>
+
+</font>
+
+
+
+<hr>
+<b> September 22, 2021  </b> <br>
+<!-- quiz 04 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+P1<br>
+Use arrows to check where the numerator and denominator go as x approaches 4 from the left. They go to -1 and 0, respectively. The denominator, however, goes to 0 from the left side. Therefore, overall the limit fails to exist but we specify positive infinity. <br>
+
+Please be careful not to 'plug in'. <br>
+Please use limit signs and equal signs until x  disappears or you have found the limit.
+
+
+<br><br>
+
+P2<br>
+Check the numerator and denominator using arrows (i.e. do not plug in on paper). We get 0 over 0, so we multiply by the conjugate. Further simplification leads a limit value of 0. <br>
+
+ <br><br>
+P3<br>
+False. It is possible to find two such functions. Give an example for full credit.
+
+ <br><br>
+
+</font>
+
+
+<hr>
+<b> September 19, 2021  </b> <br>
+<font color="dodgerblue"> 
+<b>Weekly Updates</b>: For those of you who are new to Cushing, this information may be helpful. Approximately once a week teachers post current grades on Monday night. Sometimes teachers will include concerns or noteworthy comments related to student performance. The weekly reports typically go live for students on Tuesday (sometimes Wednesday) morning. <br>
+ 
+For our class, the weekly update will reflect your current grade, including any graded week from the week before. Although I will try my best to include any quizzes you write on a Monday into the update, I can't promise that it will happen all the time. <br> In class I will try to find a minute or two to comment on grades and grading this coming week. <br> <br>
+ 
+  
+</font>
+
+
+<hr>
+<b> September 17, 2021  </b> <br>
+<font color="dodgerblue"> 
+ Brief Notes on Today's Quiz <br>
+	<i> Email me if you find typos or mistakes. </i><br>
+P1<br>
+On average, we did well on the sketching question. A couple of tips: <br>
+-bring a pencil for this class, please <br> 
+-label your axes (using arrows)<br>
+-use open circles at (-2, 2) and (1, 1). <br>
+-do NOT use an open circle at (0,0) <br> <br>
+
+P2<br>
+a) No, we cannot conclude anything because the limit does not depend on the y-value at the point of interest. <br>
+b) No, we cannot conclude anything about the y-value because it does not help determine the value of the limit. In fact, the y-value does not even need to exist. <br><br>
+</font>
+
+<hr>
+<b> September 16, 2021  </b> <br>
+<font color="dodgerblue"> 
+ Answer Key to Quiz <br>
+	<i> Email me if you find typos or mistakes. </i><br>
+P1<br>
+Use the the Factor Theorem to find two factors: \((x-\sqrt{3})\) and \((x+\sqrt{3})\). Combining them, \((x^2-3)\) must also be a factor. <br>
+Polynomial Long Division gives: \(f(x)=(4x-1)(x-\sqrt{3})(x+\sqrt{3})\)
+<br> <br>
+P2<br>
+Factor completely: \((\csc{x}-2)(\csc{x}+1) = 0\) ,and then find three solutions on the given interval: <br>
+\(x=\frac{\pi}{6},x=\frac{5\pi}{6}, x=\frac{3\pi}{2}\)
+
+
+</font> 
+
+  
+<hr>
+<b> September 14, 2021  </b> <br>
+<font color="dodgerblue"> 
+ Answer Key to Quiz <br>
+	<i> Email me if you find typos or mistakes. </i><br>
+P1<br>
+3 solutions: x= pi/6, x= 5pi/6, and x= 3pi/2 <br> <br>
+
+P2<br>
+a) r(x) and u(x) with reasoning <br>
+b) s(x) with reasoning <br>
+c) s(x) with reasoning <br>
+d) ints: (-3,0), (2,0), (0,6/25); VA: x=5, x=-5; HA: y=1 <br>
+   neat sketch with details<br><br>
+  
+P3<br>
+a) x=4<br> 
+b) x=ln2, x=ln4 <br><br>
+
+P4<br>
+a) D: [-1,1] R: [0, pi], graph <br>
+b) 5pi/6 <br>
+c)root((1/x^2)-1)<br><br>
+
+P5<br>
+a) pi/4 <br>
+b) 5pi/6 <br>
+c) 0 <br>
+d) 1/2 <br><br>
+P6<br>
+one possible solution: a=2, b = 1/2, c = 3pi/4 with work<br><br>
+
+
+
+</font> 
+<hr>
+
+<b> September 9, 2021  </b> <br>
+<font color="dodgerblue"> 
+AP registration instructions at this [ <a href="https://apcentral.collegeboard.org/pdf/joining-your-ap-class-section-students.pdf" target="_blank">link</a> ]. <br>
+
+For your course section, use join code: XRV34R <br>
+
+If you have any questions, contact Dr. Willis (AP Coordinator) in the Academic Office. <br>
+
+</font> 
+<hr>
+
+
+<b> September 7, 2021  </b> <br>
+<font color="dodgerblue"> 
+Approximately once a week, on myCushing you will notice that a portion of your homework assignment will have the tag <b> [ overtime ] </b>. This will typically involve additional problem solving, reading, exploration, that will not require more than 25 minutes of your time. All subjects are asked to have this added component this year. Let me know if you have any questions about this.
+
+</font> 
+<hr>
+
+
+<b> September 5, 2021 </b> <br>
+<font color="dodgerblue"> This section of the course page is for selected notes and commentary that I will type for the group during the academic year. Most meetings will not require typed remarks. Newer items will be at the top, but I will try to remind you during class when new content is posted here. <br>
+
+Other blocks, like 'Downloads' or 'Links', will go live soon. For now, the most important tab on this course page is the Assignments' section, which will include daily/nightly homework instructions. Be sure to visit before the start of study hall Sunday through Thursday.</font> </br>
+<hr>

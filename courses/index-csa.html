@@ -1,0 +1,937 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <!-- Project Page: Title -->
+ <script src="/incl/t.txt"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Calculus, AP Calculus, AP Calculus AB, AP Calculus BC, College Board, Free Response, Multiple Choice, Mathematics, Worksheets, Tutorials, Practice">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+ 
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#about"></a>
+    </div>
+	
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">about</a></li>   
+        <li><a href="#notes">notes</a></li>
+    <li><a href="#links">links</a></li>   
+    <li><a href="#info">info</a></li>
+    <li><a href="#help">help</a></li>
+   
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- first container: about  -->
+<div class="container-fluid bg-4 text-left">
+  <h2 class="margin" id="about">about</h2>
+ <!-- 
+  <p align="center"><img src="img/site/ca.jpeg" class="img-responsive img-circle margin" style="display:inline" alt="ap-calc" width="200" height="207"> </p>
+  -->
+
+  <p>AP Computer Science A is both a college-prep course for potential computer science majors and a foundation course for students planning to study in other technical fields such as engineering, physics, chemistry, and geology. The course emphasizes methodology, procedural abstraction, and in-depth study of algorithms, data structures, and data abstractions, as well as a detailed examination of a large case study program. Instruction includes preparation for the AP Computer Science A exam. In this course, students apply the programming tools they have learned to real-life examples on their own. Computer science is more than just programming; students who successfully complete the course will have an understanding of Java and the ability to adapt to any new programming language that they are taught in college. 
+
+</p> </div>
+<!-- end of first container -->
+
+
+<!-- start notes container (Grid) -->
+<div class="container-fluid text-left">
+  <h2 id="notes">notes / updates</h2>
+
+<hr>
+<b> October 3, 2025  | GPA Calculuator (a possible solution) </b> <br>
+
+
+<pre>
+  <code class="language-java">
+    import java.util.*;
+
+public class GPACalculator {
+
+    public static void main(String[] args) {
+
+        Scanner kb = new Scanner(System.in);
+        int input; //grade (0 to 100)
+        double totalWeight = 0.0;
+        double courseWeight;
+        double sum = 0.0;
+
+        //Record numerical grade and weight for course 1
+        System.out.println("Enter the credits (double) for course 1: ");
+        courseWeight = kb.nextDouble();
+        totalWeight = totalWeight + courseWeight;
+        System.out.println("Enter a grade (0 to 100) for course 1:");
+        input = kb.nextInt();
+
+        if (input >=93) {
+            sum = sum + courseWeight*4.0;
+        } else if (input >=90) {
+            sum = sum + courseWeight*3.7;
+        }  else if (input >=87) {
+            sum = sum + courseWeight*3.3;
+        }  else if (input >=83) {
+            sum = sum + courseWeight*3.0;
+        } else if (input >=80) {
+            sum = sum + courseWeight*2.7;
+        } else if (input >=77) {
+            sum = sum + courseWeight*2.3;
+        }  else if (input >=73) {
+            sum = sum + courseWeight*2.0;
+        }  else if (input >=70) {
+            sum = sum + courseWeight*1.7;
+        } else if (input >=67) {
+            sum = sum + courseWeight*1.3;
+        } else if (input >=63) {
+            sum = sum + courseWeight;
+        } else if (input >=60) {
+            sum = sum + courseWeight*0.7;
+        } else {
+            sum = sum + courseWeight*0.0;
+        }
+
+   //reset courseWeight
+        courseWeight = 0.0;
+        //Record numerical grade and weight for course 2
+        System.out.println("Enter the credits (double) for course 2: ");
+        courseWeight = kb.nextDouble();
+        totalWeight = totalWeight + courseWeight;
+        System.out.println("Enter a grade (0 to 100) for course 2:");
+        input = kb.nextInt();
+
+        if (input >=93) {
+            sum = sum + courseWeight*4.0;
+        } else if (input >=90) {
+            sum = sum + courseWeight*3.7;
+        }  else if (input >=87) {
+            sum = sum + courseWeight*3.3;
+        }  else if (input >=83) {
+            sum = sum + courseWeight*3.0;
+        } else if (input >=80) {
+            sum = sum + courseWeight*2.7;
+        } else if (input >=77) {
+            sum = sum + courseWeight*2.3;
+        }  else if (input >=73) {
+            sum = sum + courseWeight*2.0;
+        }  else if (input >=70) {
+            sum = sum + courseWeight*1.7;
+        } else if (input >=67) {
+            sum = sum + courseWeight*1.3;
+        } else if (input >=63) {
+            sum = sum + courseWeight;
+        } else if (input >=60) {
+            sum = sum + courseWeight*0.7;
+        } else {
+            sum = sum + courseWeight*0.0;
+        }
+
+        //reset courseWeight
+        courseWeight = 0.0;
+
+        //Record numerical grade and weight for course 3
+        System.out.println("Enter the credits (double) for course 3: ");
+        courseWeight = kb.nextDouble();
+        totalWeight = totalWeight + courseWeight;
+        System.out.println("Enter a grade (0 to 100) for course 3:");
+        input = kb.nextInt();
+
+        if (input >=93) {
+            sum = sum + courseWeight*4.0;
+        } else if (input >=90) {
+            sum = sum + courseWeight*3.7;
+        }  else if (input >=87) {
+            sum = sum + courseWeight*3.3;
+        }  else if (input >=83) {
+            sum = sum + courseWeight*3.0;
+        } else if (input >=80) {
+            sum = sum + courseWeight*2.7;
+        } else if (input >=77) {
+            sum = sum + courseWeight*2.3;
+        }  else if (input >=73) {
+            sum = sum + courseWeight*2.0;
+        }  else if (input >=70) {
+            sum = sum + courseWeight*1.7;
+        } else if (input >=67) {
+            sum = sum + courseWeight*1.3;
+        } else if (input >=63) {
+            sum = sum + courseWeight;
+        } else if (input >=60) {
+            sum = sum + courseWeight*0.7;
+        } else {
+            sum = sum + courseWeight*0.0;
+        }
+
+        //reset courseWeight
+        courseWeight = 0.0;
+
+        //Record numerical grade and weight for course 4
+        System.out.println("Enter the credits (double) for course 4: ");
+        courseWeight = kb.nextDouble();
+        totalWeight = totalWeight + courseWeight;
+        System.out.println("Enter a grade (0 to 100) for course 4:");
+        input = kb.nextInt();
+
+        if (input >=93) {
+            sum = sum + courseWeight*4.0;
+        } else if (input >=90) {
+            sum = sum + courseWeight*3.7;
+        }  else if (input >=87) {
+            sum = sum + courseWeight*3.3;
+        }  else if (input >=83) {
+            sum = sum + courseWeight*3.0;
+        } else if (input >=80) {
+            sum = sum + courseWeight*2.7;
+        } else if (input >=77) {
+            sum = sum + courseWeight*2.3;
+        }  else if (input >=73) {
+            sum = sum + courseWeight*2.0;
+        }  else if (input >=70) {
+            sum = sum + courseWeight*1.7;
+        } else if (input >=67) {
+            sum = sum + courseWeight*1.3;
+        } else if (input >=63) {
+            sum = sum + courseWeight;
+        } else if (input >=60) {
+            sum = sum + courseWeight*0.7;
+        } else {
+            sum = sum + courseWeight*0.0;
+        }
+
+        //reset courseWeight
+        courseWeight = 0.0;
+
+        //Record numerical grade and weight for course 5
+        System.out.println("Enter the credits (double) for course 5: ");
+        courseWeight = kb.nextDouble();
+        totalWeight = totalWeight + courseWeight;
+        System.out.println("Enter a grade (0 to 100) for course 5:");
+        input = kb.nextInt();
+
+        if (input >=93) {
+            sum = sum + courseWeight*4.0;
+        } else if (input >=90) {
+            sum = sum + courseWeight*3.7;
+        }  else if (input >=87) {
+            sum = sum + courseWeight*3.3;
+        }  else if (input >=83) {
+            sum = sum + courseWeight*3.0;
+        } else if (input >=80) {
+            sum = sum + courseWeight*2.7;
+        } else if (input >=77) {
+            sum = sum + courseWeight*2.3;
+        }  else if (input >=73) {
+            sum = sum + courseWeight*2.0;
+        }  else if (input >=70) {
+            sum = sum + courseWeight*1.7;
+        } else if (input >=67) {
+            sum = sum + courseWeight*1.3;
+        } else if (input >=63) {
+            sum = sum + courseWeight;
+        } else if (input >=60) {
+            sum = sum + courseWeight*0.7;
+        } else {
+            sum = sum + courseWeight*0.0;
+        }
+
+        //reset courseWeight
+        courseWeight = 0.0;
+
+
+        System.out.println("The GPA is: " + sum /totalWeight);
+
+
+    }
+}
+  </code>
+</pre>
+<br>
+  <hr> 
+  <b> September 23, 2025  | The String class (official documentation) </b> <br>
+
+ At the following url find more information about the String class and its features:  <br>
+ 
+  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" target="_blank"> https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
+</a>
+
+ <hr> 
+  <b> September 23, 2025  | Solution to tonight's homework </b> <br>
+
+   <pre>
+ 
+ <code class="language-java">
+/*
+Working with Scanner, String to build a message for the user.
+*/
+import java.util.*;
+
+public class Interaction {
+
+   public static void main(String[] args) { 
+
+      //variables
+      String firstName, lastName, country, favMovie, output;
+      int age, siblings;
+      Scanner kb = new Scanner(System.in);
+
+      System.out.println("Hi there. What's your first name?");
+      firstName = kb.nextLine();
+      
+      System.out.println("And your last name?");
+      lastName = kb.nextLine();
+      
+      System.out.println("Next, enter your country of origin.");
+      country = kb.nextLine();
+      
+      System.out.println("Next, enter your favorite movie.");
+      favMovie = kb.nextLine();
+      
+      System.out.println("Just two more questions. Next, enter your age.");
+      age = kb.nextInt();
+      
+      System.out.println("And finally, how many siblings do you have?");
+      siblings = kb.nextInt();
+      
+      output = "Hello " + firstName +" "+ lastName +". Nice to meet you.\nYou are from "
+      + country +" and your favorite movie is " + favMovie +".\nYou are "+ age +
+      " years old, and you indicated that you have " + siblings +" siblings.";
+      
+      System.out.println(output);
+      
+      System.out.println();
+      
+      System.out.println("The message I printed for you in the preceding step contains " 
+      + output.length() +" characters.");
+
+
+   }//end main
+} //end class
+</code>
+</pre>
+  
+  
+  <hr> 
+  <b> September 8, 2025  </b> <br>
+
+AP registration instructions at this [ <a href="https://apstudents.collegeboard.org/access-your-ap-resources/join-your-class-online" target="_blank">link</a> ]. <br>
+
+<b> If you think you'll be changing your schedule or dropping the class altogether, please hold off on joining the AP classroom. </b> <br>
+
+For your course section, use join code: Z4E3R6 <br>
+
+If you have any questions, contact Mr. Dan Monahan (AP Coordinator). <br>
+
+
+
+  <hr>
+
+  <b> September 1, 2025 | Introductory note.    </b> <br>
+  Welcome to AP CS A. In this area of the course page we will post important course-related information such as links to resources, announcements, reminders, commentary or feedback on assessments etc. All entries will be dated and the most recent one will be at the top of the page. As far as daily course information goes, the Assignments and Bulletin tabs are the most important.<br>
+
+<!-- 
+  <hr>
+  <b> March 5, 2025 | Study Guide for AP CS A   </b> <br>
+  Recommended but not required:<br />
+  1. Barron's https://www.amazon.com/Barrons-Computer-Science-Online-Tests/dp/1438009194<br />
+  2. Princeton Review &#160;https://www.amazon.com/Princeton-Review-Computer-Science-Prep/dp/0593517059<br />
+  3. Five Steps to a Five https://www.amazon.com/Steps-AP-Computer-Science-2022/dp/1264267460
+  <hr>
+  <b> January 23, 2025 | Visualizing Sorting Algorithms </b> <br>
+
+  https://visualgo.net/bn/sorting <br> 
+https://www.toptal.com/developers/sorting-algorithms
+<hr />
+
+
+  <hr>
+  <b> November 18, 2024 | Resource: WolframAlpha </b> <br>
+  WolframAlpha is a reliable resource that you can use to confirm various mathematical calculations. To get started, visit wolframalpha.com and type a query using natural language. <br>
+  For example: <b>derivative of cos(3x) at x equals pi/6 </b>. The following url gives the results: <br>
+  
+  <a href="https://www.wolframalpha.com/input?i=derivative+of+cos%283x%29+at+x+equals+pi%2F6" target="_blank"> https://www.wolframalpha.com/input?i=derivative+of+cos%283x%29+at+x+equals+pi%2F6</a>
+
+  <hr />
+ <b> September 27, 2024 | Quadratic Formula</b> <br>
+  Here is a possible solution to the Quadratic Equation task: <br>
+ 
+ <pre>
+ 
+ <code class="language-java">
+  import java.util.*;
+
+  public class Quadratic { 
+  
+    public static void main(String[] args) {
+      
+      //declare variables.
+    double a, b, c, discriminant, root1, root2;
+  
+    Scanner kb = new Scanner(System.in);
+  
+    System.out.println("Enter the degree 2 coefficient of a quadratic equation:");
+      a = kb.nextDouble();
+  
+    System.out.println("Enter the degree 1 coefficient of a quadratic equation:");
+      b = kb.nextDouble();
+  
+    System.out.println("Enter the degree 0 coefficient of a quadratic equation:");
+    c = kb.nextDouble();
+  
+    boolean openingup = (a > 0);
+      System.out.println("It is " + openingup + " to suggest that the parabola opens up.");
+    
+    //we are assuming that the quadratic equation has a solution. 
+      discriminant = b*b -4*a*c;
+      root1 = (-b + Math.sqrt(discriminant))/(2*a);
+      root2 = (-b - Math.sqrt(discriminant))/(2*a);
+  
+      System.out.println("The first root is: " + root1+".");
+  
+      System.out.println("The second root is: " + root2+".");
+  
+  
+    } //end main
+  }  //end class
+ </code>
+ </pre>
+
+  <hr />
+  
+  <b> September 22, 2024 | Weekly updates & Current grades  </b> <br>
+Hi everyone. I write to clarify a couple of things regarding grades and grading. <br>
+First, on myCushing under your progress tab you should be able to see your current grade for this course, which is a weighted average of the assessments we have written so far. While individual quiz scores will not be published on myCushing, the current grade will be updated approximately once week. <br>
+Second, when you read your weekly update, be sure to check the comments as well as the grade. Sometimes I add individual feedback based on recent performances or in-class observations. <br><br>
+As always, let me know if you have any questions.
+
+
+  <hr />
+  
+  <b> September 9, 2024  </b> <br>
+
+  AP registration instructions at this [ <a href="https://apcentral.collegeboard.org/pdf/joining-your-ap-class-section-students.pdf" target="_blank">link</a> ]. <br>
+  
+  For your course section, use join code: YD2VGJ <br>
+  
+  If you have any questions, contact Mr. Dan Monahan. <br>
+  
+
+  <hr>
+  <b> September 1, 2024 </b> <br><br>
+  Hi everyone. In this area of the course page we will post notes, solutions, reminders, and links to other resources throughout the year. Entries will be dated with the most recent posted at the top of the page.
+ 
+  <hr>
+  <b> May 6, 2024 | Video Review ~ 45 minutes </b> <br>
+  <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/_mClihsGtjY?si=UGgVaptbjRi-LNWD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+  <hr>
+  <b> May 3, 2024 | More FR</b> <br>
+  <a href="https://apcentral.collegeboard.org/media/pdf/ap22-frq-computer-science-a.pdf" target="_blank">Year 2023 FRQ </a> <br>
+  <a href="https://apcentral.collegeboard.org/media/pdf/ap22-sg-computer-science-a.pdf" target="_blank"> Year 2023 FRQ - Scoring Guidelines</a> <br>
+<br>
+
+  <a href="https://apcentral.collegeboard.org/media/pdf/ap22-frq-computer-science-a.pdf" target="_blank">Year 2022 FRQ </a> <br>
+<a href="https://apcentral.collegeboard.org/media/pdf/ap22-sg-computer-science-a.pdf" target="_blank"> Year 2022 FRQ - Scoring Guidelines</a> <br> <br>
+
+<a href="https://apcentral.collegeboard.org/media/pdf/ap21-frq-computer-science-a.pdf" target="_blank">Year 2021 FRQ </a> <br>
+<a href="https://apcentral.collegeboard.org/media/pdf/ap21-sg-computer-science-a.pdf" target="_blank"> Year 2021 FRQ - Scoring Guidelines</a> <br>
+
+
+
+  <hr>
+  <b> February 29, 2024 | AP Computer Science A - Java Subset </b> <br>
+ <a href="https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-computer-science-a-java-subset.pdf" target="_blank"> Link to College Board's Java subset</a> <br>
+
+
+
+  <hr />
+     <b> December 4, 2023 | About the final exam </b> <br>
+      We'll write the final exam in two parts: coded and handwritten. The focus should be on chapters 1 through 6.1 (up to arrays of objects). <br>
+      Below is a list of of some of the key concepts: <br>
+      number systems <br>
+      primitive data types <br>
+      the String class and its methods <br>
+      logic operators <br>
+      the Math Class, including random numbers <br>
+      the Scanner class <br>
+      if-else statements <br>
+      loops: for and while <br>
+      nested loops <br>
+      class design: fields, constructors, methods <br>
+      classes as fields of a class <br>
+      interfaces <br>
+      arrays of primitive data types <br>
+      arrays of objects (section 6.1) <br>
+      2d arrays (section 6.6)
+  
+  <hr>
+  <b> October 4, 2023 | Online IDE options </b> <br>
+ 
+  Below find a few online "ide" options. These are great when you are working on library computer, for example, that does not have editors installed. <br>
+  
+  <a href="https://www.jdoodle.com/online-java-compiler/" target="_blank"> JDoodle </a> <br>
+   
+    <a href="https://www.online-java.com/" target="_blank"> Online Java  </a> <br>
+    
+     <a href="https://replit.com/languages/java10" target="_blank"> replit</a> <br>
+     
+ <hr />
+ <b> October 2, 2023 | Hi-Lo Game </b> <br>
+  Here is a possible solution to the Guessing Game: <br>
+ 
+ <pre>
+ 
+ <code class="language-java">
+   import java.util.*;
+ 
+   public class GuessingGame
+   { 
+      public static void main(String args[]){
+     
+       Scanner kb = new Scanner(System.in); // a Scanner kb object is created 
+       Random ran = new Random();  //a Random ran object is created
+     
+       int target = ran.nextInt(100) + 1; //random integer from 1 to 100
+       int total_guesses = 0; //number of user guesses
+       int guess; //the user’s guess 
+     
+       System.out.println("I'm thinking of a number between 1 and 100. Guess.");
+       guess = kb.nextInt();
+       total_guesses++;
+       if(guess == target) {
+    
+       System.out.println("Nice job on the first try!");
+       } else { 
+       //supply the while statement below
+       while (guess != target) {
+     
+         total_guesses++;
+       
+         if(guess < target){
+       
+          System.out.println("Too low. Guess again.");
+          guess = kb.nextInt();
+          } else {
+          System.out.println("Too high. Guess again");
+          guess = kb.nextInt();
+          }
+     
+       } //end while
+       System.out.println("Congrats. You guessed correctly in " + total_guesses + " attempts");
+     
+     } //end else
+   
+     } //end main method
+   
+   }  //end class
+ </code>
+ </pre>
+ <hr />
+ 
+
+   
+ <b> September 4, 2023  </b> <br>
+ <font color="dodgerblue"> 
+ AP registration instructions at this [ <a href="https://apcentral.collegeboard.org/pdf/joining-your-ap-class-section-students.pdf" target="_blank">link</a> ]. <br>
+ 
+ For your course section, use join code: 3PVVMP <br>
+ 
+ If you have any questions, contact Mr. Monahan or Dr. Willis <br>
+ 
+ </font> 
+ 
+ <hr>
+ 
+ 
+ 
+ <hr>
+ <b> May 8, 2023 | AP Exam / Scores & Credit </b> <br>
+  <br>
+ In case you are curious, the free response questions from this year's exam at the following link: <a href="https://apcentral.collegeboard.org/media/pdf/ap23-frq-comp-sci-a.pdf" target="_blank"> AP CS A - FRQ 2023. </a> <br>
+ The scores will be accessible on the College Board in early July. If you are attending college in the fall and would like to transfer AP credits, you will need to provide your AP number to your university. If you need to research the AP Transfer policy for our course at specific undergraduate institutions, use the following <a href="https://apstudents.collegeboard.org/getting-credit-placement/search-policies" target="_blank"> link </a> <br>. <br>
+ 
+ Good luck! <br>
+ 
+ 
+ 
+ 
+ <b> February 28, 2023 | [Polygon.java]</b> <br>
+ Note that this is one possible solution out of many.
+ 
+ <pre>
+ <code class="language-java">
+   import java.util.*;
+ 
+   public class Polygon {
+ 
+   public static void main(String[] args) { 
+ 
+       Point p1 = new Point(-1,0);
+       Point p2 = new Point(1,0);
+       Point p3 = new Point(1,1);
+       Point p4 = new Point(1,2);
+       Point p5 = new Point(0, 2);
+       Point p6 = new Point(-1,1);
+     
+       Point[] data = {p1, p2, p3, p4, p5, p6};
+     
+       System.out.println(getArea(data, 6));
+   }
+    public static double getArea(Point[] d, int n) {
+  
+       if(n==3) {
+  
+          return triangle(d[0], d[1], d[2]);
+   } 
+            else {
+  
+         return triangle(d[0],d[n-2],d[n-1]) + getArea(d, n-1);
+  
+    }
+  
+    }
+ 
+       public static double triangle(Point p1, Point p2, Point p3) {
+         
+           return 0.5*Math.abs(p1.x*p2.y + p2.x*p3.y + p3.x*p1.y - p1.y*p2.x - p2.y*p3.x-p3.y*p1.x);
+         
+       }
+   }
+  
+ 
+ </code>
+ </pre>
+ 
+ <hr>
+ 
+ 
+ <hr>
+ <b> October 20, 2022 | [Prime.java]</b> <br>
+ Note that this is one possible solution out of many. For practice, feel free to approach this task using while loops, for example.
+ 
+ <pre>
+ <code class="language-java">
+    public static void main(String[] args) {
+ 
+    Scanner kb = new Scanner(System.in);
+       System.out.println("Please enter an integer range");
+       int range = kb.nextInt();
+       
+       //we declare a variable for the number of divisors
+       int num_divisors;
+       
+       //outer loop goes through all the candidates that need to be tested.
+       for(int i =2; i <= range; i++){
+       
+       //by default, all natural numbers greater than 1 have 2 divisors: 1 and the number itself.
+          num_divisors = 2;
+          
+          //the inner loop runs all the possible divisors. we start with 2.
+          for(int d = 2; d < i; d++) {
+             if(i%d == 0) {
+             num_divisors++;
+             }
+          
+          }//inner loop ends here
+       
+       //if there are exactly two divisors, a prime has been found.
+       if (num_divisors == 2) {
+          System.out.print("[ "+ i +" ] ");
+         } 
+       }//outer loop ends here
+          }
+ 
+  
+ 
+ </code>
+ </pre>
+ 
+ <hr>
+ <b> October 14, 2022 | "Maze" pattern (single loop solution) </b> <br>
+ <pre>
+   <code class="language-processing">
+     
+ size(400,400);
+ int gap = 10;
+ for(int i =0; i < 19; i++){
+ 
+   //top left to top right
+   line(gap + i*gap, gap+i*gap, 390-i*gap, gap+i*gap);
+ 
+     //top right to bottom right 
+   line(390-i*gap, gap+i*gap, 390-i*gap, 390-i*gap-gap);
+ 
+   //bottom right to bottom left
+   line(390-i*gap, 390-i*gap-gap,gap + i*gap+gap, 390-i*gap-gap);
+ 
+   //bottom left to top right
+   line(gap + i*gap+gap, 390-i*gap-gap,gap + i*gap+gap, gap+i*gap+gap);
+ 
+ }
+ 
+  </code> </pre>
+ 
+ <hr>
+ <b> October 13, 2022 | Monday </b> <br>
+ <pre>
+ <code class="language-java">
+ 
+     
+ import javax.swing.JFrame;
+ import java.awt.Color;
+ import java.awt.Dimension;
+ import java.awt.Graphics;
+ import javax.swing.JPanel;
+ 
+ /**
+  * Demonstrates the use of conditionals and loops to guide drawing.
+  *
+  * @author Lewis/Loftus/amit
+  *
+  */
+ public class Bullseye extends JPanel
+ {
+   private final int NUM_RINGS = 12, RING_WIDTH = 25;
+   private final int MAX_WIDTH = (NUM_RINGS + 1) * (RING_WIDTH  * 2);
+ 
+   /**
+    * Sets up the bullseye panel.
+    */
+   public Bullseye()
+   {
+     setBackground(Color.lightGray);
+     setPreferredSize(new Dimension(MAX_WIDTH, MAX_WIDTH));
+   }
+ 
+   /* (non-Javadoc)
+    * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
+    */
+   public void paintComponent(Graphics page)
+   {
+     super.paintComponent(page);
+     page.setColor(Color.lightGray);
+ 
+     int x = 0, y = 0, diameter = MAX_WIDTH;
+ 
+     for (int count = 0; count < NUM_RINGS; count++) {
+       if (page.getColor() == Color.black) // alternate colors
+         page.setColor(Color.lightGray);
+       else
+         page.setColor(Color.black);
+ 
+       page.fillOval(x, y, diameter, diameter);
+ 
+       diameter -= (2 * RING_WIDTH);
+       x += RING_WIDTH;
+       y += RING_WIDTH;
+     }
+ 
+     // Draw the red bullseye in the center
+     page.setColor(Color.red);
+     page.fillOval(x, y, diameter, diameter);
+   }
+ 
+   /**
+    * Creates the main frame of the program.
+    * @param args
+    */
+   public static void main(String[] args)
+   {
+     JFrame frame = new JFrame("Bullseye");
+     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     Bullseye panel = new Bullseye();
+     frame.getContentPane().add(panel);
+     frame.pack();
+     frame.setVisible(true);
+   }
+ }
+ 
+ </code>
+ </pre>
+ <br> <br>
+ 
+ 
+ 
+ <hr>
+ <b> October 10, 2022 | Monday </b> <br>
+ For today's class meeting please plan to work on the following. These are in-class and homework problems. Make a note of the ones that bother you and bring questions when I return to school. If you finish early, keep busy with schoolwork from other subjects. <br> 
+ 
+ At the end of CH3, solve projects 3.14, 3.15. <br> <br>
+ 
+ <hr>
+ <b> October 7, 2022 | Friday </b> <br>
+ For today's class meeting please plan to work on the following. These are in-class and homework problems. Make a note of the ones that bother you and bring questions when I return to school. If you finish early, keep busy with schoolwork from other subjects. <br>
+ At the end of CH3, solve projects 3.11, 3.12, and 3.13 . <br> <br>
+ 
+ <hr>
+ <b> October 6, 2022 | Thursday </b> <br>
+ For today's class meeting please plan to work on the following. These are in-class and homework problems. Make a note of the ones that bother you and bring questions when I return to school. If you finish early, keep busy with schoolwork from other subjects.  <br>
+ At the end of CH3, solve programming projects: 3.6 through 3.9 . <br> <br>
+ 
+ <hr>
+ <b> October 4, 2022 | Guessing Game </b> <br>
+ Below find a solution to the guessing game. We could allow for the possibility of a successful first guesss either before or after the while statement. In the approach below, it is done before the while statement.
+ 
+ <pre>
+   <code class="language-java">
+    import java.util.*;
+ 
+ public class GuessingGame {
+ 
+    public static void main(String args[]){
+     
+     Scanner kb = new Scanner(System.in); // a Scanner kb object is created 
+     Random ran = new Random();  //a Random ran object is created
+     
+     int target = ran.nextInt(100) + 1; //random integer from 1 to 100
+     int total_guesses = 0; //number of user guesses
+     int guess; //the user’s guess 
+     
+     System.out.println("I'm thinking of a number between 1 and 100. Guess.");
+     guess = kb.nextInt();
+     total_guesses++;
+     if(guess == target) {
+    
+     System.out.println("Nice job on the first try!");
+     } else { 
+     //supply the while statement below
+     while (guess != target) {
+     
+       total_guesses++;
+       
+       if(guess < target){
+       
+        System.out.println("Too low. Guess again.");
+        guess = kb.nextInt();
+        } else {
+        System.out.println("Too high. Guess again");
+        guess = kb.nextInt();
+        }
+     
+     } //end while
+     System.out.println("Congrats. You guessed correctly in " + total_guesses + " attempts");
+     
+   } //end else
+   
+   } //end main method
+   
+ }  //end class
+ 
+  </code>
+  </pre>
+ 
+ <hr>
+ <b> September 22, 2022 | Thoughts on Quiz on Strings </b> <br>
+ Some of the questions asked us to record the information, which means we need to retrieve and store in a special variable. See below.
+ 
+ <pre>
+   <code class="language-java">
+     a) int k = m.length();
+     b) String x = z.substring(0,4);
+     c) int l = z.indexOf("Jasmine");
+     d) System.out.println(z.toUpperCase());
+     e) char m = z.charAt(11);
+  </code>
+  </pre>
+ 
+ 
+ 
+ 
+ <hr>
+ <b> September 20, 2022 | Java Documentation </b> <br>
+  <a href="https://docs.oracle.com/en/java/javase/19/docs/api/index.html" target="_blank"> Oracle Website </a> <br>
+ 
+ <hr>
+ <b> September 17, 2022 | About grades and the myCushing gradebook </b> <br>
+   The current grade on myCushing is updated approximately once a week (usually by Sunday night) and it is a simple average of all the assessment scores you have earned to date in my class. The 'current_grade' assignment is not really an assignment but just a way to keep you informed about your present average. For example, as of Saturday, September 17, what you see on myCushing is current. <br>
+   
+   The gradebook does not have individual quiz/assessment scores as those are kept separately. As always, if you have questions or if you think your grade for some reason looks wrong, don't hesitate to reach out.
+ 
+ 
+ 
+ <hr>
+ 
+ <b> October 15, 2021  </b> <br>
+ 
+ <font color="dodgerblue"> 
+ The midterm marking period closes today.
+ </font>
+ 
+ 
+ 
+ <hr>
+ <b> September 19, 2021  </b> <br>
+ <font color="dodgerblue"> 
+ <b>Weekly Updates</b>: For those of you who are new to Cushing, this information may be helpful. Approximately once a week teachers post current grades on Monday night. Sometimes teachers will include concerns or noteworthy comments related to student performance. The weekly reports typically go live for students on Tuesday (sometimes Wednesday) morning. <br>
+  
+ For our class, the weekly update will reflect your current grade, including any graded week from the week before. Although I will try my best to include any quizzes you write on a Monday into the update, I can't promise that it will happen all the time. <br> In class I will try to find a minute or two to comment on grades and grading this coming week. <br> <br>
+  
+   
+ </font>
+ 
+ <hr>
+ 
+ -->
+ 
+ 
+ 
+ 
+ 
+ 
+
+<!-- end notes container-->
+</div>
+<hr>
+<!-- Second Container (Grid) -->
+  <div class="container-fluid text-left">
+    <h2 id="links">links</h2>
+     <a href="https://myap.collegeboard.org/login" target="_blank">ap classroom</a> <br>
+
+  </div>
+<hr>
+  <!-- Third Container (Grid) -->
+ <!-- <div class="container-fluid text-left">
+    <h2 id="info">expectations</h2>
+    <div w3-include-HTML="z-expectations.html"></div>
+  </div>
+-->
+
+
+<script>
+  w3.includeHTML();
+  </script>
+</body>
+</html>

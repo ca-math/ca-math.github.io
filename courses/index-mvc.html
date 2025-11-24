@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <!-- Project Page: Title -->
+ <script src="/incl/t.txt"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Calculus, AP Calculus, AP Calculus AB, AP Calculus BC, College Board, Free Response, Multiple Choice, Mathematics, Worksheets, Tutorials, Practice">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+ 
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>
+
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    </script>
+
+
+</head>
+<body>
+ 
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#about"></a>
+    </div>
+	
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">about</a></li>   
+        <li><a href="#notes">notes</a></li>
+    <li><a href="#links">links</a></li>   
+    <li><a href="#info">info</a></li>
+    <li><a href="#help">help</a></li>
+   
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- first container: about  -->
+<div class="container-fluid bg-4 text-left">
+  <h2 class="margin" id="about">about</h2>
+  <!-- <p align="center"><img src="img/site/ca.jpeg" class="img-responsive img-circle margin" style="display:inline" alt="ap-calc" width="200" height="207"> </p>
+  -->
+     <p> 
+  Multivariable Calculus extends differential and integral calculus concepts to functions in two or more variables. The topics include vectors, dot products, cross products, equations of lines and planes, surfaces, vector-valued functions, derivatives and integrals of vector-valued functions, space curves, partial and directional derivatives, extrema, double and triple integrals, etc. The curriculum may include concepts such as vector fields, line integrals, applications from the natural sciences or content from abstract mathematics topics.
+</p> </div>
+<!-- end of first container -->
+
+
+<!-- start notes container (Grid) -->
+<div class="container-fluid text-left">
+  <h2 id="notes">notes / updates</h2>
+  
+<hr>
+<b> November 3, 2025 | Plotting Vector-Valued Functions </b> <br>
+ 
+ <div class="compute">
+
+    <script type="text/x-sage">
+#define variables
+t,x,y,z = var('t x y z')
+
+#define the plot of the helix
+p1 = parametric_plot3d((cos(t), sin(t), t),(t,-5,5), color='red', thickness=3)
+
+#define the plot of the cylinder
+p2 = implicit_plot3d(x^2 + y^2 ==1, (x,-2, 2),(y,-2,2),(z,-5,5),color='blue')
+
+#plot cylinder and helix
+p1+p2
+
+
+</script></div>
+
+<hr>
+    
+  <hr>
+  <b> October 15, 2025 | Problem 57, Section 11.5 with SageMath </b> <br>
+  <pre>
+    <code class="language-python">
+      # Section 11.4 | Problem 57
+
+t = var('t')
+P = sphere((0,2,1), 0.2, color='red')
+Q = sphere((0,1,2), 0.2, color='purple')
+line1 = parametric_plot3d((2*t,1-t,2+t),(t,-3,3))
+
+v = vector([2,-1,1])
+u = vector([0,1,-1])
+proj = ((u.dot_product(v))/(norm(v)*norm(v)))*v
+norml = u - proj
+line2 = parametric_plot3d((0 +norml[0]*t,2+norml[1]*t,1+norml[2]*t),(t,-3,3))
+P + Q + line1 + line2
+    </code>
+  </pre>
+  <hr>
+  <b> September 25, 2024 | Some code for SageMath and Geogebra </b> <br>
+<pre>
+  <code class="language-python">
+  # SageMath start
+  # To declare Point objects
+  A=(1,2,3)
+  B=(1,-2,5)
+  C=(3,1,5)
+
+  # To draw a vector as a geometric shape
+  arrow(A,B)
+  # To draw more than 1 vector (triangle rule)
+  arrow(A,B) + arrow(B,C) + arrow (A,C)
+
+  # To form a vector from points
+  AB = vector(B[0]-A[0], B[1]-A[1], B[2]-A[2])
+  BC = vector(C[0]-B[0], C[1]-B[1], C[2]-B[2])
+
+# To print the vector:
+ AB 
+ print("BC: ", BC)
+
+ # To plot vectors
+ plot(AC, start=A) + plot(AB, start=A) + plot(BC, start=B)
+
+ # To check if two vectors are equal
+  
+ AB == BC
+   
+  # SageMath end
+
+   # Geogebra start (save the document if you want to keep your work)
+   #declare Point objects
+   A=Point({1,1,1})
+   B=Point({-1,2,3})
+   C=Point({2,2,-1})
+
+   # form vectors from points
+   AB = Vector(A,B)
+   BC = Vector(B,C)
+
+   # Geogebra end
+  </code>
+  </pre>
+
+  <hr>
+   <!-- 
+  <b> November 18, 2024 | Resource: WolframAlpha </b> <br>
+  WolframAlpha is a reliable resource that you can use to confirm various mathematical calculations. To get started, visit wolframalpha.com and type a query using natural language. <br>
+  For example: <b>derivative of cos(3x) at x equals pi/6 </b>. The following url gives the results: <br>
+  
+  <a href="https://www.wolframalpha.com/input?i=derivative+of+cos%283x%29+at+x+equals+pi%2F6" target="_blank"> https://www.wolframalpha.com/input?i=derivative+of+cos%283x%29+at+x+equals+pi%2F6</a>
+  
+  <hr>
+
+  <b> December 13, 2024 | About the final exam </b> <br>
+  
+  Exam date: Monday, December 16, 2024 | 1:00pm - 3:00pm. <Br>
+  Exam duration: A minimum of 90 minutes and a maximum of 120 minutes. <br> 
+  Exam location: TBD / JRCAC <br>
+  Review Session #1: In-person Sunday afternoon, 2:15 - 3:15pm JRCAC 110 or Math Office. Bring specific questions. <br>
+  Review Session #2: Zoom on Sunday night, 8:15 - 9:15 pm. Please bring specific questions. [ <a href="https://cushingacademy.zoom.us/j/6020744357" target="_blank">zoom link here. </a> ] <br>
+  
+  
+  <br>
+
+  <hr> 
+ <b> November 18, 2024 | Quiz notes.</b> <br>
+
+ P1. <br>
+\( \vec{r}(t) = < 0, 4 \cos t, 3 \sin t > \) <br><bR>
+P2. <br>
+The SageMath code for problem 2 is below. <br>
+
+ <pre>
+ 
+  <code class="language-python">
+
+t = var('t')
+
+# Problem 2 - part a
+r1 = vector((t, e^t,-t*e^t))
+r1.integrate(t,0,2)
+
+# Problem 2 - part b)
+
+f(t) = sqrt(t^2+t^4)
+f.integrate(t,0,3)
+
+</code>
+</pre>
+  <hr>
+  <b> November 15, 2024 | Quiz feedback  </b> <br>
+P1. <br>
+Write out the normal vector of the plane: \( \vec{n} = < \sqrt{3},1, 0 > \) <br>
+Write out the derivative of the given curve: \( \vec{r'(t)} = <-2\sin t, 2\cos t, e^t> \) <br>
+The derivative of the curve at some point has to be perpendicular to the normal vector to the plane in order for the tangent line to parallel, so we set the dot product equal to zero: <br>
+
+\( \vec{r'(t^*)} \cdot \vec{n} = 0 \rightarrow -2\sqrt{3}\sin t + 2\cos t = 0 \rightarrow \tan t = \frac{\sqrt{3}}{3} \rightarrow t=\frac{\pi}{6}  \) <br>
+The corresponding point is \( (\sqrt{3}, 1, e^{\pi/6}) \)
+<br><br>
+P2.<br>
+To parametrize the intersection, set \( x(t) = t \). From the first surface we get \( y=\sqrt{25-t^2}\). <br>
+From the second surface we get: \( z = \sqrt{20-(25-t^2)} = \sqrt{t^2-5}\) <br>
+Therefore, a parametric equation of the intersection between the surfaces is \( \vec{r(t)} = < t,\sqrt{25-t^2} , \sqrt{t^2-5}>\)
+At the given point, we know that \( x = t = 3 \), so we find the direction vector of the tangent line by evaluating: <br>
+\( \vec{r'(t)} = < 1, \frac{-t}{\sqrt{25-t^2}},\frac{t}{\sqrt{t^2-5}} > \) at \( t = 3\). <br>
+The direction vector is \( \vec{r'(3)} = < 1, \frac{-3}{4}, \frac{3}{2} >\) or we can also use its multiple: \( <4, -3, 6> \) <br>
+The vector equation of the tangent line is: \( <3,4,2> + t*<4,-3,6>\). <br>
+Feel free to plot in SageMath, by the way, the original curve and the tangent line. You could even include the original surfaces. <br><br>
+
+P3.<br>
+a) The curve is an ellipse on the yz plane, centered at the origin and with equation: \( \frac{y^2}{4} + \frac{z^2}{9} = 1\). The major axis is 6 and the minor axis is 4 units. <br>
+b) Find \( | \vec{r'}(t) | = \sqrt{4\sin^2t+9\cos^2t} \). The least value occurs when cosine is zero, which means sine is 1 or -1, therefore the minimum is 2. <br>
+The largest value occurs when sine is 0, which means cosine is 1 or -1, so the largest value is 3. <br>
+Similar reasoning for the length of the second derivative leads to the same conclusion: the minimum value is 2 and the maximum is 3. <br>
+<hr>
+<b> October 24, 2024 | Notes on Problem 48 | Section 11.7  </b> <br>
+If we let \( u = x^2, v = y^2 \), we get: \( 2u + 2v + (u+v)^2 = 3 \). <br>
+Rewrite as: \( (u + v )^2 + 2 (u+v) + 1 = 4  \) <br>
+Rewrite as: \( (u+v+1)^2 = 4 \), which is the same as \( u + v = 1\) or \( x^2 + y^2 = 1\). <br>
+Hence the shape is a circle.
+
+<hr>
+<b> October 3, 2024 | Cross Product with the TI-NSPIRE </b> <br>
+<a href="https://education.ti.com/en/customer-support/knowledge-base/ti-nspire-family/product-usage/32931" target="_blank"> tutorial here </a> <br>
+
+<hr>
+<b> September 30, 2024 | Problem 47 in Section 11.3 </b> <br>
+Hi all, desmos partially agrees with the author's answer to problem 47. The angle itself is the same as the author's (around 40 degrees) but the x-coordinate where this angle occurs is different. <br>
+<center><iframe src="https://www.desmos.com/calculator/db4fv0p6tr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+  <hr>
+  <b> September 27, 2024 | Quiz Notes </b> <br>
+  Below find some quiz notes. Graded work will be returned in class. If there are mistakes or typos below, feel free to email me. <br>
+  
+    
+  
+  P1 <br>
+  Let the points be: A(1, 2), B(3,1), and C(8,4). Form three vectors: <br>
+  \( \vec{AB} = < 2, -1 >, \vec{BC} = < 5, 3 >, \vec{AC} = < 7, 2> \) <br>
+  Find the three possibilities by adding any vector to the point that wasn't used to form that vector. For example, to the vector \( \vec{OC} \) we add the vector \( \vec{AB} \).
+  
+  The missing points are: (10, 3), (-4, -1), and (6, 5), as shown below: <br>
+  
+  <center> <img src="img/parallelograms.png" width="500" height"400"> </center>
+  
+  P2 <br>
+  
+  There were no issues with problem 2, except be sure to use vectors: <br>
+
+  If the points of trisection are M and N and the vector connecting the two given points is \( \vec{AB} = < 6, 3 > \), then: <br>
+
+  \( \vec{OM} = \vec{OA} + \frac{1}{3}\vec{AB} = <3, 3 > \) <br>
+
+Similarly:
+
+\( \vec{ON} = \vec{OA} + \frac{2}{3}\vec{AB} = <5, 4 > \) <br>
+
+Therefore the points are: (3,3) and (5,4). <br>
+<hr>
+<b> September 23, 2024 | Quiz Notes </b> <br>
+Below find some quiz notes. Graded work will be returned in class. If there are mistakes or typos below, feel free to email me. <br>
+
+P1 <br>
+Form three vectors using the points: A(4, -2, 7), B(-2,0,3), C(7, -3, 9). <br>
+
+\( \vec{AB} = < -6, 2, -4 >,  \vec{AC} = < 3, -1, 2 >, \vec{BC} = < 9, -3, 6 > \) <br>
+
+Note that \( \vec{AB} = -2* \vec{AC} \text{ and } \vec{BC} = (-3/2)* \vec{AB} \) <br>
+
+The three vectors are therefore multiples of each other, so the points are collinear.  <Br>
+
+<b>Note that the problem asked us to use vectors. </b> <br> <br>
+	
+P2<br>
+A(2, 9, 1), B(3,11,4), C(0, 10, 12), D(1, 12, 5) <Br>
+	
+Same idea here, except the four resulting vectors should be two equal pairs: <br>
+\( \vec{AB} = < 1, 2, 3 > = \vec{CD} \text{ and } \vec{AC} = < -2, 1, 1 > = \vec{BD}  \)  <br>
+<b>Note that the problem asked us to use vectors.</b> <br>
+
+Here is the SageMath code: <Br>
+  <pre>
+ 
+    <code class="language-python">
+      #Problem 2
+      A=(2,9,1)
+      B=(3,11,4)
+      C=(0,10,2)
+      D=(1,12,5)
+      
+      #form vectors
+      AB = vector([B[0]-A[0],B[1]-A[1],B[2]-A[2]])
+      BC = vector([C[0]-B[0],C[1]-B[1],C[2]-B[2]])
+      CD = vector([D[0]-C[0],D[1]-C[1],D[2]-C[2]])
+      AD = vector([D[0]-A[0],D[1]-A[1],D[2]-A[2]])
+      AC = vector([C[0]-A[0],C[1]-A[1],C[2]-A[2]])
+      BD = vector([D[0]-B[0],D[1]-B[1],D[2]-B[2]])
+      print("AB:", AB)
+      print("BC:", BC)
+      print("CD:", CD)
+      print("AD:", AD)
+      print("AC:", AC)
+      print("BD:", BD)
+      
+      
+      plot(AC, start=A) + plot(CD, start=C) + plot(-BD, start=D) + plot(-AB, start=B)
+    </code>
+    </pre>
+
+
+
+P3 <Br>
+
+\( t\vec{v}  \) consists of all points on the line in the direction of vector  \( \vec{v} \), passing through the origin. <br>
+
+\( \vec{u} + t\vec{v} \) describes all points on the lines that passes through the tip of \( \vec{u} \) in the direction of \( \vec{v} \). Here we assume that vector \( \vec{u} \) starts at the origin. <Br> 
+	
+\( s\vec{u} + t\vec{v} \) describes all points on the plane as long as \( \vec{u}, \vec{v} \) are not parallel to each other. If they are parallel, the resulting set is the line passing through the origin in the direction of either vector.
+
+
+  <hr />
+  
+  <b> September 22, 2024 | Weekly updates & Current grades  </b> <br>
+Hi everyone. I write to clarify a couple of things regarding grades and grading. <br>
+First, on myCushing under your progress tab you should be able to see your current grade for this course, which is a weighted average of the assessments we have written so far. While individual quiz scores will not be published on myCushing, the current grade will be updated approximately once week. <br>
+Second, when you read your weekly update, be sure to check the comments as well as the grade. Sometimes I add individual feedback based on recent performances or in-class observations. <br><br>
+As always, let me know if you have any questions.
+
+  <hr>
+  <b> September 10, 2024 </b> <br>
+  If you haven't yet, be sure to install a recent version of Geogebra:  https://www.geogebra.org/download <br>
+
+  <hr>
+  <b> September 1, 2024 </b> <br><br>
+  Hi everyone. In this area of the course page we will post notes, solutions, reminders, and links to other resources throughout the year. Entries will be dated with the most recent posted at the top of the page.
+
+
+
+ 
+  <hr>
+  <b> May 13, 2024 | Notes on 1-problem quiz </b> <br>
+Question:  Find \(a \) such that the volume inside the hemisphere \( z=\sqrt{16-x^2-y^2}\) and outside the cylinder \( x^2 + y^2 = a^2 \) is one-half the volume of the hemisphere. <br><br>
+
+Draw the region between the cocentric circles with radii \(a \) and 4, for \( 0 < a < 4\). <br>
+The integral becomes: \( \int_0^{2\pi} \int_a^4 \sqrt{(16-r^2)} r dr d\theta = \frac{1}{2} \frac{1}{2} \frac{4\pi 4^3}{3} = \frac{64\pi}{3} \) <br>
+\( \int_0^{2\pi} \int_a^4 \sqrt{(16-r^2)} r dr d\theta = \frac{-1}{2} \int_0^{2\pi} \int_a^4 \sqrt{(16-r^2)} (-2r) dr d\theta = ... = \int_0^{2\pi}\frac{1}{3} (16-a^2)^{3/2} d\theta =\frac{2\pi}{3} (16-a^2)^{3/2}   \)
+<br>
+
+\(\frac{2\pi}{3} (16-a^2)^{3/2} = \frac{64\pi}{3} \rightarrow (16-a^2)^{3/2} = 32 \rightarrow 16-a^2 = 32^{2/3} \rightarrow a^2 = 16 - 8\sqrt[3]{2} \rightarrow a = \sqrt{16 - 8\sqrt[3]{2}}= 2 \sqrt{4 - 2\sqrt[3]{2}} \)
+<hr>
+  <b> April 30, 2024 | Notes on improper double integral </b> <br>
+The original form of the integral is improper because the upper bound goes to infinity but also because the integrand is not continuous at the lower bound (x=0). <br> 
+Therefore, if we approach this as a single-variable problem, we need to break up the integral into two adjacent integrals and investigate each separately:  <br>
+
+\( \int_0^{\infty}\frac{e^{-x} - e^{-2x}}{x} dx = \int_0^1 f(x) dx + \int_1^{\infty} f(x) dx  \) <br>  <Br>
+  If we use the author's hint: <br>
+  \( \int_0^t \int_1^2 e^{-xy} dy dx = \int_1^2 \int_0^t e^{-xy} dx dy = ... = \int_1^2 \frac{-e^{-ty}}{y} +\frac{1}{y} dy = \) <br>
+  \( = \ln 2 - \int_1^2 \frac{e^{-ty}}{y} dy\) <br>
+  The integral expression converges to 0 by the ratio test. We can numerically approximate for large values of t. <br>
+  <hr>
+  <b> April 22, 2024 | Notes on problem 43 (14.1) </b> <br>
+  The function is not continuous at (0,0) so the results below are not surprising. Fubini's Theorem does not apply here due to the discontinuity. 
+  Because of the behavior of the integrand especially near the bottom left corner, our numerical approximations using Java also should not be surprising, even if we start slightly away from (0, 0).
+  The integrand, for example, approaches negative infinity as we approach the origin along the x-axis. Some code: <br>
+
+  <pre>
+    <code class=""language-python">
+      x, y = var('x y')
+      #try this:
+      plot3d((y-x)/(x+y)^3,(x,0.5,1),(y,0.5,1))
+      #then this
+      plot3d((y-x)/(x+y)^3,(x,0.25,1),(y,0.25,1))
+      #then this
+      plot3d((y-x)/(x+y)^3,(x,0.05,1),(y,0.05,1))
+      
+    </code>
+  </pre>
+
+  <pre>
+    <code class="language-python">
+      x, y = var('x, y')
+      f(x,y) = (y-x)/(x+y)^3
+      assume(x>0)
+      assume(y>0)
+      dxdy =f.integrate(x,0,1).integrate(y,0,1)
+      dydx =f.integrate(y,0,1).integrate(x,0,1)
+      print("The integral with respect to x, then y: ", dxdy,".")
+      print("The integral with respect to y, then x: ", dydx,".")
+      </code>
+      </pre>
+  
+  <hr>
+  <b> April 16, 2024 | Notes on today's quiz </b> <br>
+P1. <br>
+Set this up as a two-constraint problem. Be sure to label the equations: <br>
+\( (0) f(x,y,z) = z\)  (the objective function) <br>
+\( (4) g(x,y,z) = x^2+y^2-z^2 = 0 \) (the cone constraint) <br>
+\( (5) h(x,y,z) = x+2z = 4 \) (the plane constraint) <br><br>
+
+The multipliers conditions: <br>
+\( (1) 0 = \lambda (2x) + \mu * 1 \)  <br>
+\( (2) 0 = \lambda (2y) + \mu * 0 \) <br>
+\( (3) 1 = \lambda (-2z) +\mu * 2 \) <br><br>
+ 
+From equation (2), since the multipliers are non-zero, it follows that \( y = 0 \). <br>
+Plugging this into equation (4), we get \(  x^2 = z^2 \rightarrow x = \pm z \) <br>
+Case 1: \( x = -z \) <br>
+\( (5) x+ 2z = 4  \rightarrow z = 4 \rightarrow (-4, 0, 4) \) <br>
+
+Case 2: \( x = z \) <br>
+\( (5) x+2z= 4 \rightarrow z=\frac{4}{3} \rightarrow (4/3, 0, 4/3) \) <br>
+The highest point on the curve of intersection between the two surfaces is (-4,0,4). <br><br>
+P2. <br>
+Follow a similar approach here.
+Sphere: \( x^2 + y^2 +z^2 = 36 \) <br>
+Plane: \( 2x + y - z = 2 \) <br><br>
+  <hr>
+  <b> February 13, 2024 | Notes on today's quiz </b> <br>
+P1. <br>
+a) <br>
+\( F(x,y,z) = e^z-xyz=0 \rightarrow \frac{\partial z}{\partial x} = -\frac{F_x}{F_z} = \frac{yz}{xy-e^z}, \frac{\partial z}{\partial y} = -\frac{F_y}{F_z} = \frac{xz}{xy-e^z} \)
+<br>
+b) <br>
+\( F(x,y,z) = yz-x\ln y - z^2=0 \rightarrow \frac{\partial z}{\partial x} = -\frac{F_x}{F_z} = \frac{\ln y}{2z-y}, \frac{\partial z}{\partial y} = -\frac{F_y}{F_z} = \frac{x+yz}{2zy-y^2} \)
+<br> <br>
+P2.<br>
+-draw tree <br>
+-set up volume: \( V = \frac{1}{3} \pi r^2 h \) <br>
+-set up the Chain Rule\( \frac{dV}{dt} = \frac{dV}{dr} \frac{dr}{dt} + \frac{dV}{dh} \frac{dh}{dt}  \) <br>
+-evaluate the two missing rates: \( dV/dr=11200\pi, dr/dt=1.8, dV/dh =4800\pi, dh/dt=-5/2 \) <br>
+-\( dV/dt = 189600\pi \text{ cubic inches per second} \) (include the correct units.) <br>
+<br>
+P3. <br>
+-draw tree, then use formula: <br> 
+\( A = \frac{1}{2} x^2\sin\theta\) <br>
+\( \frac{\partial A}{\partial t} = \frac{\partial A}{\partial x} \frac{dx}{dt} + \frac{\partial A}{\partial \theta} \frac{d\theta}{dt} \) <br>
+\( \frac{\partial A}{\partial t} = \frac{\sqrt{2}(15+\pi)}{10} \text{square meters/hour} \) (include the correct units.) <br>
+
+  <hr>
+  <b> December 7, 2023 | About the final exam </b> <br>
+
+
+Exam date: Monday, December 11, 2023 | 1:00pm - 3:00pm. <Br>
+  Exam duration: A minimum of 90 minutes and a maximum of 120 minutes. <br> 
+  Exam location: JRCAC 110 <br>
+  Review Session #1: Face-to-face Sunday afternoon, 2:30 - 3:30 pm. Please bring specific questions. <br>
+  Review Session #2: Zoom on Sunday night, 8:15 - 9:15 pm. Please bring specific questions. [ <a href="https://cushingacademy.zoom.us/j/294640299?pwd=UVIxdXhlZ0t4UU9OTWx3ZTFFaXBwUT09" target="_blank">zoom link here. </a> ] <br>
+  
+  <br>
+  
+  Our final exam will be comprehensive and worth 20% of the fall semester grade. Your pre-exam grade therefore will carry a weight of 80%. The precise exam format is unknown at this time but will likely contain problems that involve multiple problem-solving steps, similar to the quiz questions. The exam may also include multiple choice and true/false/justify questions to test our conceptual understanding.
+  The best way to review is by going over previous homeworks and quizzes (on the course portal reset the assignment filter to a specific date range).
+  <br>
+<br>
+The list of topics below is general and not meant to include every single idea we discussed in class:<br>
+-the three-dimensional space <br>
+-points, distance formula, spheres <br>
+-lines and their equations<br>
+-planes and their equations <br>
+-quadric surfaces <br>
+-cylindrical and spherical coordinates <br>
+-the dot product <br>
+-projections <br>
+-the cross product <br>
+-vector-valued functions<Br>
+-calculus of vector-valued functions <br>
+-arclength <br>
+-arclength parametrization <br>
+-TNB
+-curvature
+ <br><br>
+
+
+
+<hr>
+<b> November 9, 2023 | Notes on Recent Quiz </b> <br>
+
+P1 <br>
+a) <br>
+The curve is an ellipse centered at the origin and the equation is: <br>
+\( \frac{y^2}{4} + \frac{z^2}{9} = 1 \) <br>
+The major (z-direction) and minor (x-direction) axes are 9 and 4, respectively. <br>
+b) <br>
+  \( \vec{r'(t)} = <-2 \sin(t), 3 \cos(t)> , \vec{r''(t)} = <-2 \cos(t), -3 \sin(t)> \) <br>
+  \( |\vec{r'(t)}| = \sqrt{4 + 5\cos^2 t} \), so the minimum and maximum are 2 and 3. Those occur when cosine is 0 and 1, respectively. <br>
+  \( |\vec{r''(t)}| = \sqrt{4 + 5\sin^2 t} \), so the minimum and maximum are 2 and 3. Those occur when sine is 0 and 1, respectively. <br>
+P2 <br>
+a)  Use integration by parts twice. This was the messiest of the three. <br>
+Final answer: \( < \frac{-(\cos(t)+\sin(t))}{2 e^t},\frac{\sin(t)-\cos(t)}{2 e^t}> + \vec{C} \) <br>
+b) Final answer: \( < \sqrt{2}-1, \frac{\ln 2}{2}, \frac{1}{2} > \) <br>
+c) Final answer: \( < e^{2t} \frac{2t-1}{4}, -t -\ln(1-t), \arcsin t > + \vec{C} \) <br><br>
+<hr>
+<b> November 7, 2023 | Notes on Recent Quiz </b> <br>
+
+P1 <br>
+In problem 1, find the derivative of the vector-valued function: <br>
+\( \vec{r'(t)} = < -2\sin t, 2\cos t, e^t > \) <br />
+Read the normal vector to the plane: \( \vec{n} = < \sqrt{3}, 1, 0 > \) <br> 
+Set the dot product of the two vector expressions above equal to zero, to find: <br>
+\( \tan t = \frac{\sqrt{3}}{3} \rightarrow t = \frac{\pi}{6} \) <br>
+
+The wanted point is \( (\sqrt{3}, 1, e^{\pi/6}) \) <br><br>
+
+P2 <br>
+To parametrize the intersection, we can simply set \( x=t \) or look for an option that uses trigonometric functions. <br>
+with the first option, we get: \( \vec{r(t)} = < t, \sqrt{25-t^2}, \sqrt{t^2-5} > \) <br>
+Find the derivative and then evaluate at t=3, to get: \( \vec{r'(3)} = < 1, -3/4, 3/2 > \) <br>
+
+The vector equation of the tangent line is: \( < x, y, z > = < 3+t, 4-3t/4, 2+3t/2 > \) <br> <br>
+
+Alternatively, for a trig parametrization, we start with the second equation and set: <br>
+\( y=\sqrt{20} \cos t, z=\sqrt{20}\sin t \), the first component becomes: \( x=\sqrt{25-20\cos^2t} \) <br>
+Finding the specific t value isn't necessary with this approach, because with the coordinates (3,4,2), we get: \( \cos t = \frac{2}{\sqrt{5}}, \sin t=\frac{1}{\sqrt{5}} \), <br>
+which can be plugged into the derivative's components directly, without using the inverse. <br>
+\( x'(t^{*}) = 8/3, y'(t^{*})=-2, x'(t^{*})=4  \) <br>
+Note the this direction vector is a multiple of the one we found with the first approach.
+
+-->
+
+<!-- 
+The SAGE code is below. Feel free to adjust the viewing window.
+
+<pre>
+<code class="language-python">
+t = var('t')
+
+r(t)=vector((sqrt(25-20*(cos(t))^2),sqrt(20)*cos(t),sqrt(20)*sin(t)))
+r2(t) = vector((3+8*t/3,4-2*t,2+4*t))
+p1=parametric_plot3d(r2(t),(t,0,5))
+p1 += parametric_plot3d(r(t),(t,0,5))
+p1
+</code>
+</pre>
+<br> <br>
+
+-->
+
+<!-- 
+<hr>
+<b> October 27, 2023 | Quiz Notes </b> <br>
+Below find some quiz notes. Graded work will be returned in class. If there are mistakes or typos below, feel free to email me. <br>
+
+P1 <br>
+Let point P have coordinates \( (x, y, z)  \). Translating the condition about distance into an equation, we get: <br />
+
+\( |y-1| = 2 \sqrt{x^2+(y+1)^2 + z^2} \) <br />
+Square both sides, to get: <br>
+\( y^2-2y + 1 = 4x^2 + 4z^2 + 4y^2+8y+4 \)  <br />
+\( 4x^2 + 3y^2 + 10y + 4z^2 = -3 \) <br />
+Complete the square for all three variables:  <br /> 
+\( 4x^2 + 3(y^2 + 2*5y/3 + 25/9) + 4z^2 = -3 + 3*25/9 = 16/3 \) <br />
+\( \frac{x^2}{4/3} + \frac{(y+5/3)^2}{16/9} + \frac{z^2}{4/3} = 1 \) <br />
+
+The points P describe an ellipsoid centered at (0, -5/3, 0). <br /> <br />
+
+<center>
+<iframe src="https://www.desmos.com/3d/52016ca887?embed" width="600" height="600" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
+
+
+P2 <br>
+Surface 1: \( x^2 + 2y^2-z^2 + 3x = 1 \) <br>
+Surface 2: \( 2x^2 + 4y^2-2z^2 - 5y = 0 \) <br>
+
+The intersection of the two surfaces consists of points (x, y, z) that satisfy both equations. <br>
+Note that if we multiply the first equation by 2 and subtract side by side, we get: \( 6x + 5y = 2 \). <br/>
+This means that the intersection of the two surfaces, no matter what it looks like, must consist of points that belong to a plane. <br> <br>
+
+
+
+<hr>
+
+<b> September 6, 2023  | SageMath Installation </b> <br>
+<font color="dodgerblue"> 
+SageMath for Mac OS: <br>
+https://github.com/3-manifolds/Sage_macOS/releases<br>
+SageMath for Windows: <br>
+https://github.com/sagemath/sage-windows/releases <br>
+SageMathCell: <br>
+https://sagecell.sagemath.org/
+
+</font> 
+
+<hr>
+-->
+
+<!-- end notes container-->
+</div>
+<hr>
+<!-- Second Container (Grid) -->
+  <div class="container-fluid text-left">
+    <h2 id="links">links</h2>
+    <!-- 
+    <a href="https://www.sagemath.org/" target="_blank">sagemath</a> <br>
+    <a href="https://sagecell.sagemath.org/" target="_blank"> sagecell</a> <br>
+  -->
+  </div>
+<hr>
+  <!-- Third Container (Grid) -->
+  <!-- <div class="container-fluid text-left">
+    <h2 id="info">expectations</h2>
+    <div w3-include-HTML="z-expectations.html"></div>
+  </div>
+-->
+
+
+  <script>
+    w3.includeHTML();
+    </script>
+</body>
+</html>

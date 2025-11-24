@@ -1,0 +1,526 @@
+<hr>
+<b> November 28, 2021 | About the final exam.  </b> <br>
+<font color="dodgerblue">  <br>
+Hi everyone. I hope you all had a good break. Believe it or not, there are only two weeks of classes before the semester concludes with final exams. For our class, the exam will be comprehensive and will carry a weight of 20%. The rest of the grade (assessments/quizzes) will carry a weight of 80%. As discussed at our very first meeting, there is no final exam in the spring for this class, because the AP Exam is required for all students. Let me know if you have any questions. <br> 
+</font>
+
+
+
+<hr>
+<b> November 19, 2021  </b> <br>
+<!-- quiz 24-->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+\text{Use Radian measure. Show work.}\\
+\text{a)}\\ 
+L(x) = (\sqrt{2}/2)-(\sqrt{2}/2) (x-\pi/4)\\
+L(46\pi/180)=...\\
+\text{b)}\\ 
+L(x) = 0-(1) (x-\pi)\\
+L(29\pi/180)=...\\
+\text{c)}\\ 
+L(x) = (\sqrt{3})-4 (x-\pi/6)\\
+L(29\pi/180)=...\\
+\\
+\text{Problem 2}\\
+\text{These are the answers. Be sure to simplify.}\\
+\text{a)} f'(1)=2 \\
+\text{b)} b=e^2\\
+\text{c)} c=7\\ 
+\text{d)}f'(1)=0\\
+\\
+\text{Problem 3}\\
+\text{Neat drawing with variables shown.}\\
+\text{ Equation: } \theta = \arctan{(x/5)}\\
+\text{Use } dx/d\theta = 60\pi rad/min \\
+\text{ and implicit differentiation to find }\\
+dx/dt=6000\pi ft/min\\
+\text{For full credit, include a sentence with units.}\\
+\)
+
+</font>
+
+
+
+<hr>
+<b> November 16, 2021  </b> <br>
+<!-- quiz 23-->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+y=\sin^{-1}(x/2)\\
+\text{Point: }(0,0)\\
+dy/dx = \frac{1}{2}\frac{1}{\sqrt{1-(x/2)^2}}\\
+\text{slope=}1/2\\
+\text{Equation: } y=x/2\\
+\\ 
+\\
+\text{Problem 2}\\
+y=\frac{x(x^{1/3}+1)^2}{\sqrt{x+1}}\\
+\text{Point: (8,24)}\\
+\text{Take the log of both sides:}\ln(y) = \ln(x) + 2\ln(x^{1/3}+1)-(1/2)\ln(x+1)\\
+\text{Implicitly differentiate, then plug in (8,24), to find slope:} 3\\
+\text{Equation: }y=3x\\
+\\ 
+\\
+\)
+
+</font>
+
+
+<hr>
+<b> November 15, 2021  </b> <br>
+<!-- quiz 22-->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+\text{No issues.}
+\\ 
+\\
+\text{Problem 2}\\
+\text{Start with neat drawing that includes variables.}\\
+\text{Key Equation: }\frac{x}{6}=\tan\theta\\
+\text{Show work.}\\
+dx/dt = 24pi/5 km/s\\
+\text{Include a sentence with units.}\\
+\\ 
+\\
+
+
+\)
+
+</font>
+
+
+<hr>
+<b> November 9, 2021  </b> <br>
+<!-- quiz 21 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+\text{Start with neat drawing.}\\
+\text{x = length of shadow on the wall}\\
+\text{y = distance from the person to the light source.}\\
+\frac{y}{2} =\frac{12}{x}\rightarrow x y = 24\\
+dx/dt*y+dy/dt*x=0\\
+6*dx/dt+1.6*4 = 0\rightarrow dx/dt = -0.600 m/s\\
+\text{Include a sentence with units.}\\
+\\ 
+\\
+\text{Problem 2}\\
+\text{Start with neat drawing.}\\
+\text{x = distance the man travels}\\
+\text{y = distance the woman travels}\\
+(x+y)^2 + 500^2 = z^2\\
+x=4800, y=4500,z=?\\
+2 (x+y)(dx/dt+dy/dt) = 2*z*dz/dt\\
+\text{Plug in x, y, z, dx/dt, dy/dt. z is not a nice number so it's ok if not simplified.}\\
+\text{Include a sentence with units.}\\
+\\ 
+\\
+
+
+\)
+
+</font>
+
+
+
+<hr>
+<b> November 7, 2021  </b> <br>
+<!-- quiz 20 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+\text{Make a neat drawing of a bigger cone (paper cup) and the smaller cone (water).}\\
+\text{Label h and r as height and radius for the smaller cone. }\\
+\text{Set up the equation: } V = (1/3) \pi r^2h \\
+\text{Use the ratio of triangles, like we did in class(!), to find: }\\
+r/h = 3/10\rightarrow r=3h/10\\ 
+\text{Rewrite the volume equation: } V = \frac{3\pi h^3}{100}\\
+\text{Differentiate: } dV/dt = (9\pi/100)*h^2*dh/dt\\
+\text{Find: } dh/dt = 8/(9\pi) cm/s\\
+\text{Conclusion: When the water is 5 cm deep, the water level is rising at a rate of 8/(9pi) cm/s}\\
+\\
+\\
+\text{Problem 2}\\
+\text{Draw a circle or radius 10, and an xy-coordinate}\\
+\text{system with the origin at the center of the circle.}\\
+\text{The line y=-10 represents the ground level.}\\
+\text{Draw a radius that connects the origin to the point (8, 6)}\\
+\text{Note: total elevation is 10 + 6 = 16m}\\
+\text{Label the angle this radius forms with the positive side of the x-axis as } \theta\\
+\text{Equation: } \sin\theta = y/10 \rightarrow y=10\sin\theta\\
+dy/dt = 10\cos\theta d\theta/dt\\
+\text{Plug in: } \cos\theta = 8/10, d\theta/dt=\pi rad/min \text{ to find:}\\
+dy/dt = 8\pi m/min\\
+\text{When the rider is 16 m above ground level, he is rising at a rate of } 8\pi m/min\\
+\)
+
+</font>
+
+
+
+
+<hr>
+
+<b> Nov 4, 2021  </b> <br>
+<!-- quiz 19 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+2 x y ( x dy/dx + y) + (x dy/dx + y) = 0 \\
+\text{ Plug in dy/dx = -1 to get}\\
+(2xy + 1)(y-x) = 0 \\
+y=x\text{ leads to (1,1) and (-1,-1)}\\
+2xy = -1 \text{ is impossible. Be sure to show work.}\\
+\\
+\text{Problem 2}\\
+\text{Fully differentiate and use dx/dt = dy/dt to get:}\\
+dx/dt (32x+18y) = 0 \rightarrow x = -9y/16\\
+\text{Plugging this condition into the ellipse's equation, we find two points}\\
+(-9/5, 16/5)\text{ and } (9/5, -16/5)\\\)
+
+</font>
+
+
+<hr>
+
+<b> November 7, 2021  </b> <br>
+<!-- quiz 20 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+\text{Make a neat drawing of a bigger cone (paper cup) and the smaller cone (water).}\\
+\text{Label h and r as height and radius for the smaller cone. }\\
+\text{Set up the equation: } V = (1/3) \pi r^2h \\
+\text{Use the ratio of triangles, like we did in class(!), to find: }\\
+r/h = 3/10\rightarrow r=3h/10\\ 
+\text{Rewrite the volume equation: } V = \frac{3\pi h^3}{100}\\
+\text{Differentiate: } dV/dt = (9\pi/100)*h^2*dh/dt\\
+\text{Find: } dh/dt = 8/(9\pi) cm/s\\
+\text{Conclusion: When the water is 5 cm deep, the water level is rising at a rate of 8/(9pi) cm/s}\\
+\\
+\\
+\text{Problem 2}\\
+\text{Draw a circle or radius 10, and an xy-coordinate}\\
+\text{system with the origin at the center of the circle.}\\
+\text{The line y=-10 represents the ground level.}\\
+\text{Draw a radius that connects the origin to the point (8, 6)}\\
+\text{Note: total elevation is 10 + 6 = 16m}\\
+\text{Label the angle this radius forms with the positive side of the x-axis as } \theta\\
+\text{Equation: } \sin\theta = y/10 \rightarrow y=10\sin\theta\\
+dy/dt = 10\cos\theta d\theta/dt\\
+\text{Plug in: } \cos\theta = 8/10, d\theta/dt=\pi rad/min \text{ to find:}\\
+dy/dt = 8\pi m/min\\
+\text{When the rider is 16 m above ground level, he is rising at a rate of } 8\pi m/min\\
+\)
+
+</font>
+
+
+
+
+<hr>
+
+<b> Nov 4, 2021  </b> <br>
+<!-- quiz 19 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+2 x y ( x dy/dx + y) + (x dy/dx + y) = 0 \\
+\text{ Plug in dy/dx = -1 to get}\\
+(2xy + 1)(y-x) = 0 \\
+y=x\text{ leads to (1,1) and (-1,-1)}\\
+2xy = -1 \text{ is impossible. Be sure to show work.}\\
+\\
+\text{Problem 2}\\
+\text{Fully differentiate and use dx/dt = dy/dt to get:}\\
+dx/dt (32x+18y) = 0 \rightarrow x = -9y/16\\
+\text{Plugging this condition into the ellipse's equation, we find two points}\\
+(-9/5, 16/5)\text{ and } (9/5, -16/5)\\\)
+
+</font>
+
+
+
+<hr>
+
+<b> October 31, 2021  </b> <br>
+<!-- quiz 17 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+\text{Use the quotient rule to fully factor the derivative:}\\
+f'(x)=\frac{2(x-3)^3(x^2+6x+3)}{x^2 (x+2)^2}\\
+x=3, x=-3\pm\sqrt{6}\\
+\\
+\text{Problem 2}\\
+f'(x) = 3-\csc^2(x)\\
+\text{Set } f'(x) = 1\\
+\sin x = \pm \sqrt{2}/2\\
+x = \pi/4 + k\pi/2 \\
+\)
+
+</font>
+
+
+
+<hr>
+
+<b> October 21, 2021  </b> <br>
+<!-- quiz 16 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+f(x)=\frac{-4x}{\sqrt{2x-1}}\\
+\text{ Use the quotient rule AND the chain rule with care, to find }\\
+f'(x)=\frac{4-4x}{(2x-1)^{3/2}}\rightarrow f'(x)=0 \rightarrow x=1\\
+f(1) = -4\\
+\text{The point on the graph where the tangent line is horizontal is } (1, -4)\\
+\)
+
+</font>
+
+
+<hr>
+
+<b> October 19, 2021  </b> <br>
+<!-- quiz 14 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(\\
+\text{Problem 1}\\
+f(x)=\cot x + 2x\\
+f'(x)=-\csc^2x+2\\
+f'(\pi/6)=-4+2=-2\\
+f(\pi/6)=\sqrt{3}+\pi/3\\
+\text{Tangent: } y - \sqrt{3}-\pi/3 = -2(x-\pi/6)\\
+\text{Tangent: } y = -2x+2\pi/3 + \sqrt{3}\\
+\\
+\text{Problem 2}\\
+f(x)=\tan x\\
+f'(x)=\sec^2x=2\\
+\cos x = \pm\sqrt{2}/2\\
+x=\pm\pi/4 \text{ Quadrants 1 and 4 only} \\
+(\pi/4, 1) \text{ and } (-\pi/4,-1)\\\)
+
+</font>
+
+
+
+
+
+<hr>
+
+<b> October 18, 2021  </b> <br>
+<!-- quiz 13 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(F(x)=\frac{8}{4+x^2}\\
+\text{Use the Quotient Rule to find:}\\
+F'(x)=\frac{-16x}{(4+x^2)^2}\\
+slope=F'(2) =\frac{-1}{2}\\
+equation: y=\frac{-x}{2}+2\\\)
+
+</font>
+
+
+<hr>
+
+<b> October 15, 2021  </b> <br>
+
+<font color="dodgerblue"> 
+The midterm marking period closes today.
+</font>
+
+
+
+<hr>
+
+<b> October 11, 2021  </b> <br>
+<!-- quiz 10 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(F(x)=\frac{5x}{1+x^2}\\
+\\
+F'(x)=\lim_{h \to 0} \frac{F(x+h)-F(x)}{h}\\
+F'(x)=\lim_{h \to 0}\frac{1}{h} (\frac{5(x+h)}{1+(x+h)^2}- \frac{5x}{1+x^2})\\
+\text{...combine and simplify...}\\
+F'(x) =\frac{5-5x^2}{(1+x^2)^2}= \frac{5 (1-x^2)}{(1+x^2)^2}\\
+\\
+point: (2, F(2)) = (2, 2)\\
+slope: F'(2) = \frac{-3}{5}\\
+equation: y - 2 = \frac{-3}{5}(x-2)\\\)
+
+</font>
+
+<!-- quiz 11 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(F(x)=\frac{x}{1+x^2}\\
+\\
+F'(x)=\lim_{h \to 0} \frac{F(x+h)-F(x)}{h}\\
+F'(x)=\lim_{h \to 0}\frac{1}{h} (\frac{x+h}{1+(x+h)^2}- \frac{x}{1+x^2})\\
+\text{...combine and simplify...}\\
+F'(x) =\frac{1-x^2}{(1+x^2)^2}= \frac{(1-x)(1+x)}{(1+x^2)^2}\\
+\\
+F'(x) =0 \rightarrow x=\pm{1} \\
+points: (1, 1/2) and (-1, -1/2)\\\)
+
+</font>
+
+
+<hr>
+
+<b> October 11, 2021  </b> <br>
+
+<font color="dodgerblue"> 
+In the Downloads' section (to the right) find an answer key to the [ <b>overtime</b> ] algebra review packet from week 5. Use it to correct any mistakes you may have made. If you think the key has mistakes, please let me know so we can fix them. <br> <br>
+
+</font>
+
+<hr>
+<b> October 10, 2021  </b> <br>
+<!-- quiz 09 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+\(f(x) =\frac{3}{1-x}\\
+f'(-2)= \lim_{h \to 0} \frac{f(-2+h)-f(-2)}{h} \\
+=\lim_{h \to 0} \frac{\frac{3}{1-(-2+h)}-\frac{3}{1-(-2)}}{h} \\
+=\lim_{h \to 0}\frac{1}{h} \frac{9-3(3-h)}{(3-h)(3)} \\
+=\lim_{h \to 0}\frac{1}{h} \frac{3h}{(3-h)(3)} \\
+=\lim_{h \to 0} \frac{1}{(3-h)} \\
+=1/3\\
+\\
+\\
+slope=f'(-2) = \frac{1}{3}\\
+point: (-2, 1) \\
+equation: y-1 = \frac{1}{3}(x+2)\\
+or:  y=\frac{1}{3}x+\frac{5}{3}\\\)
+
+</font>
+
+
+
+<hr>
+<b> September 24, 2021  </b> <br>
+<!-- quiz 04 -->
+<font color="dodgerblue"> 
+ Brief Notes on most recent quiz.<br>
+ 
+	<i> Email me if you find typos or mistakes. </i><br>
+P1<br>
+a) 
+|x| = -x when x is near -2 (why?), so the limit becomes: <br>
+\( \lim_{x \to -2} \frac{2-(-x)}{2+x} = \lim_{x \to -2} \frac{2+x}{2+x} = 1 \) <br>
+
+b) As x approaches 0.5 from the left, note that 2x-1 is a negative number, so |2x-1| = -(2x-1). The limit becomes: <br>
+\( ) \lim_{x \to 0.5^{-}} \frac{2x-1}{x^2 |2x-1|} =  \lim_{x \to 0.5^{-}} \frac{2x-1)}{-x^2 (2x-1)} = \text{...} = -4 \) <br>
+ 
+c) Simplify the expression (common denominator). The limit is -1/9.
+
+<br><br>
+
+P2<br>
+
+Factor the bottom to find (x+1)(x+2). In order for the limit to exist, by the factor theorem, x=-2, must make the numerator zero as well. Find a = 15, and then evaluate the limit to -1.
+ <br><br>
+
+</font>
+
+<hr>
+<b> September 20, 2021  </b> <br>
+<font color="dodgerblue"> 
+ Brief Notes on most recent Quiz <br>
+	<i> Email me if you find typos or mistakes. </i><br>
+P1<br>
+The limit exists and is equal to -4/5. Be sure to show work, use limit signs carefully, and use equal signs as well from one step to the next. 
+<br><br>
+
+P2 <br>
+Study the one-sided limits separately by using the two cases for the absolute value expression. The one sided limits turn out to be 5 and -5. Conclude this problem with a neat sketch that consists of two half lines that do not connect.
+
+<br><br>
+P3<br>
+The statement is false. Be sure to provide an example graphically, algebraically, or both ways.
+</font>
+
+
+<hr>
+<b> September 19, 2021  </b> <br>
+<font color="dodgerblue"> 
+<b>Weekly Updates</b>: For those of you who are new to Cushing, this information may be helpful. Approximately once a week teachers post current grades on Monday night. Sometimes teachers will include concerns or noteworthy comments related to student performance. The weekly reports typically go live for students on Tuesday (sometimes Wednesday) morning. <br>
+
+For our class, the weekly update will reflect your current grade, including any graded week from the week before. Although I will try my best to include any quizzes you write on a Monday into the update, I can't promise that it will happen all the time. <br> In class I will try to find a minute or two to comment on grades and grading this coming week. <br> <br>
+ 
+  
+</font>
+
+
+<hr>
+
+<b> September 9, 2021  </b> <br>
+<font color="dodgerblue"> 
+AP registration instructions at this [ <a href="https://apcentral.collegeboard.org/pdf/joining-your-ap-class-section-students.pdf" target="_blank">link</a> ]. <br>
+
+For your course section, use join code: WRJNAR <br>
+
+If you have any questions, contact Dr. Willis (AP Coordinator) in the Academic Office. <br>
+
+</font> 
+<hr>
+
+<b> September 7, 2021  </b> <br>
+<font color="dodgerblue"> 
+Approximately once a week, on myCushing you will notice that a portion of your homework assignment will have the tag <b> [ overtime ] </b>. This will typically involve additional problem solving, reading, exploration, that will not require more than 25 minutes of your time. All subjects are asked to have this added component this year. Let me know if you have any questions about this.
+
+</font> 
+<hr>
+
+
+<b> September 5, 2021 </b> <br>
+<font color="dodgerblue"> This section of the course page is for selected notes and commentary that I will type for the group during the academic year. Most meetings will not require typed remarks. Newer items will be at the top, but I will try to remind you during class when new content is posted here. <br>
+
+Other blocks, like 'Downloads' or 'Links', will go live soon. For now, the most important tab on this course page is the Assignments' section, which will include daily/nightly homework instructions. Be sure to visit before the start of study hall Sunday through Thursday.</font> </br>
+<hr>

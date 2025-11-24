@@ -1,0 +1,1645 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <!-- Project Page: Title -->
+ <script src="/incl/t.txt"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Calculus, AP Calculus, AP Calculus AB, AP Calculus BC, College Board, Free Response, Multiple Choice, Mathematics, Worksheets, Tutorials, Practice">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+ 
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#about"></a>
+    </div>
+	
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">about</a></li>   
+        <li><a href="#notes">notes</a></li>
+    <li><a href="#links">links</a></li>   
+    <li><a href="#info">info</a></li>
+    <li><a href="#help">help</a></li>
+   
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- first container: about  -->
+<div class="container-fluid bg-4 text-left">
+  <h2 class="margin" id="about">about</h2>
+<!-- <p align="center"><img src="img/site/ca.jpeg" class="img-responsive img-circle margin" style="display:inline" alt="ap-calc" width="200" height="207"> </p>
+    <p> --> 
+  AP Calculus BC follows the curriculum set forth by the College Board. It is worth the equivalent of two semesters of college credit upon successful completion of the AP examination in May. Students enrolled in this course are required to take this test. Topics covered include library of functions, limits, the derivative, applications of the derivative, definite and indefinite integrals, applications of integration, techniques of integration, infinite series and sequences, etc.
+</p> </div>
+<!-- end of first container -->
+
+
+<!-- start notes container (Grid) -->
+<div class="container-fluid text-left">
+  <h2 id="notes">notes / updates</h2>
+  <hr>
+  <b> November 21, 2025 | Notes on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+ \( f(x) = \frac{1}{x} \) is not continuous on the interval \( [-1, 1] \) because it has a vertical asymptote <br>
+ at \( x = 0 \). Therefore, the Mean Value Theorem cannot be applied. The statement is false. <br>
+
+ <br>
+
+ P2. <br>
+ "If a function has three x-intercepts, then there must be at least two points on the graph<br>
+ of the function where the tangent line is horizontal. " This statement is false because <br>
+ we do not know if the function is continuous and differentiable on the interval between the smallest <br>
+and largest x-intercept. You can draw an example here. The statement would be true if the function is both continuous and differentiable <br>
+because we can apply Rolle's Theorem twice. <Br>
+<br>
+P3. <br>
+\( f(x) = \tan x \) is continuous on the interval \( [0, \pi/4] \) and differentiable on the open interval<br>
+\( (0, \pi/4) \), therefore MVT can be applied here. <br>
+\( f'(c) = \sec^2(c) = \frac{f(\pi/4)-f(0)}{\pi/4 - 0} \rightarrow \sec^2(c) = \frac{4}{\pi} \) <br>
+\( \sec(c) = \pm \frac{2}{\sqrt{\pi}} \rightarrow \cos c = \frac{\sqrt{\pi}}{2} \) <br>
+\( c = \arccos\left(\frac{\sqrt{\pi}}{2}\right)\) <br>
+Note that we ignore the negative root above because it is not in the interior of our given interval.<br><br>
+Below is a desmos illustration. You did not need to draw a graph. <br>
+
+<center> <iframe src="https://www.desmos.com/calculator/zhxc8ubhpf?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center> 
+<hr>
+  <b> November 17, 2025 | Notes on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  \( f(x) = e^{-x^2/2} \rightarrow f'(x) = -x e^{-x^2/2} \rightarrow f''(x) = (x-1)(x+1)e^{-x^2/2} \) <br>
+  domain: all reals <br>
+  x-int: none<br>
+  y-int: (0,1) <br>
+  symmetry: even <br>
+  end-behavior: y=0 is the horizontal asymptote at both ends of the picture. <br>
+  first derivative table: no need for a table since it's just one factor and one critical number. <br>
+  ID behavior: f increases for \(x < 0\) and decreases for \(x > 0\) <br>
+  second derivative table: set up 5 rows (2 rows for the 2 factors). make a note about the exponential expression being always positive.<br>
+  Concavity: f is concave up for \( x < -1 \) and \( x > 1 \) and concave down for \( -1 < x < 1 \) <br>
+  Local and global maximum: (0,1) <br>
+  Inflection points: \( (\pm 1, \frac{1}{\sqrt{e}})\) <br>
+  Conclude the work with neat sketch. <br>  
+  <br>
+ 
+  P2. <br>
+  \( f(x) = \frac{\cos x}{2 + \sin x} \rightarrow f'(x) = \frac{-1-2\sin x}{(2+\sin x)^2} \rightarrow f''(x) = \frac{2 \cos x (\sin x - 1)}{(2+\sin x)^3}  \) <br>
+  domain: \([0, 2\pi]\) (restricted / given) <br>
+  x-int: \( (\pi/2, 0), (3\pi/2, 0) \) <br>
+  y-int: (0,1/2) <br>
+  symmetry: none <br>
+  end-behavior: not applicable since the domain is restricted. <br>
+  first derivative table: the critical numbers are \( 7\pi/6, 11\pi/6 \) <br>
+  ID behavior: f increases for \( 2\pi/6 < x < 11\pi/6\) and decreases for \( 0 < x < 7\pi/6 \) and \( 11\pi/6 < x < 2 \pi\) <br>
+  second derivative table: the critical numbers are \( \pi/2, 3\pi/2, \)<br>
+  Concavity: f is concave up for \( \pi/2 < x < 3\pi/2 \) and concave down for \( 0 < x < \pi/2 \) and \( 3\pi/2 < x < 2\pi \) <br>
+  Local and global maximum: \( (11\pi/6, \frac{\sqrt{3}}{3}) \) <br>
+  Local and global minimim: \( (7\pi/6, -\frac{\sqrt{3}}{3})\) <br>
+  Inflection points: \( (\pi/2, 0), (3\pi/2, 0) \) <br>
+  Conclude the work with neat sketch. <br> 
+  <hr>
+  <b> November 11, 2025 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  No issues with Problem 1. The limit is 1/24. <br> <br>
+  P2. <br>
+  Use L'Hospital's Rule after checking conditions and taking the natural log both sides. <br>
+  The expression approaches \( \lim\limits_{x\to \infty} \left( 1 - \frac{m}{x^2}\right)^{x^2} = \frac{1}{e^m}\). <br> <br>
+  P3. No issues with Problem 3.  The limit is 1.  <br><br>
+
+  P4. <br>
+The function \( f(x) = x^3 e^{-2x}\) is a product of two continuous functions on the entire domain of real numbers, therefore it is continuous on the interval [1, 4]. <br>
+We use the Closed Interval Method here. (Be sure to state the name of the method and the reason why the function is continuous.) <br>
+Find the derivative and consider two cases: when/if it equals 0 and when/if it is undefined. <br>
+
+\(  f'(x) = \frac{x^2 (3-2x)}{e^{2x}} \rightarrow x=0, x=3/2\) <br>
+
+Of the two critical numbers, only 3/2 is in the given domain. Evaluate \( f(3/2) = \frac{27}{8e^3}, f(4) = \frac{64}{e^8}, f(1) = \frac{1}{e^2} \)
+to find that the absolute maximum is \( \frac{27}{8e^3} \) and the absolute minimum is \( \frac{64}{e^8} \).
+
+ 
+
+  <hr>
+  <b> November 1, 2025 | Feedback on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+ \( y = \cos^{-1}\left( \frac{x}{3} \right) \rightarrow \frac{dy}{dx} = \frac{-1}{\sqrt{9-x^2}} \) <br>
+ Note that the answer above is the simplified version of the derivative. Be sure to apply the Chain Rule correctly. <br>
+ The y-value is: \( y = \cos^{-1}\left( \frac{\sqrt{5}}{3}\right) \) <br>
+ The slope is : \( \frac{dy}{dx}_{|_{x=\sqrt{5}}} = \frac{-1}{2}  \) <br>
+ Use the point-slope form of the equation of a line to find: \( y = \frac{-x}{2} +\frac{\sqrt{5}}{2}+\cos^{-1}\left( \frac{\sqrt{5}}{3}\right) \)
+<br><br>
+  P2. <br>
+Find the y-value by plugging \( x = -8 \) into the original equation. The y-coordinate is \( -4 \). <br>
+
+Take the natural log of both sides of the given equation: \( y = \frac{x (\sqrt[3]{x} +1)^2}{\sqrt{x+12}}\) <br>
+\( \ln y = \ln x + 2 \ln(\sqrt[3]{x}+1) - \frac{1}{2} \ln(x+12) \) <br>
+before implicitly differentiating with respect to x. Plug in to find: <br>
+\( \frac{dy}{dx}|_{(-8,-4} = \frac{5}{3} \) <br>
+The equation of the tangent line is: \( y = \frac{5x}{3} + \frac{28}{3}\) <br><br>
+
+  <hr>
+  <b> October 28, 2025 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+
+  After making a drawing, let \( x \) be the distance from the car to the intersection, and let \( z \) <br>
+  be the distance from the observer to the car. <br>
+  The equation is: \( z^2 = 50^2 + x^2 \). We know that after 5 seconds, \(x = 225\) meters. <br>
+  To find the value of \(z \), plug the value of \(x\) into the equation: \( z = \sqrt{50^2 + 225^2} = 25\sqrt{85}\) meters. <br>
+  
+  We also know that \( dx/dt = 45 m/s \). Fully differentiate with respect to time: <br>
+  
+  \( 2 z \frac{dz}{dt} = 2 x \frac{dx}{dt} \), to find: \( \frac{dz}{dt} = \frac{225 * 45}{25* \sqrt{85}} = \frac{405}{\sqrt{85}}\) meters per second.
+
+  Be sure to include a sentence as your conclusion. <br>
+
+  <br><br>
+
+  P2. <br>
+After drawing a cone with the radius r and height h shown, set up the volume formula: <br>
+\( V = \frac{\pi}{3} r^2 h \) <br>
+Fully differentiate with respect to time: \( \frac{dV}{dt} = \frac{\pi}{3} \left[ 2 r\frac{dr}{dt} h + r^2 \frac{dh}{dt} \right] \) <br>
+<br>
+Plug in: \( \frac{dr}{dt} = \frac{dh}{dt} = \frac{1}{2}, h = 9, r = 6 \), to find:
+\( \frac{dV}{dt} = \frac{\pi}{3} \left[ 54 + 18 \right] = 24 \pi \) centimeters per second. <br>
+Be sure to include a sentence as your conclusion.
+
+
+  <hr>
+  <b> October 23, 2025 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  
+  P1. <br>
+  The equation of the curve is: \( x y + 2x-y=0 \) <br>
+  Read the slope to the curve as: \( m=1/2 \) (the negative reciprocal of the slope of the given line) <br>
+  Differentiate completely: \( y + x \frac{dy}{dx} + 2 - \frac{dy}{dx} = 0 \) and plug in \( \frac{dy}{dx}=\frac{1}{2} \) to get: \( x=-2y-3 \) <br>
+  Plug this back into the equation of the curve, and solve for: \(y = -1, y=-3 \) <br>
+  Find the x-values, so that the points are: \( (-1, -1) \text{ and } (3, -3) \) <br>
+  The normal line equations are: \( y = -2x-3 \text{ and } y = -2x+3 \) <br>
+  The graph below shows the curve, the given line, and the two tangent lines, and the two normal lines whose equations we found: <br>
+  
+  <center><iframe src="https://www.desmos.com/calculator/b9p1ixw6hm?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe> </center>
+ 
+  P2. <br>
+  The equation of the curve is: \( x^2+ xy + y^2 = 7 \) <br>
+  
+  Setting y =0, we get: \( x= \pm \sqrt{7} \) (show work) <br />
+  
+  Differentiate implicitly: \( 2x + x \frac{dy}{dx} + y + 2 y \frac{dy}{dx} = 0 \), then solve: <br />
+   \( \frac{dy}{dx}=\frac{-2x-y}{x+2y} \) <br />
+   
+  Plug in each of \( (\pm\sqrt{7}, 0) \) to get \( \frac{dy}{dx} = -2 \) at both points.  <br>
+  In case you are curious, the graph below shows the curve, the given line, and the two parallel tangent lines at the points we found: <br>
+  
+  <center><iframe src="https://www.desmos.com/calculator/xufpkxox5q?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe> </center>
+   
+  
+
+
+
+  <hr />
+  <b> October 14, 2025 | Quiz notes </b> <br>
+  
+  P1.<br><br>
+ \( f(x) = \frac{3x}{\sqrt{3x-1}} \rightarrow f'(x) = \frac{3 (3x-2)}{2 (3x-1)^{3/2}} \\
+  f'(x) = 0 \rightarrow x = \frac{2}{3}, f(2/3) = 2 \\
+  \left( \frac{2}{3},2\right) \) <br> <br>
+
+  P2. <br><br>
+  \( f(x) = \frac{(1-x)^3}{x^2+2x} \rightarrow f'(x) = \frac{-(x-1)^2 (x^2+6x+2)}{(x^2+2x)^2} \\
+  f'(x) = 0 \rightarrow x=1, x=-3 \pm \sqrt{7}  \) <br>
+
+  <hr />
+  <b> October 9, 2025 | Quiz notes </b> <br>
+  
+  P1.<br><br>
+  \( f(x) = \cot x + 2x \rightarrow f'(x) = -\csc^2x +2 \) <br>
+  The slope of the tangent line at \( x= \pi/6  \) is \( f'(\pi/6) = -2. \) <br>
+  This means that the slope of the normal line is \( 1/2 \). <br>
+  Use \( f(\pi/6) = \sqrt{3} + \frac{\pi}{3} \) and the point slope formula to find the equation of the normal line: <br>
+  \( y = \frac{x}{2} + \sqrt{3} + \frac{\pi}{4} \) <br><br>
+
+  P2. <br>
+  \( y = \tan x \rightarrow \frac{dy}{dx} = \sec^2 x  = 2 \). Give a reason why the slope has to equal 2: because we are looking for a tangent line that is parallel to the given line. <br>
+
+  Solve the equation in the given domain, to find: \( x = \pm \frac{\pi}{4}  \). <br>
+  Be sure to compute and include the y-coordinates in your answer: \( (\frac{-\pi}{4}, -1), (\frac{\pi}{4},1) \). <br><br>
+
+
+   <hr>
+ <b> October 5, 2025 | Feedback on recent quiz  </b> <br>
+The definition of slope as a number is either: <br>
+ \( m = \lim\limits_{h \to 0}\frac{f(-3+h)-f(-3)}{h} \) <br>
+ OR <br>
+ \( m = \lim\limits_{x \to -3}\frac{f(x)-f(-3)}{x-(-3)} \) <br>
+Choose one and see where it takes you. Below I show work with the second definition: <br>
+
+\( m = \lim\limits_{x \to -3}\frac{f(x)-f(-3)}{x-(-3)} = \lim\limits_{x \to -3}\left(\frac{12}{3-x}-\frac{12}{3-(-3)}\right) \frac{1}{x+3} = \) <br>
+\( = 12 \lim\limits_{x \to -3}\left(\frac{1}{3-x}-\frac{1}{6}\right) \frac{1}{x+3} = 12 \lim\limits_{x \to -3}\left(\frac{6-(3-x)}{6(3-x)}\frac{1}{x+3}\right) = \) <br>
+ \( = 12 \lim\limits_{x \to -3}\left(\frac{3+x}{6(3-x)}\frac{1}{x+3}\right) = 12\lim\limits_{x \to -3}\left(\frac{1}{6(3-x)}\right) = \frac{12}{36} = \frac{1}{3}    \) <br> <br>
+ Since \( f(-3) = \frac{12}{3-(-3)} = 2 \), we use the point-slope formula to find the equation of the tangent line: <br>
+
+ \( y - 2 = \frac{1}{3} (x-(-3)) \), which simplifies to \( y = \frac{1}{3} x + 3\)
+
+<br><br>
+  <hr>
+ <b> September 28, 2025 | Feedback on recent quiz  </b> <br>
+ P1. a) <br>
+ \( \lim\limits_{x\to \pi^-} 2^{\cot h} = \lim\limits_{x\to \pi^-} 2^{\frac{\cos h}{\sin h}} \)<br>
+
+ Use arrows or explain how cosine goes to -1 and sine goes to 0 from positive side, so the cotangent expression goes to negative infinity. <br>
+ The overall limit is therefore 0, since \( 2^{-\infty} = \frac{1}{2^{\infty}} \to 0 \)  <br><br>
+
+ P1. b) <br>
+\( \lim\limits_{\theta \to 0} \sec\left( \frac{1-\cos(2\theta)}{\theta} \right) = \sec \left( \lim\limits_{\theta \to 0} \frac{1-\cos 2\theta}{\theta} \right) = \\
+\sec \left(2 \lim\limits_{\theta \to 0} \frac{1-\cos 2\theta}{2 \theta} \right) \)
+The inner expression goes to 0, so the overall limit is \( \sec (2*0) = \sec(0) = 1 \) <br><br>
+
+ P1. c) <br>
+\( \lim\limits_{t \to 0^+} \left( \ln(\tan t) -\ln(\sin 2t) \right) = \lim\limits_{t \to 0^+} \ln \left[ \frac{\tan t}{\sin 2t} \right] = \\
+=\ln \lim\limits_{t \to 0^+}  \left[ \frac{\sin t}{2 \cos^2 t \sin t}  \right] = \ln(1/2) = -\ln 2 \)
+ <br><br>
+
+P2.<br>
+Let the left side of the equation be the function \( f(x) = x + \sin x - 1 \). Note that since all three terms are continuous for all real numbers, the sum is also continuous everywhere. <br>
+Therefore, \( f(x) \) is continuous on the interval \( [0, \frac{\pi}{6}] \), which means we can apply the Intermediate Value Theorem.<br>
+Note that \( f(0) = -1 \) and \( f(\pi/6) =\frac{\pi}{6} + \frac{1}{2} - 1 \approxeq 0.52 - 0.5 > 0\).
+Since the function changes sign and is continuous on the given interval, by the Intermediate Value Theorem, it must have at least one zero on the given interval. <br>
+This is the same as saying: the equation \( f(x) = 0 \) has at least one solution on the interval \([0, \frac{\pi}{6}]  \). 
+
+  <hr>
+ <b> September 23, 2025 | Working with Lists - TI NSPIRE  </b> <br>
+  For those of you who own an NSPIRE, feel free to use the following tutorial with text and graphics. <br>
+
+  Stop after the section where it says "Selecting a Column (or Row)". <br>
+  Link: <a href="https://mathbits.com/MathBits/TINSection/Statistics1/Spreadsheet.html" target="_blank">TI NSPIRE TUTORIAL </a> 
+
+  <hr />
+  
+  <b> September 22, 2025 | Notes on today's quiz  </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+
+  P1. <br>
+  \( \lim\limits_{x\to-4^+} g(x) =\lim\limits_{x\to-4^+} \frac{(x+1)(x+4)}{|x+4|} = \lim\limits_{x\to-4^+} \frac{(x+1)(x+4)}{x+4} = \lim\limits_{x\to-4^+} (x+1) = -3 \) <br>
+  \( \lim\limits_{x\to-4^-} g(x) =\lim\limits_{x\to-4^-} \frac{(x+1)(x+4)}{|x+4|} = \lim\limits_{x\to-4^-} \frac{(x+1)(x+4)}{-(x+4)} = \lim\limits_{x\to-4^-} -(x+1) = 3 \) <br>
+  The overall limit does not exist since the one-sided limits are different. <br>
+  The graph of the function consists of two linear pieces: <br>
+  \( g(x) = x+1 \) for \( x > -4 \). <br>
+ \( g(x) = -x-1 \) for \( x < -4 \). <br>
+A desmos generated graph is below: <br><br>
+<center><iframe src="https://www.desmos.com/calculator/1gagm84qkq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+  
+<br> <br>
+P2.  <br>
+Check that the numerator and denominator both go to zero, then use the conjugate: <br>
+\( \lim\limits_{x\to -6} \frac{\sqrt{x^2+64}-10}{x+6} = \lim\limits_{x\to -6} \frac{\sqrt{x^2+64}-10}{x+6} \frac{\sqrt{x^2+64}+10}{\sqrt{x^2+64}+10} \\ = \lim\limits_{x\to -6} \frac{x^2-36}{x+6} \frac{1}{\sqrt{x^2+64}+10} =\lim\limits_{x\to -6} \frac{(x-6)(x+6)}{x+6} \frac{1}{\sqrt{x^2+64}+10} = \lim\limits_{x\to -6} \frac{x^2-36}{x+6} \frac{1}{\sqrt{x^2+64}+10} =\lim\limits_{x\to -6} \frac{x-6}{\sqrt{x^2+64}+10} = \frac{-12}{20} = \frac{-3}{5}  \)
+<br><br>
+P3. <br>
+The statement is false.  As an example, consider: \( f(x) =\frac{|x|}{x}, g(x) = \frac{-|x|}{x} \) <br>
+The individual limits of these two functions as \(x\) approaches zero do not exist. The limit of the product is -1, however.
+
+
+  <hr />
+  
+  <b> September 18, 2025 | Notes on the recent quiz  </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+
+  P1. <br>
+  The sketching problem went well on average. Some of the papers had the curves that were not functions (they failed the vertical line test) <br>
+  Also, remember to draw neatly and <i>approach</i> the asymptote without crossing it. It's okay to cross the horizontal asymptote as long as you make sure the graph <i> returns </i> towards it. <br><br>
+
+  P2. <br>
+ The sketch of the piece-wise function is shown below with desmos. The limit exists for all real values except \( a = 0 \). <br>
+ The one sided limits as \( x \) approaches zero are 1 and -1, which means \( \lim\limits_{x\to 0} f(x) \) does not exist. <br><br>
+
+<center> <iframe src="https://www.desmos.com/calculator/9b785c6283?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+  </center>
+  <hr />
+  
+  <b> September 12, 2025 | Notes on Today's quiz  </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+
+P1.<br>
+a) Set \( 9 - x^2 \geq 0 \) and solve either algebraically or graphically to find the domain: \( [-3, 3] \) <br>
+Algebraically, study the sign after factoring \( (3-x)(3+x) \geq 0 \). <br>
+Geometrically, draw the graph of \( y = 9 - x^2 \) to confirm the domain. <br><br>
+
+b) Set \(  x^2 - 4 >0 \) and solve either algebraically or graphically to find the domain. The work is similar to part a). <br>
+The domain is:  \( x < -2 \cup x > 2 \). In interval notation: \( (-\infty, -2,) \cup (2, \infty) \) <br><br>
+
+c) Set \((1-x)(5-x) > 0 \) and solve either algebrically or graphically to find the domain. The work is similar to part a).  <br>
+The domain is: \( (1,5) \). <br><br>
+
+c) The domain of the direct sum of the three functions is the intersection of the domains in parts a), b), and c). <br>
+The intersection, using interval notation, is: \( (2, 3]  \).
+
+    <hr> 
+  <b> September 8, 2025  </b> <br>
+
+AP registration instructions at this [ <a href="https://apstudents.collegeboard.org/access-your-ap-resources/join-your-class-online" target="_blank">link</a> ]. <br>
+
+<b> If you think you'll be changing your schedule or dropping the class altogether, please hold off on joining the AP classroom. </b> <br>
+
+For your course section, use join code: QELZR2 <br>
+
+If you have any questions, contact Mr. Dan Monahan (AP Coordinator). <br>
+
+
+   <hr>
+
+  <b> September 1, 2025 | Introductory note.    </b> <br>
+  Welcome to AP Calculus BC. In this area of the course page we will post important course-related information such as links to resources, announcements, reminders, commentary or feedback on assessments etc. All entries will be dated and the most recent one will be at the top of the page. As far as daily course information goes, the Assignments and Bulletin tabs are the most important.<br>
+
+ <!--
+  <hr> 
+   <b> May 14, 2025 | BC FRQ 2025    </b> <br>
+<i> The answer key below was typed fast and is not formatted properly, which means it likely has mistakes. Additionally, I have left out units and full reasoning/explanations. 
+  The questions are on the collegeboard website. </i> <br>
+<br><br>
+Q1.<br>
+a. 2.778<br>
+b. 1.282 <br>
+c. The limit is 0.<br>
+d. Absolute maximum @ t = 11.442. The maximum is 7.317.<br>
+<br>
+Q2.<br>
+a. 1.031<br>
+b. 2.067<br>
+c. x(0.95532) = 0.770 (Use CIM to justify.)<br>
+d. 15.465<br>
+<br>
+
+Q3. <br>
+a. 5 words per minute per minute<br><br>
+
+b. Yes, by IVT, R (c) = 155  at least once on [8, 10] since 155 is between R (8) = 150  and R (10) = 162. The function R is continuous because it is given as differentiable.<br><br>
+
+c. 1252<br>
+d. 1300<br>
+<br>
+Q4.<br>
+a. g'(x) = f(x) by FTC, so g'(8) = f(8) = 1 <br>
+b. g''(x)  = f'(x), which changes sign at x = -3, 3, 6.<br>
+    These are the inflection points on the graph of g.<br><br>
+c. g(12) = 9<br>
+   g(0) = -9pi/2<br>
+d. Consider critical numbers and endpoints:
+    g(-6) = g(6) = 0<br>
+    g(0) = -9pi/2<br>
+    g(12) = 9<br>
+   By the Closed Interval Method, the global minimum occurs at x=0.<br><br>
+
+Q5. <br>
+a. f''(1) = -9<br>
+b. T(x) = -1 + 2 (x - 1) - (9/2) (x - 1)^2<br>
+c. LEB = | 60 * 0.1^3/(3!)| = 1/100. The error cannot exceed the bound.<br>
+d. f(1.4) is approximately equal to -0.470.<br><br>
+
+Q6.<br>
+a. [1, 7) with work and reasoning<br>
+b.  f' (x) = (1/3) (x - 4) + (1/3^2) (x - 4)^2 + (1/3^3) (x - 4)^3 + ... + (1/3^n)  (x - 4)^n + ...<br><br>
+
+c.<br>
+a = r = (x-4)/3, so the series converges to a/(1 - r)  = (x - 4) / (3 - x + 4) = (x - 4) /(7 - x)<br>
+<br>
+d.<br>
+x=8 is not in the interval of convergence of the original function f(x), so f'(x) will not converge at x=8 either.
+<br>
+
+  <hr> 
+  
+  <b> May 2, 2025 | PAST FRQ Questions   </b> <br>
+  <a href="https://apcentral.collegeboard.org/courses/ap-calculus-bc/exam/past-exam-questions" target="_blank" rel="noopener"> AP PAST FRQ Questions</a> <br>
+ 
+
+
+  <hr>
+  <b> April 29, 2025 | Feedback on today's quiz.</b> <br>
+  A plot is shown below. Note that I mixed up the name of the region at the start of the problem (called it R) and in the separate parts referred to it as M. Also, I had a typo in part a). It should have read 'and find its area'. <br>
+  a) \( A = \int\limits_0^1 \left( 1 - 2^{-x} \right) dx = 1 - \frac{1}{2\ln2} \) <br><br>
+  b) \( V_{washer} = \pi \int\limits_0^1 \left( 1^1 - (2^{-x})^2 \right) dx = ... = \pi (1-\frac{3}{8\ln 2}) \) <br><br>
+  c) \( V_{washer} = \pi \int\limits_0^1 \left(  (5-2^{-x})^2 - (5-1)^2 \right) dx  \) <br><br>
+  d) \( A(x) = (1-2^{-x})^2 \rightarrow V=\int\limits_0^1 A(x) dx = ... = 1-\frac{5}{8\ln 2}\)  <br>
+  <center><iframe src="https://www.desmos.com/calculator/7fz8ws8bg9?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+  <hr>
+  <b> April 25, 2025 | Feedback on today's quiz.</b> <br>
+
+   \( f(x) = \ln(1-x^2) \rightarrow f'(x) = \frac{-2x}{1-x^2}\) <br>
+   \( 1 + \left(\frac{-2x}{1-x^2}\right)^2 = \frac{(1-x^2)^2 + 4x^2}{(1-x^2)^2} =...= \frac{(1+x^2)^2}{(1-x^2)^2}\) <br>
+
+   \( L = \int\limits_0^{1/2} \sqrt{1+(dy/dx)^2} dx = \int\limits_0^{1/2} \frac{1+x^2}{1-x^2} dx \) <br>
+   Divide before setting up partial fractions, or rewrite as: <br>
+ \( \int\limits_0^{1/2} \frac{-(1-x^2)+2}{1-x^2} dx = \int\limits_0^{1/2} -1 + \frac{2}{(1-x)(1+x)} dx =  \int\limits_0^{1/2} -1 + \frac{A}{1-x} + \frac{B}{1+x} dx =...   \) <br>
+ The final answer is \( \ln(3) - \frac{1}{2} \). <br><br>
+
+
+
+  <hr>
+  <b> April  21, 2025 | Feedback on today's quiz.</b> <br>
+  No points were awarded if in any of the parts below you set up a dx type of integral as a dy or vice-versa, even if the answer came out to be the same. <br> <br>
+
+  P1. <br>
+
+a) The sketch was fine. As a reminder, the curves were \(y = x^2, y = \sqrt{x} \). <br>
+b) \( V_{washer} = \pi \int\limits_0^1 \left(\sqrt{y} \right)^2 - \left(y^2 \right)^2 dy = ... = \frac{3\pi}{10} \) <br>
+c) \( V_{washer} = \pi \int\limits_0^1 \left(1-y^2 \right)^2 - \left(1-\sqrt{y} \right)^2 dy \) <br>
+d) \( V_{washer} = \pi \int\limits_0^1 \left(1-x^2 \right)^2 - \left(1-\sqrt{x} \right)^2 dx \) <br> <br>
+
+P2. <br>
+a) the drawing was fine here, too. As a reminder, the curves were: \( x = 1 + y^2, x = 4-2y^2\). <br>
+b) \( A = \int\limits_{-1}^1 \left( 4-2y^2 \right) - \left( 1 + y^2 \right) dy = ... = 4 \) <br>
+Note: if using symmetry, be sure to explain why! <br>
+c) \( V_{washer} = \pi \int\limits_{-1}^1 \left( 6-(1+y^2) \right)^2 - \left( (6-(4-2y^2) \right)^2 dy  \)
+
+
+
+  <hr>
+  <b> April 18, 2025 | AP Classroom </b> <br>
+    The following link takes you to the <a href="https://myap.collegeboard.org/login" target="_blank">ap classroom</a>. The link is also under the 'links' section on the bulletin board of your course page. <br>
+    
+    FYI - You registered for access to this resource at the start of school year. <br>
+
+    
+  <hr>
+  <b> April 14, 2025 | DESMOS FOR THE AP EXAM </b> <br>
+  Hey everyone. If you are a complete beginner with desmos, go over the following links in order. My sample file includes derivatives and integrals. <Br> 
+  
+  <a href="https://help.desmos.com/hc/en-us/articles/4406040715149-Getting-Started-Desmos-Graphing-Calculator" target="_blank"> 1. Getting Started </a> <br>
+  <a href="https://help.desmos.com/hc/en-us/articles/4405296853517-Graph-Settings#h_01FB2RRQ5ZHN6Q66WWWK545SGY" target="_blank"> 2. Graph Settings </a> <br>
+  <a href="https://www.desmos.com/calculator/r1isarbu8w" target="_blank"> 3. Mr. Shubleka's Sample Desmos document </a> <br>
+  <a href="https://www.desmos.com/testing/cb-sat-ap/graphing" target="_blank"> 4. The Desmos version used in the AP Exam </a>
+  
+  <hr>
+
+  <b> April  13, 2025 | Feedback on recent quiz.</b> <br>
+P1. <br>
+\( x(t) = t-2\cos t , y(t)=2-2\sin t, \text{ for } 0\leq t \leq 10\) <br>
+
+a) For the particle to fly horizontally, we must set \( dx/dt \neq 0 \) AND \( dy/dt = 0 \). <br>
+   Find three solutions: \( t = \frac{\pi}{2},\frac{3\pi}{2}, \frac{5\pi}{2} \). (Note that \( 7\pi/2 > 10\).) <br><br>
+b) For the particle to fly vertically, we must set \( dx/dt = 0 \) AND \( dy/dt \neq 0 \).<br>
+Find three solutions: \( t = \frac{7\pi}{6},\frac{11\pi}{6}, \frac{19\pi}{6} \). (Note that \( 23\pi/6 > 10\).) <br><br>
+P2. <br>
+\( x(t) = \sqrt{t} - 2, y(t) = 2t^{3/4} \text{ for } 1\leq t \leq 16\). <br>
+\( (dx/dt)^2 = \frac{1}{4t}\) <br>
+\( (dy/dt)^2 = \frac{9}{4\sqrt{t}} = \frac{9\sqrt{t}}{4t} \) <br>
+\( L = \int\limits_1^{16} \sqrt{\frac{1+9\sqrt{t}}{4t}}dt  = \int\limits_1^{16} \frac{1}{2\sqrt{t}} \sqrt{1+9\sqrt{t}}dt \) <br><br>
+Solve the integral with \( u = 1 + 9\sqrt{t} \). Be sure to update the bounds when switching variables. <br><br>
+<hr>
+  <b> April  3, 2025 | Common Maclaurin Series with Desmos</b> <br>
+  <hr>
+  <center> <iframe src="https://www.desmos.com/calculator/vyvpv5woz4?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+  </center>
+
+  <hr>
+
+  <b> February  24, 2025 | Feedback on today's quiz.</b> <br>
+P1. <br>
+Be sure to draw and shade the region. When drawing the graph, give a little more detail (for example, the vertical asymptotes). <br>
+\( A = \int_2^{\infty} \frac{4}{x^2-1} dx = \lim\limits_{t\to \infty} \int_2^t \left( \frac{A}{x-1} + \frac{B}{x+1} \right) dx = ... = 2\ln 3 \) <br>
+Show work when calculating \( A = 2, B=-2 \).<br><br>
+P2. <br>
+Recognize the integral as improper due to the discontinuity. This means we NEED to use limits. Use u-substitution. <br>
+\( \int_{-4}^2 \frac{x}{\sqrt{16-x^2}} dx = \lim\limits_{b\to -4^+} \frac{-1}{2} \int_b^2 \frac{-2x}{\sqrt{16-x^2}} dx = ... = -2 \sqrt{3} \) <br><br>
+P3. <br>
+Rewrite the integral by completing the square: <br>
+\( \int \frac{1}{\sqrt{(2y-1)^2-4}} dy\) <br>
+Use trigonometric substitution with: \( 2y-1 = 2\sec\theta \). <br>
+Be sure to draw a right triangle.  The final answer comes out to: <br>
+\( \frac{1}{2} \ln \left| \frac{2y-1+\sqrt{4y^2-4y-3}}{2} \right| + C\) <br><br>
+P4. <br>
+\( \int_0^1 \ x \sqrt{2-\sqrt{1-x^2}}dx\) <br><br>
+Option 1: Use u-substitution with \( u = 1-x^2 \), then w-substitution with \( w  = 2-\sqrt{u}\). <br>
+Option 2: Use trigonometric substitution with \( x = \sin\theta \). <br>
+No matter which option you choose, be sure to update the bounds carefully whenever you switch variables.
+The final answer is: \( \frac{2(8\sqrt{2}-7)}{15}\) 
+
+  <hr>
+
+  <b> February  17, 2025 | Feedback on today's quiz.</b> <br>
+P1. <br>
+\( \int \frac{1}{\sqrt{x^2-a^2}} dx \) <br>
+Use trigonometric substitution with: \( x = a sec\theta \). <br>
+Be sure to draw a right triangle with all three sides labeled. <br>
+\( dx = a \sec\theta \tan\theta d\theta \) <br>
+After the substitution of the expressions for \( x \) and \( dx \), the integral reduces to: <br>
+\( \int \sec\theta d\theta = \ln |\sec\theta + \tan\theta | + C = \ln\left| \frac{x +\sqrt{x^2-a^2}}{a} \right| + C \)
+<br><br>
+P2. <br>
+One of your classmates pointed out that I was missing a \( dx \) at the end of the integral for this problem.  <br>
+
+\( \int_0^{3\sqrt{3}/2} \left( \frac{x^3}{(4x^2+9)^{3/2}} \right) dx \) <br>
+
+Option 1: \( u = 4x^2 +9, du = 8 x dx, x^3 = x^2 x  = \frac{u-9}{4} x \) <br>
+Remember to switch the bounds of integration to \( 9 \leq u \leq 36 \) when switching from \( dx \) to \( du\).<br>
+
+<br><br>
+Option 2: Use trigonometric substitution with \( x = \frac{3}{2} \tan\theta \) <br>
+Be sure to draw a right triangle and update the bounds: \( 0 \leq \theta \leq \frac{\pi}{3}\) <br>
+
+The final answer with either approach comes out to 3/32. 
+  <hr>
+
+  <b> January  15, 2025 | Problem 59 (Section 4.1) </b> <br>
+  The initial velocity is \( v(0) = 16\) ft/s (positive because the object is moving up). <br>
+  The initial position is \( s(0) = 64 \) ft. <br>
+a) <br>
+  Find the velocity function: \( v(t) = -32 t + 16 \) by taking the anti-derivative of acceleration and using the initial value. <br>
+  Find the position function \( s(t) = -16t^2 + 16t + 64 \) by taking the anti-derivative of velocity and using the initial value. <br>
+  To find the time when the object hits the ground, set the position expression equal to zero, then solve. <br>
+b) Plug the t-value into the velocity function. <br>
+
+
+
+
+  <hr>
+
+  <b> January  13, 2025 | Feedback on Today's Quiz </b> <br>
+  
+P1. <br>
+We know for all four parts that \( f'(x) = v(x)\). <br>
+a) \( \int 2 v(x) dx = 2 \int v(x) dx = 2 f(x) + C \), so statement 1 is true. <br>
+b) The derivative of \( f(2x) \) is \( 2 f'(2x) = 2 v(2x) \), so the second statement is false. <br>
+   \( f(x) = sin(x), v(x) = \cos(x) \) should work as an example. <br>
+c) \( \int (v(x) + 1) dx = f(x) + x + K \), so the third statement is false. <br>
+d) If we use the same example as the one in part b), we can see that \( (\sin x)^2 \) is not an anti-derivative of \( (\cos x)^2\). Therefore the fourth statement is false. 
+<br><br>
+P2. <br>
+\( a(t) = -32 \rightarrow \int (-32) dt  = -32t + C = v(t)\)<br>
+Since the initial velocity is zero, it follows that \(C = 0 \). <br>
+The velocity when the stone hits the ground is -120. The time at which this happens can be determined by solving: <br>
+\( v(t) = -32t = -120 \rightarrow t=\frac{15}{4} \). <br>
+the position function is: \( s(t) = \int v(t) dt = \int (-32 t) dt = -16t^2 + K  \). <br>
+The position is zero when \( t = \frac{15}{4} \), so find \( K = 225\) feet. <br>
+The is also the height of the cliff since it is the value of the position function \( s(t) = -16t^2 + 225 \) when \( t =0 \) <br><br>
+
+P3. <br>
+a. \( \int \left[ \frac{1}{2\sqrt{1-x^2}} -\frac{3}{1+x^2} \right] dx = \frac{\arcsin x}{2} - 3\arctan x + C \)<br><br>
+b. \( \int \frac{\sec x + \cos x}{2 \cos x} dx = \int \left(\frac{1}{2}\sec^2x+\frac{1}{2} \right) dx = \frac{1}{2} \tan x + \frac{1}{2} x + C\)
+<hr>
+ 
+  <hr>
+
+  <b> December 13, 2024 | About the final exam </b> <br>
+  
+  Exam date: Monday, December 16, 2024 | 8:30am - 10:30am. <Br>
+  Exam duration: A minimum of 90 minutes and a maximum of 120 minutes. <br> 
+  Exam location: JRCAC 206(?) <br>
+  Review Session #1: In-person Sunday afternoon, 2:15 - 3:15pm JRCAC 110 or Math Office. Bring specific questions. <br>
+  Review Session #2: Zoom on Sunday night, 8:15 - 9:15 pm. Please bring specific questions. [ <a href="https://cushingacademy.zoom.us/j/6020744357" target="_blank">zoom link here. </a> ] <br>
+  
+  
+  <br>
+  
+  <hr>
+  <b> November 19, 2024 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+ Vocab Quiz: <br>
+ a) The Second Derivative Test is used to justify local extrema. Be sure to state that f(x) has a stationary number at x=c, so the first derivative is zero there. List all three cases about the second derivative:
+  If the second derivative at x=c is positive, then f(c) is a local minimum. <br>
+  If the second derivative at x=c is negative, then f(c) is a local maximum. <br>
+  If the second derivative is also zero, then the test is inconclusive. <br><br>
+b) EVT states that a function f(x) that is continuous on a closed interval [a, b] is guaranteed to have an absolute maximum and an absolute minimum on that interval.<br><br>
+c) x=c is a critical number of a function f(x) if f'(c) is either zero or undefined. <br><br>
+d) A function f(x) has an inflection point at x=c if three conditions are met: f is continuous, f'(x) does NOT change sign at x=c, and f''(x) changes sign at x=c. <br><br>
+e) The First Derivative Test is used to justify local extrema. Be sure to state the function must be continuous at a critical number x=c. <br>
+Case 1: If f' changes sign from + to - at x=c, then f(c) is a local maximum. <br>
+Case 2: If f' changes sign from - to + at x=c, then f(c) is a local minimum. <br>
+Case 3: If f' does not change sign at x=c, then f(c) is not a local extremum. <br> <br>
+
+<b> Curve-Sketching Quiz. </b> <br>
+On average, this task went well. A few points: <br>
+
+For the Slant Asymptote be sure to divide the polynomials. Don't just list the answer \( y = x \).<br>
+For symmetry, be sure to verify that it is odd: \( f(-x) = -f(x) \) for all \(  x \). <br>
+The fully factored derivatives were: \( f'(x) = \frac{x^2 (x^2+3)}{(x^2+1)^2}; f''(x) = \frac{-2x (x-\sqrt{3})(x+\sqrt{3})}{(x^2+1)^3} \) <br>
+Be sure to list or label the tree inflection points, which means we include their y-coordinates as well. <br>
+Be sure to state that there are no extrema of any kind. <br>
+  <hr>
+  <b> November 18, 2024 | Resource: WolframAlpha </b> <br>
+  WolframAlpha is a reliable resource that you can use to confirm various mathematical calculations. To get started, visit wolframalpha.com and type a query using natural language. <br>
+  For example: <b>derivative of cos(3x) at x equals pi/6 </b>. The following url gives the results: <br>
+  
+  <a href="https://www.wolframalpha.com/input?i=derivative+of+cos%283x%29+at+x+equals+pi%2F6" target="_blank"> https://www.wolframalpha.com/input?i=derivative+of+cos%283x%29+at+x+equals+pi%2F6</a>
+  
+  <hr>
+
+
+  <b> November 15, 2024 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  \( f(x) = x - \frac{1}{x}-\frac{1}{x^2} = \frac{x^3-x^2-1}{x^2} \) <br>
+  Domain: all reals except \( x = 0 \). <br>
+  Symmetry: none. <br>
+  VA: \( x=0 \) <br>
+  HA: none. <br>
+  Slant: \( y=x \) <br>
+  y-intercept: none <br>
+  x-intercept: at least one due to IVT but it's hard to find since it is difficult to solve: \( x^3-x^2-1 = 0 \) <Br>
+  \( f'(x) = \frac{(x+1)(x^2-x+2)}{x^3} \rightarrow x=-1, x=0\) are the critical numbers. <br>
+  The sign table for \( f'(x) \) only needs 2 factor rows because the quadratic expression is always positive \( b^2-4ac < 0, a>0 \) <br>
+ID behavior: increasing on \( (-\infty, -1) \cup (0, \infty) \); decreasing on \( (-1,0) \) <br> 
+ \( f''(x) = \frac{-2(x+3)}{x^4} \rightarrow x=-3, x=0 \) are the critical numbers. <br>
+ The sign table for \( f''(x) \) also needs two factor rows. <br>
+ Concavity: concave up on \( (-\infty, -3)\); concave down on \( (-3, 0) \cup (0, \infty) \) <br>
+ Inflection point at: \( (-3, -25/9) \); Local maximum at \( (-1, -1) \) ; No other extrema.<br>
+ Conclude with sketch. A version from desmos with key details is below: <br>
+   <center> <iframe src="https://www.desmos.com/calculator/wgx0xprusi?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center> <br> <br>
+
+P2. <br>
+\( f(x) = \frac{x^2}{\sqrt{x+1}}  \) <br>
+Domain: \( x > -1 \). <br>
+Symmetry: none. <br>
+VA: \( x= -1 \) <br>
+HA: none. <br>
+Slant: none <br>
+y-intercept: \( (0,0) \)<br>
+x-intercept:\( (0,0)\) <Br>
+\( f'(x) = \frac{x(3x+4)}{2(x+1)^{3/2}} \rightarrow x=0, x=-1\) are the only critical numbers in the domain. <br>
+The sign table for \( f'(x) \) needs 3 factor rows or only 2 if you make a note about \( (x+1)^{3/2} \) being positive for \( x >-1 \) <br>
+ID behavior: decreasing on \( (-1, 0) \); increasing on \( (0,\infty) \) <br> 
+\( f''(x) = \frac{3x^2+8x+8}{4(1+x)^{5/2}} \rightarrow \) no critical numbers in the domain. <br>
+You do not need a sign table for \( f''(x) \) as long as you state that both numerator and denominator are positive wherever they are defined.  <br>
+Concavity: concave up on \( (-1, \infty )\)  <br>
+No inflection points. Local and global minimum at \( (0, 0) \) ; No other extrema.<br>
+Conclude with sketch. A version from desmos with key details is below. <br>
+<center><iframe src="https://www.desmos.com/calculator/pqv9a5tdnx?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center> <br> <br>
+
+P3. <br>
+  \( f(x) = e^{(-x^2)/2} \) <br>
+  Domain: all reals. <br>
+  Symmetry: even. <br>
+  VA: none <br>
+  HA: \( y = 0 \) with brief explanation (use limits) <br>
+  Slant: none <br>
+  y-intercept: \( (0, 1) \) <br>
+  x-intercept: none <Br>
+  \( f'(x) = -x e^{(-x^2)/2} \rightarrow x=0\) is the only critical number. <br>
+  The sign table for \( f'(x) \) only needs 1 factor row so we don't even need a table.  A number line will suffice here. <br>
+
+ID behavior: increasing on \( (-\infty, 0) \); decreasing on \( (0,\infty) \) <br> 
+ \( f''(x) = (x-1)(x+1) e^{(-x^2)/2} \rightarrow x=-1, x=1 \) are the critical numbers. <br>
+ The sign table for \( f''(x) \) needs two factor rows. <br>
+ Concavity: concave up on \( (-\infty, -1) \cup (1, \infty) \); concave down on \( (-1, 1)  \) <br>
+ Inflection points at: \( \left(-1, \frac{1}{\sqrt{e}}\right), \left(1, \frac{1}{\sqrt{e}}\right)   \); Local and global maximum at \( (0, 1) \) ; No other extrema.<br>
+ Conclude with sketch. A version from desmos with key details is below. <br>
+ <center> <iframe src="https://www.desmos.com/calculator/qdn2ponuar?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+ <br> <br>
+
+ P4. <br>
+  \( f(x) = \frac{\cos x}{2+\sin x}\) <br>
+  Domain:  \( [0, 2\pi] \), as given. <br>
+  Symmetry: none. <br>
+  VA: none <br>
+  HA: none or NA due to the restricted domain. <br>
+  Slant: none or NA due to restricted domain. <br>
+  x-intercepts: \( (\pi/2, 0), (3\pi/2, 0) \)<br>
+  y-intercept: \( (0, 1/2) \)<Br>
+  \( f'(x) = \frac{-2\sin x - 1}{(2+\sin x)^2} \rightarrow x=7\pi/6, x=11\pi/6\) are the critical numbers. <br>
+  The sign table for \( f'(x) \) only needs 1 factor row (for the numerator!) so as long as we explain, a number line with explanation would be sufficient here. <br>
+ID behavior: increasing on \( (7\pi/6, 11\pi/6) \); decreasing on \( (0,7\pi/6) \cup (11\pi/6, 2\pi) \) <br> 
+ \( f''(x) = \frac{2 \cos x (\sin x - 1)}{(2+\sin x)^3} \rightarrow x=\pi/2, x=3\pi/2 \) are the critical numbers. <br>
+ The sign table for \( f''(x) \) needs two factor rows, one for each expression at the numerator level.  <br>
+ Concavity: concave up on \( (\pi/2, 3\pi/2) \); concave down on \( (0, \pi/2) \cup (3\pi/2, 2\pi) \) <br>
+ Inflection points at: \( (\pi/2, 0), (3\pi/2, 0) \); Local and global maximum at \( (11\pi/6, \frac{\sqrt{3}}{3}) \) ; Local and global minimum at \( (7\pi/6, -\frac{\sqrt{3}}{3}) \)<br>
+ Conclude with sketch. A version from desmos with key details is below. <br>
+ <center><iframe src="https://www.desmos.com/calculator/fezjxla8r8?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe> </center> <br> <br>
+
+
+  <hr>
+  <b> November 14, 2024 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+The function \( f(x) = x^3 e^{-2x}\) is a product of two continuous functions on the entire domain of real numbers, therefore it is continuous on the interval [1, 4]. <br>
+We use the Closed Interval Method here. (Be sure to state the name of the method and the reason why the function is continuous.) <br>
+Find the derivative and consider two cases: when/if it equals 0 and when/if it is undefined. <br>
+
+\(  f'(x) = \frac{x^2 (3-2x)}{e^{2x}} \rightarrow x=0, x=3/2\) <br>
+
+Of the two critical numbers, only 3/2 is in the given domain. Evaluate \( f(3/2) = \frac{27}{8e^3}, f(4) = \frac{64}{e^8}, f(1) = \frac{1}{e^2} \)
+to find that the absolute maximum is \( \frac{27}{8e^3} \) and the absolute minimum is \( \frac{64}{e^8} \).
+
+  <hr>
+  <b> November 11, 2024 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  a) Use L'Hospital's Rule twice. Be sure to use arrows to indicate that the conditions have been confirmed. <br>
+
+  \( \lim\limits_{p \to 0} \frac{0.5p^2+\cos p}{p^4} = \frac{1}{24}\) <br><br>
+
+  b) Confirm that this is an indeterminate form of the type \( 1^{\infty} \), then proceed with: <br>
+  \( \ln y = bx \ln\left(1+ \frac{a}{x} \right) \) <br>
+  Find the limit of the original expression to be \( e^{ab} \) since \( \ln y \rightarrow ab \) as \( x \to \infty\). <br><br> 
+  c) Check the conditions before rewriting as: \( \lim\limits_{x\to \infty} \frac{\tan(1/x)}{1/x}\).<br><br>
+  The limits ends up being 1 here. 
+  <hr>
+  <b> November 5, 2024 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  Suppose the tangent line touches the curve at \( x = a  \) <br>
+  Find slope after evaluating the derivative: \( f'(x)=3e^{3x} \rightarrow f'(a) = 3e^{3a} \) <br>
+  The slope is also equal to the slope of the segment connecting the origin to the point on the curve: \( \frac{e^{3a}-0}{a-0} = \frac{e^3a}{a} \) <br>
+  Set the two versions of slope equal to each other, and then solve to find: \( a=\frac{1}{3} \) <br>
+  The point on the curve is: \( (\frac{1}{3}, e) \). <br><br>
+    
+  P2. <br>
+  \( L(x) = f(\pi/3) + f'(\pi/3) (x-\pi/3) \rightarrow L(x) = \sqrt{3} + 4(x-\pi/3) \)<br>
+  Plugging in \( x = 61\pi/180 \), we get:
+  \( \tan(61^{\circ}) \approxeq L(61\pi/180) = \sqrt{3} + \pi/45 \) 
+  <br><br>
+  
+  P3.<br>
+  Draw a right triangle with hypotenuse \( c \) and legs \( a, b \). <br>
+  We know that: \( \frac{dc}{dt} = m, \frac{da}{dt} = -n \) <br>
+  Let \( \alpha \) be the angle formed by \( c \) and \( b \). <br>
+  For part a) rewrite the relationship: \( \sin\alpha = \frac{a}{c} \) as \( \alpha = \arcsin(\frac{a(t)}{c(t)}) \) <br>
+  For part b)  differentiate with respect to time: \( \frac{d\alpha}{dt} = \frac{1}{\sqrt{1-\frac{a^2}{c^2}}} \frac{c*da/dt - a*dc/dt}{c^2} \) <br>
+  Plug in the known rates as well as \( c = \sqrt{2} \) to find \( \frac{d\alpha}{dt} = -n-\frac{m}{\sqrt{2}} \) radians per second. <br>
+  At the instant when both legs are 1 centimeter, the angle \( \alpha \) formed by the hypotenuse and side \( b \) decreases at a rate of \( n+ \frac{m}{\sqrt{2}} \) radians per second.
+    <br><br>
+  
+<br><br>
+ 
+
+  <hr>
+  <b> November 4, 2024 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  \( f(x) = \sin^{-1}\frac{x}{2} \) The y-value is 0 when \( x= 0\), so the tangent line touches the curve at the origin.<br>
+  \( dy/dx = \frac{1}{\sqrt{1-\frac{x^2}{4}}}\frac{1}{2} \) by the chain rule. <br>
+  Evaluate at the origin to get \( f'(0)=1/2 \) <br>
+  The tangent line equation is \( y= x/2 \) <br>
+  
+  P2. <br>
+  Use logarithmic differentiation to find \( m = 3 \) and the tangent line equation is \( y=3x. \) <br>
+  The first steps are below: <br>
+  
+  \( y = \frac{x (\sqrt[3]{x}+1)^2}{\sqrt{x+1}} \) <br>
+  \( \ln y = \ln x + 2 \ln(\sqrt[3]{x}+1) -\frac{1}{2} \ln(x+1) \)<br>
+  
+  \( \frac{1}{y}\frac{dy}{dx} = \frac{1}{x} + \frac{2}{\sqrt[3]{x}+1} \frac{1}{3}*x^{-2/3} -\frac{1}{2(x+1)} \)
+  
+
+  <hr>
+  <b> October 25, 2024 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  
+  P1. <br>
+
+  This problem went well. Be sure to answer the question: <br>
+  At the moment when \( x=1, y=2 \) the quantity \( z \) is changing at a rate of \( -12 \) units per second. <br>
+  The explanation: Since the rate is negative, \( z \) is decreasing at that moment.  <br> <br>
+
+  P2. <br>
+  No major issues here either. When the area is 9 square miles, the radius of the spill is increasing at a rate of \( \frac{1}{\sqrt{\pi}} \) miles per hour. <br> Be sure to simplify. If you write the rate as \( \frac{\sqrt{\pi}}{\pi} \), that is fine, too.
+
+  <hr>
+  <b> October 23, 2024 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  Problem 1 generally went well. This was nearly identical to the question we did in class. For the cone, be sure to draw neatly and set of the ratio of similar triangles: <br>
+  \( \frac{r}{3} = \frac{h}{10} \rightarrow r=\frac{3h}{10} \) <br>
+  Substitute this into the volume formula so that the volume is in terms of \( h(t) \) only. <br>
+
+  If you take the derivative implicitly with respect to time without substituting, be sure to use: <br>
+  \( \frac{dr}{dt} = \frac{3}{10} \frac{dh}{dt} \) <br>
+  The unknown rate was: \( \frac{dh}{dt} = \frac{8}{9\pi} cm/s \) <br>
+  Be sure to include a sentence for the conclusion. 
+ <br><br>
+ P2. <br>
+ Be sure to start with a correct drawing. If \( y \) is the length of the shadow and \( x \) is the distance from the spotlight, the ratio of similar triangles gives us: <br>
+ \( \frac{ 12}{y} = \frac{x}{2} \) <br>
+ Rewrite as: \( 24 = x(t) y(t) \) and then implicitly differentiate with respect to time \( t \)<br>
+\( \frac{dy}{dt} = \frac{-3}{5} m/s \). Be sure to include a sentence for the conclusion.
+
+ 
+  
+  <hr />
+  <b> October 8, 2024 | Quiz notes </b> <br>
+  
+  P1<br>
+  Use the quotient rule. Do NOT use techniques we have not discussed in class.  <br> 
+  \( f(x) = \frac{2}{1-3x} \rightarrow f'(x) = \frac{(1-3x)*0 - (-3)*2}{(1-3x)^2} = \frac{6}{(1-3x)^2} \) <br>
+  When \(x = 0, y = 2, f'(0) = 6 \rightarrow y = 6x + 2\) <br>
+  When \(x = -1, y = \frac{1}{2}, f'(-1) = \frac{3}{8} \rightarrow y = \frac{3}{8}x + \frac{7}{8}\) <br> <br>
+
+  P2.<br>
+  The slope of the given line is \(-3 \), since the equation can be written as \( y = -3x \). <Br>
+
+    Find the derivative using the power rule or the quotient rule:
+
+    \( y = 12 x^{-1} \rightarrow \frac{dy}{dx} = -12 x^{-2} = \frac{-12}{x^2}  \) <br>
+    Set the derivative equal to \( -3 \), then solve to find \( x= \pm 2 \). <br>
+    The points are \( (2, 6) \) and \( (-2,-6) \). <bR><br>
+
+  
+
+  <hr />
+  <b> October 5, 2024 | Quiz notes </b> <br>
+  
+  P1<br>
+  \( f(x)=\frac{3}{1-x} \text{ at } x=-2 \) <br>
+  
+  Since the problem asks specifically to use the definition of slope as a number, be sure to either 
+  use the "h" definition: \( m = \lim\limits_{h\to 0} \frac{f(-2+h)-f(-2)}{h} \) <br>
+  
+  or the "a" definition: \( \lim\limits_{x\to -2} \frac{f(x)-f(-2)}{x-(-2)}\). <br>
+  
+  Do NOT use the derivative as a function definition: \( f'(x) = \lim\limits_{h\to 0} \frac{f(x+h)-f(x)}{h} \). <br>
+  Be sure to show work for credit.<Br>
+    
+  \( \lim_{x\to -2} \frac{f(x)-f(-2)}{x - (-2)} = \lim_{x\to -2} \frac{\frac{3}{1-x} - \frac{3}{3}}{x+2} = \lim_{x\to -2}\frac{6+3x}{3(1-x)(x+2)} = ... = \frac{1}{3}  \)  <br>
+  
+  Use the point-slope or slope-intercept form to find the equation of the tangent line: \( y = \frac{x+5}{3} \) <br>
+  
+  
+
+ 
+  <hr />
+  <b> October 1, 2024 | Quiz feedback </b> <br>
+
+  a) Be sure to use limits when discussing continuity: <br>
+
+  At \( x = 2 \) the graph of \(g \) is continuous from both sides, since \( \lim\limits_{x\to 2^-} g(x) = \lim\limits_{x\to 2^+} g(x) = 0 = g(2)  \). Therefore the graph of \( g(x) \) is continuous at \(x = 2\). <br> 
+  At \( x = 3 \) the graph of \(g \) is continuous from both sides, since \( \lim\limits_{x\to 3^-} g(x) = \lim\limits_{x\to 3^+} g(x) = -1 = g(3)  \). Therefore the graph of \( g(x) \) is continuous at \(x = 3 \). <br> 
+  At \( x = 4 \) the graph of \(g \) is only continuous from the right , since \( \lim\limits_{x\to 4^+} g(x) = \pi = g(4)  \). \( g(x) \) is not continuous from the left at \(x = 4 \) because \( \lim\limits_{x\to 4^-} g(x) = 0 \neq g(4) = \pi \). <br> 
+
+
+  <center><iframe src="https://www.desmos.com/calculator/yljpxrrszq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center>
+  <hr />
+  <b> September 30, 2024 | Quiz notes </b> <br>
+  
+  P1<br>
+  Be sure to use arrows or explain your thinking in words. Be careful about plugging in right away! <Br>
+  a) <br>
+  \( \lim\limits_{t\to \pi/2^+} e^{\tan t} = e^{ \lim\limits_{t\to \pi/2^+} \tan t} =  0  \) because \( \tan(t) \rightarrow - \infty \) and raising e to an infinitely small number tends towards zero.<br> <Br>
+  
+  b) <br>
+  \( \lim\limits_{\theta \to 0}\tan(\frac{1-\cos\theta}{\theta}) = \tan(\lim\limits_{\theta \to 0}\frac{1-\cos\theta}{\theta} ) = \tan(0) = 0 \) <br>
+  Note that the inner limit is that famous limit we talked about in class. <br> <br>
+  
+  c) <br>
+  Use the log properties here instead of subtracting infinities. <br> 
+  \(\lim\limits_{\theta\to 0^+} \ln(\sin(2\theta)) - \ln(\tan(\theta)) =\lim\limits_{\theta\to 0^+} \ln( \frac{ \sin(2\theta)}{\tan(\theta)}) = ... = \ln 2 \) <br> <br>
+  
+  P2. <br>
+  
+  Let \( f(x) = x+\sin x + -1  \). This function is continuous on the interval \( [0, \pi/6] \), so we can use the Intermediate Value Theorem: <br>
+  
+  \( f(0) = -1 < 0 \) <Br>
+  \( f(\pi/6) = \frac{\pi-3}{6} > 0 \) <br>
+  
+  Therefore, since the the sign changes from negative to positive and the graph of f(x) is continuous on the given interval, by the Intermediate Value Theorem, the function has at least one x-intercept in the given interval, which is the same as saying that the equation has at least one root on the given interval. 
+  
+  
+
+  
+  <hr />
+  <b> September 26, 2024 | Quiz notes </b> <br>
+  
+  P1<br>
+  <b> General feedback</b> <br> </b>Remember to write neatly. <br>
+  Please remember to use pencil. <br>
+  Do not plug in on paper. If you would like to mentally plug in, use arrows pointing out of the expression.<br>
+  Be sure to Justify! <br><br>
+
+  a) <br>
+  \( \lim\limits_{x\to -2}\frac{2-|x|}{2+x} = \lim\limits_{x\to -2}\frac{2-(-x)}{2+x} = \lim\limits_{x\to -2}\frac{2+x}{2+x}  \) <br>
+  -Because x is going to -2 and hence is less than zero, \( |x| = -x \) for both one-sided limits. <br>
+  -The overall limit comes out to 1, after confirming both sides. <br><br>
+  b) <br>
+  \( \lim\limits_{x \to 0.5^{-}}\frac{2x-1}{x^2 |2x-1|} \) <br>
+  Be sure to state that since \( x < 0.5 \), it follows that \( 2x-1 < 0 \), therefore \( |2x-1|  = -(2x-1) \). <br>
+  -The one sided limit, with work, comes out to -4 <br> <br>
+  
+  c) <br>
+  \(\lim\limits_{h\to 0} \frac{(3+h)^{-1}-3^{-1}}{h} = \lim\limits_{h\to 0} (\frac{1}{3+h} - \frac{1}{3}) * \frac{1}{h} = \lim\limits_{h\to 0} \frac{3-(3+h)}{3 (3+h)} * \frac{1}{h} = \lim\limits_{h\to 0} \frac{-h}{3*h* (3+h)} = ... \) <br>
+  -check that the parts of the fraction both go to zero. <br>
+  -find the common denominator of the numerator <br>
+  -simplify but keep writing the limit notation. <br>
+  -the limit comes out to -1/9.<br> <br>
+
+  <hr />
+  <b> September 23, 2024 | Notes on today's quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  \( \lim\limits_{x\to -4} \frac{\sqrt{x^2+9}-5}{x+4} = ... = -4/5 \) <br>
+  Check (with arrows) that the numerator and denominator both go to zero, then multiply both top and bottom by the conjugate of the numerator. <br><br>
+  P2. <br>
+  a) \( \lim\limits_{x\to 2^+} g(x) = \lim\limits_{x\to 2^+} \frac{x^2+x-6}{|x-2|} = \lim\limits_{x\to 2^+} \frac{(x-2)(x+3)}{x-2} = \lim\limits_{x\to 2^+} (x+3) = 5  \)<br>
+   \( \lim\limits_{x\to 2^-} g(x) = \lim\limits_{x\to 2^-} \frac{x^2+x-6}{|x-2|} = \lim\limits_{x\to 2^-} \frac{(x-2)(x+3)}{-(x-2)} = \lim\limits_{x\to 2^-} (-x-3) = -5  \)<br>
+   <br>
+  b) The overall limit \( \lim\limits_{x\to 2} g(x) \) does not exist but the one-sided limits are different. <br>
+
+  c) Sketch a piece-wise function: <br>
+  <center> <iframe src="https://www.desmos.com/calculator/wxorwywkfc?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center> <br><br>
+  P3.<br>
+  The statement is false. Consider the example we offered to illustrate the Squeeze Theorem: <br>
+  \( \lim\limits_{x\to 0} (x^2 \sin(1/x)) = 0 \) despite the fact that \( \lim\limits_{x\to 0} (x^2) = 0 \) and \( \lim\limits_{x\to 0}  \sin(1/x) \) does not exist.
+
+
+  <hr />
+  <b> September 23, 2024 | Notes on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  
+
+  
+  Quiz 1 - P1<br>
+  Draw the three pieces neatly. The <i> a </i> values for which \( \lim_{a\to a} f(x) \) exists include all real numbers in the domain except for \( a= 0 \). The limit at this point does not exist because the one-sided limits are 1 and -1. At all other places, including \( a=1 \), the overall limit exists.
+    
+  
+  <center><iframe src="https://www.desmos.com/calculator/fjlv9a5fal?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe> </center> <br>
+
+
+  Quiz 1 - P2<br>
+  Rewrite the equation as:
+  
+  \( (e^{-x})^2-3 (e^{-x}) + 2 = 0 \) <br>
+  
+  Factor into:  \( (e^{-x}-1) (e^{-x}-2) = 0  \) <br>
+  
+  \( e^{-x}=2 \text{ or } e^{-x} = 1 \) <br>
+  
+  Two solutions: \( x=-\ln 2, x=-\ln 1 = 0 \) <br> <br>
+  
+  Quiz 2 -  P1 <br>
+  No major issues with this problem. Be sure to label your graph. Put arrows on the coordinate axess. <Br> <br>
+
+  Quiz 2 - P2 <br>
+  Factor completely: \( (\csc x - 2) (\csc x + 1) = 0 \) <Br>
+  Solve: \( \csc x = 2 \text{ or } \csc x = -1  \) <br>
+  
+  Find three solutions on the given domain: \( x= \pi/6, 5\pi/6, 3\pi/2 \) <br><Br>
+
+  <hr />
+  
+  <b> September 22, 2024 | Weekly updates & Current grades  </b> <br>
+Hi everyone. I write to clarify a couple of things regarding grades and grading. <br>
+First, on myCushing under your progress tab you should be able to see your current grade for this course, which is a weighted average of the assessments we have written so far. While individual quiz scores will not be published on myCushing, the current grade will be updated approximately once week. <br>
+Second, when you read your weekly update, be sure to check the comments as well as the grade. Sometimes I add individual feedback based on recent performances or in-class observations. <br><br>
+As always, let me know if you have any questions.
+
+  
+<hr>
+<b> September 10, 2024 </b> <br>
+At the following  <a href="https://openstax.org/books/precalculus-2e/pages/1-introduction-to-functions" target="_blank">link (opens new window)</a> find an online precalculus textbook. The content in chapters 1 through 7 covers a great deal of content we need to know well in order to be successful in this course. 
+
+<hr />
+  
+  <b> September 9, 2024  </b> <br>
+
+  AP registration instructions at this [ <a href="https://apcentral.collegeboard.org/pdf/joining-your-ap-class-section-students.pdf" target="_blank">link</a> ]. <br>
+  
+  For your course section, use join code: 2MJA3Q<br>
+  
+  If you have any questions, contact Mr. Dan Monahan.<br>
+  
+  
+  <hr>
+  <b> September 1, 2024 </b> <br><br>
+     Hi everyone. In this area of the course page we will post notes, solutions, reminders, and links to other resources throughout the year. Entries will be dated with the most recent posted at the top of the page.
+
+
+  <hr>
+  <b> May 12, 2024 | MC Sets </b> <br><br>
+MC Set "NINE" KEY:  1. E 2. B 3. C 4. A 5. A 7. C 8. D  9. C  10. D 11. D 12. E 13. D <br>
+MC Set "EIGHT and a HALF" KEY: 1. B 
+2. C
+3. C 
+4. B 
+5. A 
+6. D
+7. A 
+8. C 
+9. D 
+10. C
+11. A 
+12. B  <br>
+MC Set "EIGHT" KEY: 1. C
+2. C 
+3. D 
+4. D
+5. E 
+7. C 
+8. C 
+9. C 
+10. E 
+11. A 
+12. B 
+13. B  <br>
+MC Set "SEVEN" KEY:1. E
+2. A
+3. D 
+4. E 
+5. D 
+7. D 
+8. A 
+9. E 
+10. A 
+11. C
+12. C 
+13. D    <br>
+MC Set "SIX" KEY: 1. E 
+2. A
+3. C 
+4. A 
+5. E 
+
+7. B 
+8. C 
+9. E 
+10. A
+11. C 
+12. C
+13. A  <br>
+MC Set "FIVE" KEY: 
+1. C 
+2. D 
+3. E 
+4. D 
+5. D I-40
+7. C 
+8. D 
+9. A 
+10. C 
+11. E 
+12. A 
+13. B
+
+  <hr>
+ <b> May 10, 2024 | This weekend. </b> <br><br>
+ For more <b>FR practice</b>, feel free to use the following generator. Each question should take approximately 15 minutes.
+After 2011, only Problems 1 and 2 are calculator active. Before 2011, problems 1, 2, and 3 were calculator active. <br>
+
+<a href="https://apmath.github.io/fr-gen/fr-bc.html" target="_blank"> Free Response Generator </a> <br><br>
+For misc <b>MC practice</b>, work on the combined sets "FIVE" through "NINE". I can add answer keys here on Sunday or you're welcome to email me when done with some or all. <br> <br>
+
+<b> AP Exam details</b>
+What to bring: <br>
+water bottle, snack, sweatshirt in case it's too cool. <br>
+pencils, pens, eraser, ruler, calculator in radian mode, spare calculator is optional but recommended, also in radian mode. <br><Br>
+Exam date: Monday May 13, 2024 <br>
+Exam Time: 7:45 (for an 8:00am start) <br>
+Exam location: Watkins Field House <br><br>
+
+<hr>
+ <b> May 10, 2024 | Answer Key to MC Packets </b> <br><br>
+ The answer key to MC packet "TEN" is below. <br>
+ 1. B  2. D  3. A  4. C  5. D  6. E  7. A  8. A  9. D  10. C  11. A 12. D 
+  <hr>
+<b> May 10, 2024 | More FR Practice </b> <br><br>
+
+<a href="https://apcentral.collegeboard.org/media/pdf/ap23-frq-calculus-bc.pdf" target="_blank">2023 Form A </a> ( <a href="https://apcentral.collegeboard.org/media/pdf/ap23-sg-calculus-bc.pdf" target="_blank"> Key </a> ) <br />
+<a href="https://secure-media.collegeboard.org/apc/ap22-frq-calculus-bc.pdf" target="_blank">2022 Form A </a> ( <a href="https://apcentral.collegeboard.org/media/pdf/ap22-sg-calculus-bc.pdf" target="_blank">Key</a> ) <br />
+              
+          <a href="https://apcentral.collegeboard.org/pdf/ap21-frq-calculus-bc.pdf" target="_blank">2021 Form A </a> ( <a href="https://apcentral.collegeboard.org/pdf/ap21-sg-calculus-bc.pdf" target="_blank">Key</a> )  <br />
+          
+      <a href="https://secure-media.collegeboard.org/apc/ap19-frq-calculus-bc.pdf" target="_blank">2019 Form A </a> ( <a href="https://apstudents.collegeboard.org/ap/2019-08/ap19-sg-calculus-bc.pdf" target="_blank">Key</a> ) <br />
+
+<br>
+
+  <hr>
+
+  <b> May 9, 2024 | FR Questions</b> <br>
+ The FR set we worked on earlier this week is from year 2021.  <br>
+
+ <a href="https://apcentral.collegeboard.org/media/pdf/ap21-frq-calculus-bc.pdf" target="_blank"> 2021 - FRQ</a> <br>
+ <a href="https://apcentral.collegeboard.org/pdf/ap21-sg-calculus-bc.pdf" target="_blank"> 2021 - FRQ Scoring</a> <br> <br>
+
+  <hr>
+
+  <b> May 3, 2024 | Notes on today's quiz</b> <br>
+  Be sure to remember the chain rule when finding the derivative. <br> 
+
+  Factor before separating variables: <br>
+  \( \int e^{-y} dy = \int (x+2) dx \) <br>
+
+  \( -e^{-y} = \frac{x^2}{2} + 2x + C \leftarrow (0, 0) \) <br>
+ \( C = -1  \), therefore: \( -e^{-y} = \frac{x^2}{2} + 2x - 1 \) <br>
+ Multiply both sides by -1, to get: <br>
+ \( e^{-y} = 1- 2x - \frac{x^2}{2} \) <br>
+ Take the natural log: <br>
+ \( -y = \ln | 1 - 2x - \frac{x^2}{2}| \) <br>
+ Multiply by (-1) <br>
+ 
+ \( y = = - \ln | 1 - 2x - \frac{x^2}{2}| \) <br>
+ Optionally, you can also write the solution as: <br>
+ \( y = \ln |\frac{1}{1-2x-\frac{x^2}{2}}| =\ln |\frac{2}{2-4x-x^2}| \)
+
+  <hr>
+
+
+  <hr>
+
+  <b> May 1, 2024 | Notes on today's quiz</b> <br>
+  Be sure to remember the chain rule when finding the derivative. <br> 
+
+  \( f(x) = (\frac{x}{2})^4 + \frac{1}{2x^2} \rightarrow f'(x) = \frac{x^3}{4}-\frac{1}{x^3} \) <br>
+
+  \( (dy/dx)^2 + 1 = \frac{x^6}{16} - \frac{1}{2} + \frac{1}{x^6} + 1 = \frac{x^6}{16} + \frac{1}{2} + \frac{1}{x^6} = (\frac{x^3}{4}+\frac{1}{x^3})^2  \) <br>
+  <br>
+
+  \( L = \int_1^4 \sqrt{(dy/dx)^2 + 1} dx =  \int_1^4 \frac{x^3}{4}+\frac{1}{x^3} dx = ... = \frac{525}{32} \) 
+  <hr>
+
+<b> April 30, 2024 | Study Guide</b> <br>
+If you would like to invest in a guide, below find a few clean links that point to Amazon. I'll provide plenty of review resources for you starting this Friday and throughout next week, so the guide is entirely optional. The benefit of using the guide is that you can complete practice problems targeting specific topics as well as a few mock exams.
+<br> <br>
+
+Barron's (around 17 plus shipping) <br>
+https://www.amazon.com/AP-Calculus-Premium-2024-Comprehensive/dp/1506287832/<br><br>
+
+Princeton Review - AP Calculus BC (around 19 plus shipping)<br>
+https://www.amazon.com/Princeton-Review-Calculus-Prep-10th/dp/0593516753/<br><br>
+
+5 Steps to a 5 - AP Calculus BC (around 20)<br>
+https://www.amazon.com/Steps-AP-Calculus-BC-2024/dp/1265339783/<br>
+
+
+  <hr>
+  <b> April 4, 2024 | Thoughts on today's quiz.</b> <br>
+ a) \( \sum_{n=1}^{\infty} \frac{(-1)^n (n+1)3^n}{ 2^{2n+1}} \) <br>
+ The Ratio Test works best here. Be sure to use the absolute value notation: <br>
+
+ \( |\frac{a_{n+1}}{a_n}| = |\frac{(n+2)3^{n+1}}{2^{2n+3}} * \frac{2^{2n+1}}{(n+1)3^n}| = ... |\frac{n+2}{n+1} \frac{3}{4}|\rightarrow \frac{3}{4} < 1 \) <br>
+ Since the series converges absolutely, it convergs. <br> <br>
+
+ b) \( \sum_{n=1} (-1)^n \frac{\sqrt{n}}{2n+1} \) <br>
+ Use the alternating series test  here. We need to check and show work for two conditions: <br>
+ First, \( b_n = \frac{\sqrt{n}}{2n+1} = \frac{1/\sqrt{n}}{2+\frac{1}{\sqrt{n}}} \rightarrow \frac{0}{2+0} = 0 \) <br>
+ Second, confirm that \( b_{n+1} \leq b_n\). You can do this algebraically or by taking the derivative of \( f(x) = \frac{\sqrt{x}}{2x+1}\) and confirming that the derivative is negative. <br>
+
+ c) \( \sum_{n=1}^{\infty} \frac{\cos 3n}{1+(1.2)^n} \) <br>
+ This is similar to the example from class. We show absolute convergence for the given series by using the comparison test twice: <br>
+ \( | \frac{\cos 3n}{1+(1.2)^n} | \leq \frac{1}{1+(1.2)^n} < \frac{1}{(1.2)^n} = (5/6)^n \) <br>
+ The right-most sequence above makes a geometric series that is convergent, so by the Comparison Test, the original series converges absolutely, and therefore it converges. <br>
+
+ d) \( \sum_{n=1}^{\infty} \frac{(-5)^{2n}}{n^2 9^n} = \sum_{n=1}^{\infty} \frac{5^{2n}}{n^2 9^n}  \) <br>
+ Use the ratio test with care to show that the series diverges. Note that: \( a_{n+1} = \frac{5^{2(n+1)}}{(n+1)^2 9^{n+1} }\). The ratio ends up approaching 25/9, which is greater than 1. <br>
+
+
+  <hr>
+  <b> April 4, 2024 | Thoughts on problem 15 from today's worksheet.</b> <br>
+ 
+  An odd number can be described as \( 2n-1 \) or \( 2n+1 \) if n is a positive integer. <br> 
+   In the absence of a formula for the product of the odd numbers, we write: <br>
+   \( \sum_{n=1}^{\infty} \frac{1*3*...*(2n-1)}{n!} \) <br>
+   Proceed to test using the Ratio Test:
+   \( |\frac{a_{n+1}}{a_n}| = | \frac{1*3*...*(2n-1)(2n+1)}{(n+1)*n!} \frac{n!}{1*3*...*(2n-1)}| = |\frac{2n+1}{n+1}|\rightarrow 2 > 1  \) <br>
+   Therefore the series diverges.
+
+  <hr>
+  <b> March 29, 2024 | Thoughts on recent quiz </b> <br>
+  P1. <br>
+  a) True. All sequences are functions because for every n in the domain there is exactly one term of the sequence. <br>
+  b) False. Consider \( a_n=(-1)^n, b_n = (-1)^{n+1} \). The sequence \( \{a_n + b_n\} \) converges to 0 even though the individual sequences diverge. <br>
+  c) False. Consider \( \{(-1)^n \}_{n=1}^{\infty} \). <br>
+  d) True. The y-value of the horizontal asymptote is also where the sequences converges. <br> <br>
+
+  P2.<br>
+  a) This is geometric sequence with \( r=\frac{\pi}{4} \). Since \( -1 < r  \leq 1 \), the sequence converges. In this case it converges to 0. <br>
+  b) The positive part of the sequence converges to 2. Therefore the sequences oscillates between approximately 2 and approximately -2. The sequence therefore diverges. <br>
+  c) The natural log goes to infinity. The outer function (arctangent) goes towards \( \pi/2 \), therefore the sequence converges to \( \pi/2 \). <br>
+  <hr>
+
+  <hr>
+  <b> March 5, 2024 | Thoughts on recent quiz </b> <br>
+  P1. <br>
+  With the graphing calculator, find the intersection points: \( a=1.4581853 , b=4.894216 \) <br>
+  Integrate to find the total area: \( \int_a^b (\ln x) - (x^2-6x+7) dx \approxeq 7.171 \) <br>
+  Note: you need to show work for calculation itself, especially the part where you find the anti-derivative. <br>
+ <center> 
+  <iframe src="https://www.desmos.com/calculator/gd9gsjol3j?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
+  <hr>
+  <b> March 4, 2024 | Thoughts on recent quiz </b> <br>
+  P1. <br>
+ \( f(x)=\frac{8}{x^2-4} = \frac{A}{x-2} + \frac{B}{x+2} = \frac{2}{x-2} -\frac{2}{x+2} \text{ on } [4,\infty) \)  <br>
+ The area, if it exists, is given by: \( \int_4^{\infty} f(x) dx = 2 \lim_{t\to \infty} ( \ln |\frac{t-2}{t+2}| -\ln(\frac{1}{3})) = ... = 2\ln3 \) <br> 
+  <br>
+  P2.<br>
+Recognize the vertical asymptote at \( x=-3 \), then use u-substitution with limit notation to evaluate: <br>
+  \( \int_{-3}^1 \frac{x}{\sqrt{9-x^2}} dx = \lim_{t\to -3^{+}} \int_t^1 \frac{x}{\sqrt{9-x^2}} dx= ... =-2 \sqrt{2} \)<hr>
+  <b> March 1, 2024 | Thoughts on recent quiz </b> <br>
+  P1. <br>
+  Be sure to draw a right triangle. Use trig substitution: \( x = a\sin\theta \rightarrow dx = a\cos\theta d\theta \).<br>
+  When \( x = -a \rightarrow \theta = -\pi/2\). When \( x=a \rightarrow \theta = \pi/2 \).
+  Be sure to update the bounds of integration whenever you switch variables: <Br>
+  \( A = \int_{-a}^a \sqrt{a^2-x^2} dx = ... = \int_{-\pi/2}^{\pi/2} a^2 \cos^2\theta d\theta = a^2 \int_{-\pi/2}^{\pi/2} \frac{\cos(2\theta)+1}{2} d\theta = ... = \frac{\pi a^2}{2}  \) <br>
+Note that in this problem we can also use symmetry and find the quarter circle's area before doubling it. We could have also used the even symmetry in the approach above.  <br><Br>
+
+  P2. <br>
+  \( \frac{1}{x^3-8} = \frac{1}{(x-2)(x^2+2x+4)} = \frac{A}{x-2} + \frac{Bx+C}{x^2+2x+4} \) <br>
+  \( A=1/12, B = -1/12, C=-1/3 \) <br>
+  \( \int \frac{1}{x^3-8} dx = \frac{1}{12} \ln|x-2| - \frac{1}{4\sqrt{3}} \arctan(\frac{x+1}{\sqrt{3}}) -\frac{1}{24}\ln(x^2+2x+4) + C \)
+  <hr>
+  <b> February 26, 2024 | Thoughts on recent quiz </b> <br>
+  P1. <br>
+  The function is positive on the given interval, so the definite integral is the same as area, even if we don't know the shape of the curve. <br>
+\(  \int_3^5 \frac{x^2}{\sqrt{x^2-1}} dx   \)  <br>
+Use trigonometric substitution: <br> 
+\( x = \sec \theta \rightarrow dx = \sec \theta \tan \theta d\theta; x^2 = \sec^2 \theta \) <br>
+
+\( \int_3^5 \frac{x^2}{\sqrt{x^2-1}} dx = \int_a^b \frac{\sec^2\theta}{\tan\theta} \sec \theta \tan \theta d\theta   \) <br>
+where: \( a =\arccos(1/3), b =\arccos(1/5)  \) <br>
+\( \int_a^b \sec^3 d\theta =\int_a^b (sec^2\theta) \sec\theta  d\theta =...   \) <Br>
+Integrate by parts with \( u=\sec x, v'=\sec^2 x \) <Br><br>
+  P2. <br>
+  \( y_{avg} =\frac{1}{1-0} \int_0^1 \frac{1}{\sqrt{9-4x^2}} dx \) <br>
+
+  Start by rewriting the denominator or directly substitute (trigonometric substitution): \( x = \frac{3 \sin\theta} {2} \) <br>
+  \( 2 dx = 3 \cos\theta d\theta \) <br>
+  As always, be sure to update the bounds of integration when switching variables. <br>
+ 
+
+  <hr>
+  <b> February 22, 2024 | Resource / Link </b> <br>
+<i> Feel free to bookmark and use this to check definite or indefinite integrals with a prompt. Remember that this is not a substitute for the graphing calculator's integration command, which we will be using during the AP Exam. </i> <br><br>
+
+<a href="https://www.wolframalpha.com/" target="_blank"> wolframalpha.com</a> <br> <br>
+
+Example of a query: <b> integrate x*cos(x^2) from 0 to pi/2</b> <br>
+
+  <hr>
+  <b> February 19, 2024 | Thoughts on today's quiz </b> <br>
+  P1. <br>
+Draw neatly and shade the enclosed region in quadrant I: <br>
+<center><iframe src="https://www.desmos.com/calculator/z9jpfsvqc4?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center> <br>
+
+\( A = \int_{\pi/4}^{3\pi/4} \sin y dy = ... = \sqrt{2} \) <br> <br>
+
+
+  P2. <br>
+  Shade the region enclosed by the curves. Note that the vertical asymptotes are \( x = \pm \pi/2 \) and the graphs of \( y =2, y=\sec^2 x\) intersect at \( x=\pm \pi/4 \) <Br>
+  <center><iframe src="https://www.desmos.com/calculator/lsilcg1sf5?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe> </center> <br>
+
+  \( A = \int_{-\pi/4}^{\pi/4} 2-\sec^2 x dx = ... = \pi-2 \) <br> <br>
+
+
+
+
+
+
+  <hr>
+  <b> February 13, 2024 | Thoughts on today's quiz </b> <br>
+  P1. <br>
+  a) Use \( u = e^{4x} - 4 \rightarrow du = 4 e^{4x} dx \) <br> 
+  \( \int (e^{4x}-4)^{\frac{1}{5}} 8 e^{4x} \text{  } dx = \frac{5}{3} *(e^{4x}-4)^{\frac{6}{5}} + C  \) <br>
+  c) <br>
+  Use \( u=\ln x \rightarrow du = \frac{1}{x} dx \) <br>
+  \( \int \frac{3}{x \ln x} dx = 3 \ln|\ln x| + C \) <br>
+
+  P2. <br>
+ a) <br>
+ \( y_{avg} = \frac{1}{\frac{\pi}{2}-0} \int_0^{\pi/2} x +\cos x \text{ } dx = \frac{8+\pi^2}{4\pi}  \) <br>
+ b) <br>
+ \( y_{avg} = \frac{1}{\frac{\pi}{2}-0} \int_0^{\pi/2} e^x -\sin x \text{ } dx = \frac{2(e^{\pi/2}-2)}{\pi}  \) <br>
+
+  <hr>
+  <b> January 30, 2024 | Thoughts on today's quiz </b> <br>
+  
+  P1.<br>
+  Draw and shade neatly. The cubic is easy to draw after factoring. <br> 
+ State, in English, that the definite integral is equal to the net signed area. 
+<br>
+  \( f(x) = x (x-2) (x-3)  \text{ on } [-1, 1] \) <br>
+  \( \Delta x = \frac{1-(-1)}{n} = \frac{2}{n} \) <br>
+  \( x_i = -1 + \frac{2i}{n} \) <br>
+  \( f(x_i) =-12 + \frac{38i}{n}-\frac{i^2}{n^2}+\frac{8i^3}{n^3}\) <br>
+  
+  The precise definite integral (net area) comes out to \( \frac{-10}{3} \) <br>
+
+  <hr>
+
+  <hr>
+  <b> January 29, 2024 | Thoughts on today's quiz </b> <br>
+  
+  P1.<br>
+  Draw and shade neatly. The cubic is easy to draw after factoring. <br> 
+  <center><iframe src="https://www.desmos.com/calculator/wiz6wc8rw3?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe> </center>
+
+<br>
+  \( f(x) = -x (2x+1) (x-1)  \text{ on } [-1, 3] \) <br>
+  \( \Delta x = \frac{-3-(-1)}{n} = \frac{4}{n} \) <br>
+  \( x_i = -1 + \frac{4i}{n} \) <br>
+  \( f(x_i) =2 - \frac{28i}{n}+\frac{112i^2}{n^2}-\frac{128i^3}{n^3}\) <br>
+  \( A = \lim_{n\to\infty} \sum_{i=1}^{n} [2 - \frac{28i}{n}+\frac{112i^2}{n^2}-\frac{128i^3}{n^3}]* \frac{2}{n} \) <br>
+  The precise definite integral (net area) comes out to \( \frac{-80}{3} \) <br>
+
+  <hr>
+
+  <b> January 26, 2024 | Thoughts on today's quiz </b> <br>
+  
+P1.<br>
+Draw and shade neatly. The cubic is easy to draw because you are given the factored form. <br> 
+\( f(x) = (x-1) (x-4)(x+3) \text{ on } [-3, -1] \) <br>
+\( \Delta x = \frac{-1-(-3)}{n} = \frac{2}{n} \) <br>
+\( x_i = -3 + \frac{2i}{n} \) <br>
+\( f(x_i) = \frac{56i}{n}-\frac{44i^2}{n^2}+\frac{8i^3}{n^3}\) <br>
+\( A = \lim_{n\to\infty} \sum_{i=1}^{n} ( f(x_i)*\frac{2}{n} ) \) <br>
+The precise area comes out to \( \frac{92}{3} \) <br>
+  <hr>
+
+  <b> January 18, 2024 | Thoughts on today's quiz </b> <br>
+  
+P1.<br>
+Start with a drawing of \( y=\frac{3}{x} \) in the first quadrant and a tangent line at some point. <br>
+The equation of the tangent line taken at \( x= m  \) is: \( y - \frac{3}{m} = \frac{-3}{m^2} (x-m)  \) <br>
+Find the x-intercept in terms of m: \( 2m \) <br>
+Find the y-intercept in terms m: \( \frac{6}{m} \) <br>
+The square of the length of the hypotenuse is: \( Q(m)  = 4m^2 +\frac{36}{m^2}\) <br> 
+The domain is \( m > 0 \) <br>
+Find the critical number: \( m=\sqrt{3} \) and justify using the first or second derivative test for global extrema. <br>
+The length itself is \( \sqrt{Q(2\sqrt{3})} = \sqrt{24} = 2\sqrt{6} \) <Br>
+
+ 
+<hr>
+
+  <b> January 16, 2024 | Thoughts on today's quiz </b> <br>
+  
+P1.<br>
+The equation of the tangent line taken at \( x= m  \) is: \( y - 3 e^{-m} = -3e^{-m} (x-m)  \) <br>
+Find the x-intercept in terms of m.  Find the y-intercept in terms m. <br>
+Set up \( Q(m)= \frac{b*h}{2} = \frac{(x-int)(y-int)}{2} \) with domain \( m > 0 \) <br>
+Find the critical number \( m=1 \) and justify by the First Derivative Test for Global Extrema. Be sure to state the lengths of the intercepts and the area of the triangle. <br>
+
+P2. <br>
+If x is the distance from the observer to the wall, set up: \( Q(x) = \arctan(7/x) - \arctan(3/x) \) <br>
+Find the critical number \( x = \sqrt{21} \) meters and justify by the First Derivative Test for Global Extrema. <Br>
+   
+  <hr>
+
+  <b> January 12, 2024 | Thoughts on today's quiz </b> <br>
+  
+The distance function of the boat going south is: \( x(t) = 20t \). <br>
+The distance function of the boat going east towards the same dock is \( y(t) = 15-15t \), because at the beginning (t=0) this boat is located 15 km away and its velocity is negative since it is approaching the dock. <br>
+Set up the square of the distance as the objective function: \( Q(t) = (x(t))^2 + (y(t))^2 = 225 (1-t)^2 + 400t^2 \) <br>
+The domain is \( 0 \leq t \leq 1 \).
+Find the derivative: \( Q'(t) = 450(t-1) + 800 t = 1250 t -450 \) <br>
+The only critical number is: \(  t= \frac{9}{25}\) <br>
+Evaluate: \( Q(0)= 225, Q(1) = 400, Q(9/25) = 144 \) <br>
+By the Closed Interval Method, the minimum of the square of the distance occurs at the critical number; the correspoding time is 2:21:36 (21 minutes and 36 seconds past 2:00 PM).
+At this time the distance will be a minimum as well.  
+
+  <hr>
+
+  <b> January 9, 2024 | Thoughts on today's quiz </b> <br>
+  
+  In your drawing label the dimensions of the print area as x (width) and y (height). <br>
+  \( xy = 42 \rightarrow y = 42/x \) <br>
+  \( Q(x) = (x+3)(y+2) = (x+3)(42/x + 2) = 42 + 2x + 126/x + 6 \) with domain \( x > 0 \) <br>
+  \( Q'(x) = 2-\frac{126}{x^2} = \frac{2(x^2-63)}{x^2} \) <br>
+  List three critical numbers and identify only \( x = \sqrt{63} = 3\sqrt{7} \) as part of the domain. <br>
+  The other dimension of the print area is: \( y = 2\sqrt{7} \) <br>
+  The dimension of the paper with least area are: \( 3\sqrt{7} + 3  \) by \( 2\sqrt{7} + 2 \) <br>
+To justify, use the First Derivative Test for Global Extrema. Note that the numerator of the factored version of the derivative is a quadratic expression. Its graph is a parabola that opens up and changes from negative to positive at the critical number. This implies that the original function has a global minimum at \(x = 3\sqrt{7} \). <br> 
+The Second Derivative Test for Global Extrema works as well. No matter which test you use, be sure to explain! <br> 
+  
+  
+
+ <hr>
+
+
+<b> December 7, 2023 | About the final exam </b> <br>
+
+Exam date: Monday, December 11, 2023 | 8:30am - 10:30am. <Br>
+Exam duration: A minimum of 90 minutes and a maximum of 120 minutes. <br> 
+Exam location: JRCAC 110<br>
+Review Session #1: Face-to-face Sunday afternoon, 2:30 - 3:30 pm. Please bring specific questions. <br>
+Review Session #2: Zoom on Sunday night, 8:15 - 9:15 pm. Please bring specific questions. [ <a href="https://cushingacademy.zoom.us/j/294640299?pwd=UVIxdXhlZ0t4UU9OTWx3ZTFFaXBwUT09" target="_blank">zoom link here. </a> ] <br>
+
+<br>
+
+Our final exam will be comprehensive and worth 20% of the fall semester grade. Your pre-exam grade therefore will carry a weight of 80%. The precise exam format is unknown at this time but will likely contain problems that involve multiple problem-solving steps, similar to the quiz questions. The exam may also include multiple choice and true/false/justify questions to test our conceptual understanding.
+The best way to review is by going over previous homeworks and quizzes (on the course portal reset the assignment filter to a specific date range).
+<br>
+The list of topics below is general and not meant to include every single idea we discussed in class:<br>
+-library of functions - precalculus<br>
+-limits conceptually: one-sided and overall<br>
+-finding limits algebraically, graphically, and numerically<br>
+-laws of limits<br>
+-special trig limits<br>
+-intermediate value theorem<br>
+-squeeze theorem<br>
+-slope at a point: two limit definitions of f'(a) <br>
+-slope as a rule: limit definition of f'(x)<br>
+-rules of differentiation (shortcuts)<br>
+-the chain rule<br>
+-implicit differentiation<br>
+-related rates problems<br>
+-derivatives of: trig, inverse trig, logarithmic, exponential functions<br>
+-logarithmic differentiation<br>
+-linear approximation<br>
+-L'Hospital's Rule <br>
+-extrema, id behavior, concavity, curve sketching<br>
+-mvt <br><br>
+
+  <hr>
+
+<b> December 5, 2023 | Thoughts on today's quiz </b> <br>
+
+\( f(x) = \frac{x^3}{x^2+1}, f'(x)=\frac{x^2(x^2+3)}{(x^2+1)^2}, f''(x)=\frac{2x(\sqrt{3}-x)(\sqrt{3}+x)}{(x^2+1)^3} \) <Br>  
+domain: all reals <br>
+x-intercept: (0,0) <br>
+y-intercept: (0,0) <br>
+symmetry: odd function, since we are dividing an odd by an even function <br>
+VA: none; HA: none; Slant Asymptote: y = x (be sure to show polynomial division -- it takes two quick steps.) <br>
+ID behavior after completing the sign table: the function is increasing throughout. <br>
+Concavity after completing the sign table: <br>
+concave up on \( (-\infty, -\sqrt{3}), (0, \sqrt{3}) \) <br>
+concave down on \( (-\sqrt{3},0), (\sqrt{3}, \infty) \) <br>
+no local or global extrema. <br>
+inflection points at: \( (0,0), (\sqrt{3}, \frac{3\sqrt{3}}{4}), (-\sqrt{3}, \frac{-3\sqrt{3}}{4})  \) <br>
+Conclude your discussion with a neat sketch. Note that the graph only crosses the slant asymptote at the origin. <br>
+<center> <iframe src="https://www.desmos.com/calculator/awusreydvq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</center>
+
+
+
+  <hr>
+  <b> November 28, 2023 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  Note that the term extrema is the plural of extremum. Since the problem asks about the global extrema, we need to check for both max and min. <br>
+  First, we state that the function is continuous on the given interval, which means we can use the Closed Interval Method: <br>
+  Find and factor the first derivative completely: \(f'(x)=x^2 e^{-2x} (3-2x) \) <br>
+  Find two critical numbers: 0, 3/2. Only 3/2 is in the given interval from 1 to 4, so we ignore 0. <br>
+  Evaluate the function at the endpoints and at the critical number: <br>
+  \( f(1)=\frac{1}{e^2} \\ f(3/2) =\frac{27}{8e^3} \\ f(4)=\frac{64}{e^8} \) <br>
+  
+  Compare these three values by rewriting each fraction with a common denominator: <br>
+  \( f(1)=\frac{8e^6}{8e^8} \\ f(3/2) =\frac{27 e^5}{8e^8} \\ f(4) = \frac{8*64}{8e^8} \) <br>
+  Absolute maximum: \( (\frac{3}{2}, \frac{27}{8e^3}) \) <br>
+  Absolute minimum: \( (4, \frac{64}{e^8}) \) <br><br>
+  
+  
+  
+  <hr>
+  <b> November 7, 2023 | Thoughts on recent quiz </b> <br>
+  <i> If there are typos or mistakes, let me know so I can fix them here. </i> <br><br>
+  P1. <br>
+  Draw a circle with radius r. Set up the area equation: \( A(t) =\pi (r(t))^2 \) <br>
+  Differentiate with respect to time: \( dA/dt = 2 \pi r \frac{dr}{dt} \) <br>
+  Plug in to find find: \( \frac{dA}{dt} = 100.8\pi \frac{ft^2}{min} \) <br>
+  Conclusion: When the radius of the oil slick is 120 ft, its area is increasing at a rate of \( 100.8\pi ft^2/min\). <br><br>
+  
+  P2. <br>
+  Make a drawing of a straight shoreline and a point R (radar) 6 km away from the nearest point B on the shore. <br>
+  Label a point down the shore as point A, and call AB = x. The angle ARB is \( \theta \). The moment we are interested in is when the angle BAR is 45 degrees, which means the angle ARB is also 45 degrees.<br>
+  We know that \( \frac{d\theta}{dt} = \frac{2\pi}{5} rad/s \) <br />
+  With this set up, the equation is: \( \tan\theta = \frac{x}{6} \) or if you prefer, \( \theta = \arctan(x/6) \) <br><br>
+  
+  <center> <iframe src="https://www.desmos.com/calculator/28rc7gpplt?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>	</center> <br />
+    
+  Differentiate both sides with respect to time, to find \( dx/dt = \frac{24\pi}{5} \frac{km}{s} \) <br>
+  Conclusion: When the beam makes a 45 degree angle with the shore, the radar beam is moving at a rate of \( \frac{24\pi}{5} \frac{km}{s}\). <br><br>
+  
+  
+    
+  
+  <hr>
+
+
+  
+  <b> September 13, 2023 | New resource </b> <br>
+  In the Downloads column (to your right on this page) find a summary of concepts from trigonometry. It includes steps on how to plot on the graphing calculator. I hope you find it useful. <br>
+  
+  <hr />
+  
+  <b> September 11, 2023 | Quiz Notes </b> <br>
+  Below find some quiz notes. Graded work will be returned in class. If there are mistakes or typos below, feel free to email me. <br>
+  P1<br>
+  \(f(x)= \sqrt{4-x^2} +\ln(1-x) \) <br>
+  Condition 1: \( 4-x^2 \geq 0 \rightarrow -2 \leq x \leq 2 \) with work shown <br>
+  Condition 2: \( 1-x > 0 \rightarrow x < 1 \) <br>
+  Intersecting these conditions gives us the domain: \( -2 \leq x < 1  \) <br> <br>
+  
+  P2<br>
+  \( f(x)=\tan(x-1) +e^{\sqrt{x-2}}\) <br>
+  Condition 1: \( x-2 \geq 0 \rightarrow x \geq 2  \) <br>
+  Condition 2: \( x-1 \neq \frac{\pi}{2} +n \pi \rightarrow x \neq 1+\frac{\pi}{2} +n \pi \) <br>
+  Domain: All real numbers such that \( x \geq 2 \text{ but }  x \neq 1+\frac{\pi}{2} +n \pi\) <br>
+  
+   <Br> <br>
+  
+  
+  <hr />
+  <b> September 7, 2023 | Quiz Notes </b> <br>
+  Below find some quiz notes. Graded work will be returned in class. If there are mistakes or typos below, feel free to email me. <br>
+  P1<br>
+  a) 300 degrees is \( 5\pi/3 \)  <Br>
+  b) -18 degrees is \( -\pi/10 \) <Br> <br>
+  
+  
+  P2<br>
+  \( 5\pi/6 \) radians is 150 degrees <br>
+  2 radians is \( 360/\pi \) degrees<br><br>
+  
+  
+  P3<Br>
+  \( L = \theta r = \pi/6 * 12 = 2\pi \) centimeters. <Br> <br>
+  
+   
+   P4<br>
+  \(\tan(\pi/3) = \sqrt{3} \) <br>
+  \(\sin(7\pi/6) = -1/2 \) <br>
+  \( \sec(5\pi/3) = 2 \) <br> <br>
+   
+   P5 <br>
+   \( a = 24 \sin\theta \) <br>
+   \( b= 24 \cos\theta \) <br> <br>
+   
+   P6<br>
+  Draw two right triangles to find: <Br>
+   \( \cos y = 4/5, \sin y = 3/5, \sin x = 1/3, \cos x = 2\sqrt{2}/3 \)<Br>
+     Then use the formula the sine of the sum of two angles: <br>
+   \( \sin(x+y) = \sin x \cos y + \sin y \cos x = ... = \frac{4+6\sqrt{2}}{15} \) <br> <br>
+   
+   P7<Br>
+     Use the double angle formula from precalculus: <br>
+   \( \sin(2x) = \sin x \) <br>
+   \( 2 \sin x \cos x = \sin x \) <br>
+   \( \sin x (2\cos x - 1) = 0 \) <br>
+   \( \sin x = 0 \text{ or } \cos x = 1/2 \) <Br>
+   \( x=0, \pi, 2\pi, \pi/3, 5\pi/3 \) <Br><br>
+  
+  P8 <br>
+  \( f(x)=1+ \sin(2x) = \sin(2x) + 1 \) <br>
+  The period is \( \frac{2\pi}{2} = \pi \) and the sine curve is shifted up 1 unit. <br>
+  <center>
+  <iframe src="https://www.desmos.com/calculator/jvsz4iuwcq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+    </center>
+   
+
+ 
+  <b> September 5, 2023  </b> <br>
+  <font color="dodgerblue"> 
+  A pre-calculus textbook has been added in the Downloads block on this page (see panel to the right).
+  
+  </font> 
+  
+
+  -->
+  
+  
+  
+
+<!-- end notes container-->
+</div>
+<hr>
+<!-- Second Container (Grid) -->
+  <div class="container-fluid text-left">
+    <h2 id="links">links</h2>
+    <a href="https://myap.collegeboard.org/login" target="_blank">ap classroom</a> <br>
+     
+
+  </div>
+
+  <hr>
+  <!-- Third Container (Grid) -->
+ <!-- <div class="container-fluid text-left">
+    <h2 id="info">expectations</h2>
+    <div w3-include-HTML="z-expectations.html"></div>
+  </div>
+-->
+
+<script>
+  w3.includeHTML();
+  </script>
+</body>
+</html>
