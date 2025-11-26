@@ -4,7 +4,7 @@ layout: page
 permalink: /profile/
 ---
 
-<p align="center"><img src="../d-img/profile__.jpeg" border="2" width="360" height="360"> </p>
+<!-- <p align="center"><img src="../d-img/profile__.jpeg" border="2" width="360" height="360"> </p> -->
 
 <strong>about me</strong><br>
 Instructor of upper level mathematics and computer science.<br>
