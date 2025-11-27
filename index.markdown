@@ -9,7 +9,7 @@ I teach upper level mathematics and computer science at Cushing Academy, an inde
 
 available by appointment most mornings (8:00am - 8:30am).
 
-# current schedule 
+# schedule 
 A = MVC/LA :: B = AP Calculus AB :: F = AP Computer Science A :: G1 = AP Calculus BC
 
 <p align="center"> <img src="/d-img/schedule.png" border="2"> </p>
