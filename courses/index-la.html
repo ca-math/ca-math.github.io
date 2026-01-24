@@ -75,6 +75,45 @@ Linear algebra is a crossroads where many important areas of mathematics meet, a
 <!-- start notes container (Grid) -->
 <div class="container-fluid text-left">
   <h2 id="notes">notes / updates | linear algebra </h2>
+  
+  
+  <hr>
+<b> January 23, 2026 | Visualizing Discrete Dynamic Systems with SageMath </b> <br>
+  
+   <pre>
+   <code class="language-python">
+  A = matrix(RR,[[0.8,0],[0,1.1]]) # matrix A
+x = vector([1.0,2.0])  #initial population
+
+mylist = []  #create an empty list
+mylist.append(x) #add the initial population vector
+
+iterations = 25; #set the number of iterations
+for i in range(1,iterations):   
+    x = A*x
+    mylist.append(x)
+
+#just to check the content of mylist
+for j in range(0,iterations):
+       print(mylist[j][0],mylist[j][1])
+
+# or simply print the whole thing
+mylist
+
+#build plot
+myplot = arrow(mylist[0],mylist[1])
+
+for i in range(1,iterations):
+    myplot += arrow(mylist[i-1],mylist[i])
+
+myplot.show()
+
+# after the list has been filled, we reset
+x = vector([1.0,2.0])
+</code>
+</pre>
+
+<!-- 
   <hr>
 <b> Dec 6, 2025 | A list of topics </b> <br><br>
   Chapter 1 <br>
@@ -141,6 +180,7 @@ print(A == L*U)
 
   <hr>
 
+-->
 
 
 
