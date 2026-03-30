@@ -77,6 +77,37 @@ MathJax.Hub.Config({
 <div class="container-fluid text-left">
  
   <h2 id="notes">notes / updates | ap calculus bc </h2>
+ <hr>
+ <b> March 30, 2026 | Notes on today's quiz </b> <br>
+ The details below are hints or suggestions to problems 1, 2, and 3 only. <br>
+P1. <br>
+Perform a Ratio Test for \( a_n = \frac{\pi^n (x-1)^2n}{(2n+1)!}\) <br>
+to find that the power series converges for all real numbers. The domain is all reals. <br><br>
+P2. <br>
+Note that the given function is the second derivative of: <br>
+\( f(x) = \frac{1}{1+2x} = \frac{1}{1-(-2x)}  = 1+ (-2x) + (-2x)^2 + ... + (-2x)^n + ... \) <br>
+as long as \( |-2x| < 1 \). <br>
+Complete the two-step term by term differentiation process to find:
+\( \sum\limits_{n=2}^{\infty} (-1)^n n (n-1)2^n x^{n-2} \) <br>
+The radius is the same as the original function's radius of convergence: \( R = 1/2 \) <br>
+<br>
+ P3. <br>
+The first four nonzero terms are: <br> 
+\( e^u = 1 + u + \frac{u^2}{2!} + \frac{u^3}{3!} + ... + \frac{u^n}{n!} + ... \) <br>
+
+Plug in \( u = -x^2 \): <br> 
+\( e^{-x^2} = 1 + (-x^2) + \frac{(-x^2)^2}{2!} + \frac{(-x^2)^3}{3!} + ... + \frac{(-1)^n x^{2n}}{n!} + ... \) <br>
+
+Multiply by \( x^3 \): <br>
+\( f(x) =  x^3 e^{-x^2} = x^3 -x^5 + \frac{x^7}{2!} - \frac{x^9}{3!} + ... + \frac{(-1)^n x^{2n+3}}{n!} + ... \) <br>
+
+The anti-derivative is: <br>
+\( F(x) = C + \frac{x^4}{4} - \frac{x^6}{6} + \frac{x^8}{8*2!} - \frac{x^10}{10*3!} + ... + \frac{(-1)^n x^{2n+4}}{(2n+4)n!} + ... \) 
+<br>
+Integrate the first four terms: <br>
+\( \int\limits_0^2 f(x) dx = F(2) - F(0) = F(2) \approxeq ... = \frac{-116}{15} \)
+
+
 
     <hr>
  <b> February 23, 2026 | Snow Day - Office Hours  </b> <br>
