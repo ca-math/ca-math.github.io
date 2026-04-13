@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA - AP Exams - 2026</title>
+    <style>
+        :root {
+            --primary: #003366;
+            --accent: #00b4d8;
+            --bg: #f8f9fa;
+            --text: #2d3436;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            display: none; 
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background: var(--primary);
+            color: white;
+            margin: -20px -20px 30px -20px;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 10px auto 0;
+            line-height: 1.4;
+            font-style: italic;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        h2 { margin-top: 0; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+
+        table { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+        th { text-align: left; background: #f1f3f5; padding: 12px; }
+        td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+
+        .exam-btn {
+            display: block;
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-align: left;
+            margin-bottom: 4px;
+            width: 100%;
+        }
+
+        .exam-btn:hover { background: #e7f5ff; text-decoration: underline; }
+
+        #roster-sidebar { position: sticky; top: 20px; height: fit-content; max-height: calc(100vh - 40px); overflow-y: auto; }
+
+        .student-list { list-style: none; padding: 0; }
+        .student-list li {
+            padding: 8px 12px;
+            margin-bottom: 6px;
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent);
+            border-radius: 0 4px 4px 0;
+            font-size: 0.9rem;
+        }
+
+        .count-badge {
+            background: var(--primary);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>CA - AP Exams - 2026</h1>
+    <p class="subtitle">Unofficial rosters of AP candiatates testing on campus. The count is probably off for some of these.
+        <br> Refer to course portal or Dan's exam rosters for correct info. <Br></p>
+</div>
+
+<div class="layout">
+    <div class="card">
+        <h2>Official Exam Schedule (May 2026)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Morning (8:00 AM)</th>
+                    <th>Afternoon (12:00 PM)</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-table"></tbody>
+        </table>
+    </div>
+
+    <div id="roster-sidebar" class="card">
+        <h2 id="roster-title">Select an Exam</h2>
+        <div id="roster-content">
+            <p style="color:#adb5bd; text-align:center;">Click an exam name to see the student list.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const gatekeeper = () => {
+        const pass = prompt("Access Key Required:");
+        if (pass === "2026") {
+            document.body.style.display = "block";
+            init();
+        } else {
+            alert("Invalid key.");
+            window.location.reload();
+        }
+    };
+
+    const examData = {
+        "Biology": ["Sandhu, Mehek (Miki) '28", "Deng, Xiaojing (Cherry) '27", "Holliday, Lucy '27", "Kang, Minjin '27", "Li, Chanti (Sherine) '27", "Ngo, Quan (Ketherine) '27", "Sun, Lile (Stella) '27", "Wang, Molly '27", "Zhang, Zuming (Jack) '27", "Holt, Brayden '26", "Takahashi, Yukimura (Yuki) '26", "Torres-Martinez, Ana '26", "Gao, Yingge (Jack) '27", "Lee, Dowon '27", "Lee, Kangmin (Justin) '27", "Li, Shaocong '27", "Long, Evey '27", "Park, Een (Lynn) '27", "Park, Jimin (Jamie) '27", "Wang, Kaning (Karen) '27", "Yan, Lijie (Joyce) '27", "Abdeshkyzy, Kuralay '26", "Chang, Yunji (Tiff) '26", "Mulvey, Tessa '26", "Shin, Brandon '26", "Tsang, Enok '26"],
+        "Calculus AB": ["Wu, Siyu (Samantha) '28", "Yao, Shuyan (Suri) '28", "Feng, Keyang Williams (Williams) '27", "Lee, Dowon '27", "Park, Jimin (Jamie) '27", "Vu Do, Minh Tri '27", "Zhou, Kuisheng (Kevin) '27"],
+        "Calculus BC": ["Deng, Fengdi '28", "Park, Jiahn '28", "Peng, Zixi (Tony) '28", "Kang, Minjin '27", "Lee, Kangmin (Justin) '27", "Xia, Jiaqi (Adiya) '27", "Du, Kingston '26", "Han, Jinhao (Jin) '26", "Pang, Rong (Rony) '26", "Wong, Pak Hei (William) '26", "Zhang, Evan '26", "Zhang, Haoxiang (Hugo) '26"],
+        "Chemistry": ["Park, Een (Lynn) '27", "Pham, Nguyen Ngoc Minh (Emma) '27", "Xia, Jiaqi (Adiya) '27", "Yan, Lijie (Joyce) '27", "Cao, Sicheng (Danny) '26", "Hou, Jianjing '26", "Khan, Umar '26", "Kwak, Minji (Valerie) '26", "Ma, Kristen '26", "Pang, Rong (Rony) '26", "Wong, Pak Hei (William) '26", "Wu, Yi Hong (Luke) '26", "Zhang, Wenqian (Sophia) '26"],
+        "Chinese Language": ["Masalskaia, Arina '27", "Pham, Nguyen Ngoc Minh (Emma) '27", "Chang, Yunji (Tiff) '26", "Dickerson, Brady '26", "Lee, Minjae (MJ) '26", "Mulvey, Tessa '26", "Nguyen, Dung (Zoom) '26", "Tourchot, Jiang Leo '26", "Yu, Angelina (Angie) '26"],
+        "Computer Science A": ["Kang, Minjin '27", "Bang, Yejun (Ryan) '26", "Du, Kingston '26", "Monahan, James (Jimmy) '26"],
+        "Computer Science Principles": ["Yang, Jian (Echo) '28", "Pham, Nguyen Nhu Ngoc (Wendy) '27", "Sokova, Alisa '27", "Wang, YiQian (Justin) '27", "Fujikawa, Mao '26", "Liu, Runyang (Ryan) '26", "Luo, Xueting (Emily) '26", "Phan, Ngoc (Skye) '26", "Tanabe, Nao '26", "Tourchot, Jiang Leo '26", "Wong, Pak Hei (William) '26", "Xu, Siyu (Ethan) '26", "Yang, Ka Yee Anddy (Isabella) '26", "Zhang, Evan '26", "Zhang, Haoxiang (Hugo) '26", "Higashi, Maaya '26", "Li, Ophylia '26", "Lou, Jiatong (Jasmine) '26", "Nguyen, Manh Hai (Hai) '26", "O'Neil, Michael (Mikey) '26", "Su, Xinyue (Jayne) '26", "Wang, Jiaxin (Rico) '26", "Zhang, Wenqian (Sophia) '26"],
+        "Economics": ["Krauss, Nolan '27", "Lie, Gwyneth (Gwen) '27", "Liu, Yu Sum (Shireen) '27", "Park, Jimin (Jamie) '27", "Pham, Nguyen Ngoc Minh (Emma) '27", "Pham, Nguyen Nhu Ngoc (Wendy) '27", "Senecal, Gage '27", "Zhu, Pinqian (Wayne) '27", "Botnick, Lukas '26", "Bui, Thinh Duc (Thomas) '26", "Cha, Jae-Ha (David) '26", "Dickerson, Brady '26", "Hyun, Sumin (Lisa) '26", "Lou, Jiatong (Jasmine) '26", "Phan, Ngoc (Skye) '26", "Wong, Pak Hei (William) '26", "Zhang, Haoxiang (Hugo) '26", "Cahill, Thomas (Tommy) '26", "Fadel, Khalil (Kai) '27", "Maloblocki, Matthew '27", "Pham, Nguyen Bao Ngoc (Tracy) '27", "Shi, Kevin '27", "Sokova, Alisa '27", "Tkachenko, Lev '27", "Wang, Molly '27", "Bang, Yejun (Ryan) '26", "Cao, Sicheng (Danny) '26", "Flores John, David '26", "Fujikawa, Mao '26", "Liu, Runyang (Ryan) '26", "Luo, Xueting (Emily) '26", "O'Connell, Brady '26", "Tanabe, Nao '26", "Winckler, Lillian (Lily) '26", "Hynes, Jack '26", "Nosek, Jacob (Jake) '26"],
+        "European History": ["Cooper, Cameron (Cam) '27", "Frum, Jonah '27", "Gao, Yingge (Jack) '27", "Khamis, Ines '27", "Long, Evey '27", "Wilbur, Caylee '27", "Zhang, Zuming (Jack) '27", "Chen, Olivette '26", "Jay, Ashleigh '26", "Monahan, James (Jimmy) '26", "Torres-Martinez, Ana '26"],
+        "French": ["Dusablon, Jayden '28", "Beyoko, Junior '26", "Hou, Jianjing '26", "Liao, Fangqi (Felicity) '26"],
+        "Human Geography": ["Chatelle, Emma '28", "Dale, Cooper '28", "Deng, Fengdi '28", "Freitas, Isabella (Bella) '28", "Gao, Rania '28", "Halloran, Colin '28", "Harrington, Caroline '28", "Ke, Zitong (Zoe) '28", "King, Jaclyn (Jackie) '28", "Li, Guo Heng (Anson) '28", "Maserati, Natalia '28", "Mijares Lacayo, Daniela '28", "Peng, Zixi (Tony) '28", "Richard, Olivia '28", "Weigold, Ava '28", "Wu, Siyu (Samantha) '28"],
+        "Language and Composition": ["Aubuchon, William (Liam) '27", "Beaudry, Stella '27", "Gao, Yingge (Jack) '27", "Gu, Yixiao (Rachel) '27", "Khamis, Ines '27", "Lee, Dowon '27", "Long, Evey '27", "Murphy, Madison (Maddie) '27", "Park, Jimin (Jamie) '27", "Weiner, Rachel '27", "Deng, Xiaojing (Cherry) '27", "Devin, Madeline '27", "Dittman, Violet '27", "Hsu, Dawson '27", "Karam, Madelyn (Maddey) '27", "Sun, Lile (Stella) '27", "Wilbur, Caylee '27", "Zhang, Zuming (Jack) '27", "Zhou, Kuisheng (Kevin) '27"],
+        "Latin": ["Abbott, Benjamin (Ben) '27", "Byrne, Marella '26", "Choi, Jaehyo (Daniel) '26", "Monahan, James (Jimmy) '26"],
+        "Literature": ["Fontas, Mia '27", "Abdeshkyzy, Kuralay '26", "Asadoorian, Owen '26", "Du, Kingston '26", "Flores John, David '26", "Han, Jinhao (Jin) '26", "Kwak, Minji (Valerie) '26", "Ma, Kristen '26", "Pang, Rong (Rony) '26", "Wang, Jiaxin (Rico) '26", "Lefever, August (Gus) '27", "Masalskaia, Arina '27", "Bang, Yejun (Ryan) '26", "Choi, Jaehyo (Daniel) '26", "Dickerson, Brady '26", "Ekere, Ewomazino (Zino) '26", "Higashi, Maaya '26", "Hou, Jianjing '26", "Lou, Jiatong (Jasmine) '26", "Monahan, James (Jimmy) '26", "Mulvey, Tessa '26", "Phan, Ngoc (Skye) '26", "Pirro, Arianna (Ari) '26", "Salvucci, MacKenzie (Finch) '26", "Yang, Ka Yee Anddy (Isabella) '26", "Babine, Mackenzie '26", "Byrne, Marella '26", "Chen, Olivette '26", "Corrigan, Gardner '26", "Dunphy, Isys '26", "Jay, Ashleigh '26", "Kong, Xiangyu (Sophia) '26", "Liao, Fangqi (Felicity) '26", "Marcolini, Benjamin (Ben) '26", "O'Neil, Michael (Mikey) '26", "Peacock, Rolland (RJ) '26", "Su, Xinyue (Jayne) '26", "Zhang, Evan '26", "Napolitano, Sean '26"],
+        "Physics 1": ["Chen, Yixun (Ryan) '28", "Deng, Fengdi '28", "Park, Jiahn '28", "Shi, Anna '28", "Wu, Siyu (Samantha) '28", "Feng, Keyang Williams (Williams) '27", "Gu, Yixiao (Rachel) '27", "Vu Do, Minh Tri '27", "Yan, Yuetong (Tom) '27", "Choi, Jaehyo (Daniel) '26"],
+        "Physics C": ["Krauss, Nolan '27", "Chang, Yunji (Tiff) '26", "Kwak, Minji (Valerie) '26", "Su, Xinyue (Jayne) '26", "Wong, Pak Hei (William) '26", "Zhang, Haoxiang (Hugo) '26", "Xia, Jiaqi (Adiya) '27", "Han, Jinhao (Jin) '26", "Hou, Jianjing '26", "Kong, Xiangyu (Sophia) '26", "Lee, Minjae (MJ) '26", "Liao, Fangqi (Felicity) '26", "Liu, Runyang (Ryan) '26", "Lou, Jiatong (Jasmine) '26", "Marcolini, Benjamin (Ben) '26", "O'Neil, Michael (Mikey) '26", "Wang, Jiaxin (Rico) '26", "Zhang, Evan '26"],
+        "Psychology": ["Fontas, Mia '27", "Chang, Noria '26", "Ciarletta, Charlotte '26", "Dickerson, Brady '26", "Flores John, David '26", "Han, Jinhao (Jin) '26", "Kong, Xiangyu (Sophia) '26", "Lambert, Julia '26", "Li, Ophylia '26", "Liao, Fangqi (Felicity) '26", "Nguyen, Dung (Zoom) '26", "Nguyen, Manh Hai (Hai) '26", "Pirro, Arianna (Ari) '26", "Soderquist, Madelyn (Madi) '26", "Wang, Jiaxin (Rico) '26", "Hynes, Jack '26", "Asadoorian, Owen '26", "Babine, Mackenzie '26", "Bang, Yejun (Ryan) '26", "Byrne, Marella '26", "Corbin, Quinn (Quinny) '26", "Corrigan, Gardner '26", "Ekere, Ewomazino (Zino) '26", "Higashi, Maaya '26", "Hyun, Sumin (Lisa) '26", "Jay, Ashleigh '26", "Kwak, Minji (Valerie) '26", "Monahan, James (Jimmy) '26", "O'Connell, Brady '26", "Pang, Rong (Rony) '26", "Peacock, Rolland (RJ) '26", "Salvucci, MacKenzie (Finch) '26", "Winckler, Lillian (Lily) '26", "Zellers, Kamryn '26", "Favreau, Axel '26"],
+        "Statistics": ["Krauss, Nolan '27", "Lee, Kangmin (Justin) '27", "Li, Shaocong '27", "Park, Een (Lynn) '27", "Sun, Lile (Stella) '27", "Wang, Kaning (Karen) '27", "Cao, Sicheng (Danny) '26", "Cha, Jae-Ha (David) '26", "Chang, Noria '26", "Chen, Olivette '26", "Dickerson, Brady '26", "Higashi, Maaya '26", "Hou, Jianjing '26", "Wu, Yi Hong (Luke) '26", "Zhang, Wenqian (Sophia) '26", "Long, Evey '27", "Nagatome, Hiroki '27", "Asadoorian, Owen '26", "Choi, Jaehyo (Daniel) '26", "Dervent, Mengu '26", "Flores John, David '26", "Fujikawa, Mao '26", "Kwak, Minji (Valerie) '26", "Lee, Minjae (MJ) '26", "Mulvey, Tessa '26", "Takahashi, Yukimura (Yuki) '26", "Tanabe, Nao '26", "Tourchot, Jiang Leo '26", "Tsang, Enok '26", "Wang, Jiaxin (Rico) '26", "Yang, Ka Yee Anddy (Isabella) '26", "Favreau, Axel '26"],
+        "US Government & Politics": ["Hunter, Stella '27", "Mark, Coleman (Coley) '27", "Rahn, Lyla '27", "Abdeshkyzy, Kuralay '26", "Army, Alice '26", "Chang, Noria '26", "Chen, Olivette '26", "Corbin, Quinn (Quinny) '26", "Fujikawa, Mao '26", "Han, Jinhao (Jin) '26", "Lee, Minjae (MJ) '26", "O'Neil, Michael (Mikey) '26", "Pang, Rong (Rony) '26", "Yu, Angelina (Angie) '26", "Zhang, Evan '26", "Donovan, Jack '26", "Finn, Ryan '26", "Harb, Brooke '26", "Hynes, Jack '26", "Beaudry, Stella '27", "Howard, Timothy (Tim) '27", "Lefever, August (Gus) '27", "Ciarletta, Charlotte '26", "Fletcher, Blake '26", "Forman, Benjamin (Benjamin) '26", "Kahn, William (Will) '26", "Ma, Kristen '26", "Nguyen, Dung (Zoom) '26", "Phan, Ngoc (Skye) '26", "Pirro, Arianna (Ari) '26", "Su, Xinyue (Jayne) '26", "Tanabe, Nao '26", "Torres-Martinez, Ana '26", "Williams, James '26", "Wu, Yi Hong (Luke) '26", "Yang, Ka Yee Anddy (Isabella) '26", "Zhang, Wenqian (Sophia) '26"],
+        "US History": ["Devin, Madeline '27", "Fischer, Casey '27", "Guo, Franklin '27", "Hsu, Dawson '27", "Kaplan, Isla '27", "Karam, Madelyn (Maddey) '27", "Ozgener, Aidan '27", "Pham, Nguyen Bao Ngoc (Tracy) '27", "Poplaw, James '27", "Xia, Jiaqi (Adiya) '27", "Yan, Yuetong (Tom) '27", "Zhou, Kuisheng (Kevin) '27", "Zhuo, Tianchen (Tom) '27", "Du, Kingston '26", "Hull, Katherine '26", "Liao, Fangqi (Felicity) '26", "Aubuchon, William (Liam) '27", "Deng, Xiaojing (Cherry) '27", "Gao, Yingge (Jack) '27", "Hutchinson, Alexander (Alex) '27", "Lee, Dowon '27", "Lee, Kangmin (Justin) '27", "Li, Chanti (Sherine) '27", "Li, Shaocong '27", "Li, Zitian (Catherine) '27", "Masalskaia, Arina '27", "Sun, Lile (Stella) '27", "Wang, Molly '27", "Wang, YiQian (Justin) '27", "Zhang, Zuming (Jack) '27"]
+    };
+
+    const schedule = [
+        { date: "Mon, May 4", am: ["Biology", "Latin"], pm: ["European History", "Economics"] },
+        { date: "Tue, May 5", am: ["Human Geography", "Chemistry"], pm: ["US Government & Politics"] },
+        { date: "Wed, May 6", am: ["Literature"], pm: ["Physics 1"] },
+        { date: "Thu, May 7", am: [], pm: ["Statistics"] },
+        { date: "Fri, May 8", am: ["US History"], pm: ["Chinese Language", "Economics"] },
+        { date: "Mon, May 11", am: ["Calculus AB", "Calculus BC"], pm: [] },
+        { date: "Tue, May 12", am: ["French"], pm: ["Psychology"] },
+        { date: "Wed, May 13", am: ["Language and Composition"], pm: ["Physics C"] },
+        { date: "Thu, May 14", am: [], pm: ["Physics C", "Computer Science Principles"] },
+        { date: "Fri, May 15", am: [], pm: ["Computer Science A"] }
+    ];
+
+    function init() {
+        const table = document.getElementById('schedule-table');
+        table.innerHTML = "";
+        schedule.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td><strong>${row.date}</strong></td><td>${createLinks(row.am)}</td><td>${createLinks(row.pm)}</td>`;
+            table.appendChild(tr);
+        });
+    }
+
+    function createLinks(examNames) {
+        if (examNames.length === 0) return '<span style="color:#ccc">---</span>';
+        return examNames.map(name => `<button class="exam-btn" onclick="showRoster('${name}')">${name}</button>`).join('');
+    }
+
+    function showRoster(exam) {
+        const title = document.getElementById('roster-title');
+        const content = document.getElementById('roster-content');
+        const students = examData[exam] || [];
+        title.innerHTML = `${exam} <span class="count-badge">${students.length}</span>`;
+        let html = '<ul class="student-list">';
+        students.sort().forEach(name => html += `<li>${name}</li>`);
+        html += '</ul>';
+        content.innerHTML = html;
+    }
+
+    gatekeeper();
+</script>
+</body>
+</html>
