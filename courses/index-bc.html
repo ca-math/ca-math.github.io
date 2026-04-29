@@ -83,8 +83,11 @@ MathJax.Hub.Config({
  \( y = \ln(1-x^2) \) on \([0,1/2] \) <br><br>
  Before setting up the arclength formula, rewrite the expression inside the root as a perfect square: <br>
  \( 1+ \left( \frac{dy}{dx}\right)^2 = 1 + \frac{4x^2}{(1-x^2)^2} = ... = \left( \frac{x^2+1}{1-x^2} \right)^2 \) <br><br>
+ 
+ Perform polynomial division or rewrite the fraction before setting up partial fractions:<br>
+ \(  \frac{x^2+1}{1-x^2} =  \frac{x^2-1+2}{1-x^2} = \frac{x^2-1}{1-x^2} + \frac{2}{1-x^2} = -1 + \frac{2}{1-x^2} = -1 + \frac{A}{1-x} + \frac{B}{1+x}    \) <br> 
 
-\( L = \int\limits_0^{1/2} 1 - \frac{2}{(1-x)(1+x)} dx  = \int\limits_0^{1/2} 1 - \frac{1}{(1+x)} + \frac{1}{1+x} dx  = ... = \ln(3)-\frac{1}{2} \)
+\( L = \int\limits_0^{1/2} -1 + \frac{2}{(1-x)(1+x)} dx  = \int\limits_0^{1/2} -1 + \frac{1}{(1-x)} + \frac{1}{1+x} dx  = ... = \ln(3)-\frac{1}{2} \)
 
 
 <br><br>
@@ -95,6 +98,11 @@ MathJax.Hub.Config({
   <br>
 
  \( V_{shell} =\int\limits_{-2}^2 2\pi(3-y)\frac{1}{1+y^2} dy = ... = 12\pi \arctan(2) \)
+
+ Alternatively, if you use the Washer Method, separate the setup into two integrals. The Shell Method is more convenient here, however. <br>
+
+ A desmos illustration of the region is shown below: <br>
+ <center> <iframe src="https://www.desmos.com/calculator/7phxkqdlhu?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe></center>
 
  <hr>
 
