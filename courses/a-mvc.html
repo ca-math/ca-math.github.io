@@ -77,7 +77,47 @@ END NAVBAR -->
 <div class="container-fluid text-left">
   <h2 id="notes">updates</h2>
 
+<b><mark> Nov 6, 2026 | ArcLength Parametrization with SageMath </mark>   </b> <br>
 
+<pre>
+  <code class="language-python">
+
+#Step 1: Declare Variables
+t , u, s, a = var('t u s a')
+
+#Step 2: Declare original vector-valued function
+r(t) = vector([cos(t),sin(t),t])
+
+#Step 3: Find the derivative 
+rp(t)= diff(r(t),t)
+
+#Step 4: Find the arclength function 
+# alternate approach: g(u) = sqrt(rp.dot_product(rp)).subs(t=u).full_simplify() 
+g(t) = norm(rp(t)).full_simplify()
+
+#Step 5: Integrate   
+m(t) = integrate(g(u),u,0,t) 
+
+#Step 6: solve for s in term of t
+t_sol = solve(m(t) == s, t)[0].rhs()
+
+
+#Step 7: Substitute the expression of t in terms s into the original curve r(t).
+rnew = r.subs({t: t_sol})
+
+#Testing:
+pretty_print("Original in terms of parameter t: ", r(t))
+pretty_print("Parametrized with respect to arclength s: ", rnew(s))
+
+#Plotting
+p1 = parametric_plot3d(r(t),(t,0,2*pi))
+p1.show()
+p2 = parametric_plot3d(r(s),(s,0,2*pi*sqrt(2)))
+p2.show()
+</code>
+</pre>
+
+<hr> 
 
   <b><mark>October 23, 2026 | Quiz Feedback </mark>   </b> <br>
   
